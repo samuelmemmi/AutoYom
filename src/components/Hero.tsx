@@ -63,7 +63,7 @@ const Hero = () => {
             <Button 
               variant="outline" 
               size="lg" 
-              className="text-lg px-8 py-6 border-premium-light text-premium-light hover:bg-premium-light hover:text-premium-dark"
+              className="text-lg px-8 py-6 border-premium-light text-black hover:bg-premium-light hover:text-premium-dark"
             >
               Nos tarifs
             </Button>
