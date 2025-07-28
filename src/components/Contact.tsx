@@ -7,6 +7,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Phone, MessageSquare, MapPin, Clock, QrCode } from "lucide-react";
 
 const Contact = () => {
+  const { t } = useLanguage();
   return (
     <section id="contact" className="py-20 bg-muted/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

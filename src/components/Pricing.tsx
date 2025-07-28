@@ -2,33 +2,42 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Car, Truck, Users } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
+import compactCarImage from "@/assets/compact-car.jpg";
+import sedanCarImage from "@/assets/sedan-car.jpg";
+import largeCarImage from "@/assets/large-car.jpg";
 
 const Pricing = () => {
+  const { t } = useLanguage();
+
   const pricingTiers = [
     {
-      type: "Citadine / Compacte",
+      type: t("pricing.compact"),
       price: "130 ₪",
       icon: <Car className="w-8 h-8" />,
-      description: "Véhicules jusqu'à 4,2m",
+      description: t("pricing.compact.desc"),
       examples: ["Peugeot 208", "Renault Clio", "Citroën C3", "Volkswagen Polo"],
-      color: "bg-premium-green"
+      color: "bg-premium-green",
+      image: compactCarImage
     },
     {
-      type: "Berline / SUV standard",
+      type: t("pricing.sedan"),
       price: "150 ₪",
       icon: <Car className="w-8 h-8" />,
-      description: "Véhicules standards",
+      description: t("pricing.sedan.desc"),
       examples: ["Peugeot 308", "Renault Mégane", "BMW Série 3", "Audi A4"],
       color: "bg-premium-gold",
-      popular: true
+      popular: true,
+      image: sedanCarImage
     },
     {
-      type: "Grand véhicule / 7 places",
+      type: t("pricing.large"),
       price: "180 ₪",
       icon: <Users className="w-8 h-8" />,
-      description: "Monospace et grands SUV",
+      description: t("pricing.large.desc"),
       examples: ["Peugeot 5008", "Renault Espace", "BMW X5", "Audi Q7"],
-      color: "bg-premium-dark"
+      color: "bg-premium-dark",
+      image: largeCarImage
     }
   ];
 
@@ -38,13 +47,13 @@ const Pricing = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-premium-dark mb-4">
-            Nos <span className="text-premium-green">Tarifs</span>
+            {t("pricing.title")} <span className="text-premium-green">{t("pricing.highlight")}</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-6">
-            Tarification transparente selon le type de véhicule
+            {t("pricing.subtitle")}
           </p>
           <Badge variant="outline" className="text-base px-6 py-2">
-            Prix pour toutes nos formules selon le véhicule
+            {t("pricing.badge")}
           </Badge>
         </div>
 
@@ -59,11 +68,20 @@ const Pricing = () => {
             >
               {tier.popular && (
                 <Badge className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-premium-gold text-premium-dark">
-                  Le plus demandé
+                  {t("pricing.popular")}
                 </Badge>
               )}
               
               <CardHeader className="text-center pb-4">
+                {/* Vehicle Image */}
+                <div className="mb-4 rounded-lg overflow-hidden">
+                  <img 
+                    src={tier.image} 
+                    alt={tier.type}
+                    className="w-full h-32 object-cover"
+                  />
+                </div>
+                
                 <div className={`mx-auto p-4 rounded-full mb-4 ${tier.color} text-premium-light`}>
                   {tier.icon}
                 </div>
@@ -98,7 +116,7 @@ const Pricing = () => {
                   variant={tier.popular ? "gold" : "premium"} 
                   className="w-full"
                 >
-                  Réserver ce tarif
+                  {t("pricing.reserve")}
                 </Button>
               </CardContent>
             </Card>
@@ -108,14 +126,12 @@ const Pricing = () => {
         {/* Pricing Note */}
         <div className="bg-muted/50 rounded-xl p-8 text-center">
           <h3 className="text-xl font-bold text-premium-dark mb-4">
-            💎 Pourquoi ces tarifs ?
+            {t("pricing.note.title")}
           </h3>
           <p className="text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-            <span className="font-semibold text-premium-green">Ces prix reflètent le temps, la taille du véhicule, les produits utilisés et le niveau de soin apporté à chaque prestation.</span>
+            <span className="font-semibold text-premium-green">{t("pricing.note.desc")}</span>
             <br /><br />
-            Nous avons fait le choix de valoriser chaque intervention, même sur des véhicules plus petits. 
-            Notre service premium justifie cette approche par la qualité des produits utilisés, 
-            le professionnalisme de nos équipes et la commodité du service à domicile.
+            {t("pricing.note.detail")}
           </p>
         </div>
 
@@ -124,20 +140,20 @@ const Pricing = () => {
           <div className="bg-premium-dark rounded-xl p-6 text-center">
             <Truck className="w-12 h-12 text-premium-gold mx-auto mb-4" />
             <h3 className="text-xl font-bold text-premium-light mb-2">
-              Service à domicile inclus
+              {t("pricing.mobile.title")}
             </h3>
             <p className="text-premium-light/80">
-              Pas de frais de déplacement dans notre zone d'intervention
+              {t("pricing.mobile.desc")}
             </p>
           </div>
           
           <div className="bg-premium-green rounded-xl p-6 text-center">
             <Users className="w-12 h-12 text-premium-light mx-auto mb-4" />
             <h3 className="text-xl font-bold text-premium-light mb-2">
-              Devis personnalisé
+              {t("pricing.custom.title")}
             </h3>
             <p className="text-premium-light/80">
-              Pour les prestations spéciales ou véhicules particuliers
+              {t("pricing.custom.desc")}
             </p>
           </div>
         </div>

@@ -1,0 +1,429 @@
+import React, { createContext, useContext, useState, ReactNode } from 'react';
+
+export type Language = 'fr' | 'he' | 'ru';
+
+interface LanguageContextType {
+  language: Language;
+  setLanguage: (lang: Language) => void;
+  t: (key: string) => string;
+}
+
+const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
+
+const translations = {
+  fr: {
+    // Header
+    'header.home': 'Accueil',
+    'header.guarantees': 'Nos garanties qualité',
+    'header.pricing': 'Tarifs',
+    'header.services': 'Formules de lavage',
+    'header.contact': 'Réserver maintenant',
+    'header.call': 'Appeler',
+    'header.whatsapp': 'WhatsApp',
+    
+    // Hero
+    'hero.slogan': 'Votre voiture, notre fierté.',
+    'hero.title': 'Service de lavage automobile',
+    'hero.subtitle': 'premium à domicile',
+    'hero.description': 'Service mobile haut de gamme, entièrement manuel avec le souci du détail à chaque étape. Nous venons chez vous avec tout notre équipement professionnel.',
+    'hero.cta': 'Réserver maintenant',
+    'hero.learn': 'En savoir plus',
+    
+    // Guarantees (ex Why Choose Us)
+    'guarantees.title': 'Nos',
+    'guarantees.highlight': 'Garanties Qualité',
+    'guarantees.subtitle': 'Un service professionnel et fiable pour votre tranquillité d\'esprit',
+    'guarantees.mobile.title': '100% mobile et autonome',
+    'guarantees.mobile.desc': 'Réserve d\'eau, rallonges électriques, adaptateurs pour bornes en sous-sol',
+    'guarantees.products.title': 'Produits professionnels',
+    'guarantees.products.desc': 'Green Star, Meguiar\'s, Alchimy7 - Marques reconnues pour leur efficacité',
+    'guarantees.manual.title': 'Lavage respectueux et manuel',
+    'guarantees.manual.desc': 'Technique sur-mesure adaptée à chaque véhicule et situation',
+    'guarantees.experience.title': 'Expertise et savoir-faire',
+    'guarantees.experience.desc': 'Équipe formée aux techniques professionnelles de détailing automobile',
+    
+    // Pricing
+    'pricing.title': 'Nos',
+    'pricing.highlight': 'Tarifs',
+    'pricing.subtitle': 'Tarification transparente selon le type de véhicule',
+    'pricing.badge': 'Prix pour toutes nos formules selon le véhicule',
+    'pricing.compact': 'Citadine / Compacte',
+    'pricing.compact.desc': 'Véhicules jusqu\'à 4,2m',
+    'pricing.sedan': 'Berline / SUV standard',
+    'pricing.sedan.desc': 'Véhicules standards',
+    'pricing.large': 'Grand véhicule / 7 places',
+    'pricing.large.desc': 'Monospace et grands SUV',
+    'pricing.popular': 'Le plus demandé',
+    'pricing.reserve': 'Réserver ce tarif',
+    'pricing.note.title': '💎 Pourquoi ces tarifs ?',
+    'pricing.note.desc': 'Ces prix reflètent le temps, la taille du véhicule, les produits utilisés et le niveau de soin apporté à chaque prestation.',
+    'pricing.note.detail': 'Nous avons fait le choix de valoriser chaque intervention, même sur des véhicules plus petits. Notre service premium justifie cette approche par la qualité des produits utilisés, le professionnalisme de nos équipes et la commodité du service à domicile.',
+    'pricing.mobile.title': 'Service à domicile inclus',
+    'pricing.mobile.desc': 'Pas de frais de déplacement dans notre zone d\'intervention',
+    'pricing.custom.title': 'Devis personnalisé',
+    'pricing.custom.desc': 'Pour les prestations spéciales ou véhicules particuliers',
+    
+    // Services
+    'services.title': 'Nos',
+    'services.highlight': 'Formules de Lavage',
+    'services.subtitle': 'Service mobile premium, entièrement manuel avec le souci du détail à chaque étape',
+    'services.simple.title': 'Lavage Simple',
+    'services.simple.subtitle': 'Intérieur / Extérieur',
+    'services.simple.desc': 'Idéal pour un entretien régulier',
+    'services.simple.badge': 'Régulier',
+    'services.deep.title': 'Lavage Approfondi',
+    'services.deep.subtitle': 'Confort et propreté',
+    'services.deep.desc': 'Pour un intérieur visiblement plus propre',
+    'services.deep.badge': 'Populaire',
+    'services.premium.title': 'Lavage Premium',
+    'services.premium.subtitle': '& Détail',
+    'services.premium.desc': 'Véhicule remis à neuf',
+    'services.premium.badge': 'Premium',
+    'services.popular': 'Le plus populaire',
+    'services.choose': 'Choisir cette formule',
+    'services.additional.title': 'Prestations',
+    'services.additional.highlight': 'à la carte',
+    'services.polishing': 'Polissage carrosserie',
+    'services.polishing.desc': 'Correction micro-rayures et oxydation',
+    'services.waxing': 'Lustrage premium',
+    'services.waxing.desc': 'Application de cire - brillance et protection',
+    'services.engine': 'Nettoyage moteur',
+    'services.engine.desc': 'Compartiment moteur impeccable',
+    'services.steam': 'Nettoyage vapeur',
+    'services.steam.desc': 'Désinfection et aseptisation complète',
+    'services.quote': 'Demander un devis personnalisé',
+    
+    // Booking
+    'booking.title': 'Réserver',
+    'booking.highlight': 'Maintenant',
+    'booking.subtitle': 'Réservez en quelques clics à l\'endroit et à l\'horaire qui vous conviennent.',
+    'booking.cta': 'Réserver maintenant',
+    'booking.description': 'Notre système de réservation en ligne vous permet de choisir facilement votre créneau et le lieu d\'intervention.',
+    
+    // Contact
+    'contact.title': 'Nous',
+    'contact.highlight': 'Contacter',
+    'contact.subtitle': 'Une question ? Besoin d\'un devis personnalisé ? Contactez-nous !',
+    'contact.name': 'Nom complet',
+    'contact.phone': 'Téléphone',
+    'contact.location': 'Lieu d\'intervention',
+    'contact.vehicle': 'Type de véhicule',
+    'contact.message': 'Message (optionnel)',
+    'contact.send': 'Envoyer la demande',
+    'contact.whatsapp': 'Écrire sur WhatsApp',
+    
+    // Coming Soon
+    'coming.title': 'À Venir',
+    'coming.highlight': 'Prochainement',
+    'coming.subtitle': 'Découvrez les nouvelles fonctionnalités que nous préparons pour vous',
+    'coming.loyalty.title': 'Carte de fidélité virtuelle',
+    'coming.loyalty.desc': 'Cumulez des points et bénéficiez d\'avantages exclusifs',
+    'coming.videos.title': 'Vidéos avant/après',
+    'coming.videos.desc': 'Visualisez le résultat de nos prestations en accéléré',
+    'coming.presentation.title': 'Présentation visuelle',
+    'coming.presentation.desc': 'Interface interactive pour découvrir nos formules',
+    'coming.qr.title': 'QR code personnalisé',
+    'coming.qr.desc': 'Réservation rapide via QR code unique',
+    
+    // Footer
+    'footer.tagline': 'Votre voiture, notre fierté',
+    'footer.description': 'Service de lavage automobile premium à domicile. Professionnel, mobile et respectueux de votre véhicule.',
+    'footer.services.title': 'Nos services',
+    'footer.services.simple': 'Lavage simple',
+    'footer.services.deep': 'Lavage approfondi',
+    'footer.services.premium': 'Lavage premium',
+    'footer.contact.title': 'Contact',
+    'footer.contact.phone': 'Téléphone',
+    'footer.contact.whatsapp': 'WhatsApp',
+    'footer.contact.email': 'Email',
+    'footer.legal.title': 'Informations légales',
+    'footer.legal.terms': 'Conditions d\'utilisation',
+    'footer.legal.privacy': 'Politique de confidentialité',
+    'footer.legal.mentions': 'Mentions légales',
+    'footer.rights': 'Tous droits réservés.',
+  },
+  he: {
+    // Header
+    'header.home': 'בית',
+    'header.guarantees': 'הבטחות האיכות שלנו',
+    'header.pricing': 'תעריפים',
+    'header.services': 'נוסחאות שטיפה',
+    'header.contact': 'הזמן עכשיו',
+    'header.call': 'התקשר',
+    'header.whatsapp': 'WhatsApp',
+    
+    // Hero
+    'hero.slogan': 'המכונית שלך, הגאווה שלנו.',
+    'hero.title': 'שירות שטיפת רכבים',
+    'hero.subtitle': 'פרימיום עד הבית',
+    'hero.description': 'שירות נייד יוקרתי, ידני לחלוטין עם תשומת לב לכל פרט. אנו מגיעים אליכם עם כל הציוד המקצועי שלנו.',
+    'hero.cta': 'הזמן עכשיו',
+    'hero.learn': 'למידע נוסף',
+    
+    // Guarantees
+    'guarantees.title': 'הבטחות',
+    'guarantees.highlight': 'האיכות שלנו',
+    'guarantees.subtitle': 'שירות מקצועי ואמין לשקט הנפש שלכם',
+    'guarantees.mobile.title': '100% נייד ועצמאי',
+    'guarantees.mobile.desc': 'מאגר מים, מאריכי חשמל, מתאמים לעמדות טעינה במרתף',
+    'guarantees.products.title': 'מוצרים מקצועיים',
+    'guarantees.products.desc': 'Green Star, Meguiar\'s, Alchimy7 - מותגים מוכרים ביעילותם',
+    'guarantees.manual.title': 'שטיפה עדינה וידנית',
+    'guarantees.manual.desc': 'טכניקה מותאמת אישית לכל רכב ומצב',
+    'guarantees.experience.title': 'מומחיות וניסיון',
+    'guarantees.experience.desc': 'צוות מאומן בטכניקות מקצועיות של פיתוח רכבים',
+    
+    // Pricing
+    'pricing.title': 'התעריפים',
+    'pricing.highlight': 'שלנו',
+    'pricing.subtitle': 'תמחור שקוף לפי סוג הרכב',
+    'pricing.badge': 'מחירים לכל הנוסחאות שלנו לפי הרכב',
+    'pricing.compact': 'עירוני / קומפקטי',
+    'pricing.compact.desc': 'רכבים עד 4.2 מטר',
+    'pricing.sedan': 'סדאן / SUV רגיל',
+    'pricing.sedan.desc': 'רכבים רגילים',
+    'pricing.large': 'רכב גדול / 7 מקומות',
+    'pricing.large.desc': 'מונוספייס ו-SUV גדולים',
+    'pricing.popular': 'הכי מבוקש',
+    'pricing.reserve': 'הזמן תעריף זה',
+    'pricing.note.title': '💎 למה התעריפים האלה?',
+    'pricing.note.desc': 'המחירים האלה משקפים את הזמן, גודל הרכב, המוצרים המשמשים ורמת הטיפול בכל שירות.',
+    'pricing.note.detail': 'בחרנו להעריך כל התערבות, אפילו ברכבים קטנים יותר. השירות הפרימיום שלנו מצדיק את הגישה הזו באיכות המוצרים, המקצועיות של הצוותים והנוחות של השירות בבית.',
+    'pricing.mobile.title': 'שירות עד הבית כלול',
+    'pricing.mobile.desc': 'ללא עלות נסיעה באזור השירות שלנו',
+    'pricing.custom.title': 'הצעת מחיר מותאמת',
+    'pricing.custom.desc': 'לשירותים מיוחדים או רכבים מיוחדים',
+    
+    // Services
+    'services.title': 'נוסחאות',
+    'services.highlight': 'השטיפה שלנו',
+    'services.subtitle': 'שירות נייד פרימיום, ידני לחלוטין עם תשומת לב לכל פרט',
+    'services.simple.title': 'שטיפה פשוטה',
+    'services.simple.subtitle': 'פנים / חוץ',
+    'services.simple.desc': 'אידיאלי לתחזוקה שוטפת',
+    'services.simple.badge': 'שוטף',
+    'services.deep.title': 'שטיפה מעמיקה',
+    'services.deep.subtitle': 'נוחות וניקיון',
+    'services.deep.desc': 'לפנים נקי יותר בצורה גלויה',
+    'services.deep.badge': 'פופולרי',
+    'services.premium.title': 'שטיפה פרימיום',
+    'services.premium.subtitle': 'ופירוט',
+    'services.premium.desc': 'רכב מחודש',
+    'services.premium.badge': 'פרימיום',
+    'services.popular': 'הכי פופולרי',
+    'services.choose': 'בחר נוסחה זו',
+    'services.additional.title': 'שירותים',
+    'services.additional.highlight': 'לפי בחירה',
+    'services.polishing': 'ליטוש מרכב',
+    'services.polishing.desc': 'תיקון שריטות קלות וחמצון',
+    'services.waxing': 'ליטוש פרימיום',
+    'services.waxing.desc': 'יישום שעווה - ברק והגנה',
+    'services.engine': 'ניקוי מנוע',
+    'services.engine.desc': 'תא מנוע ללא רבב',
+    'services.steam': 'ניקוי קיטור',
+    'services.steam.desc': 'חיטוי וטיהור מלא',
+    'services.quote': 'בקש הצעת מחיר מותאמת',
+    
+    // Booking
+    'booking.title': 'הזמן',
+    'booking.highlight': 'עכשיו',
+    'booking.subtitle': 'הזמינו בכמה קליקים במקום ובזמן שנוח לכם.',
+    'booking.cta': 'הזמן עכשיו',
+    'booking.description': 'מערכת ההזמנות המקוונת שלנו מאפשרת לכם לבחור בקלות את המועד ומקום ההתערבות.',
+    
+    // Contact
+    'contact.title': 'צור',
+    'contact.highlight': 'קשר',
+    'contact.subtitle': 'שאלה? צריכים הצעת מחיר מותאמת? צרו קשר!',
+    'contact.name': 'שם מלא',
+    'contact.phone': 'טלפון',
+    'contact.location': 'מקום ההתערבות',
+    'contact.vehicle': 'סוג הרכב',
+    'contact.message': 'הודעה (אופציונלי)',
+    'contact.send': 'שלח בקשה',
+    'contact.whatsapp': 'כתוב ב-WhatsApp',
+    
+    // Coming Soon
+    'coming.title': 'בקרוב',
+    'coming.highlight': '',
+    'coming.subtitle': 'גלו את התכונות החדשות שאנו מכינים עבורכם',
+    'coming.loyalty.title': 'כרטיס נאמנות וירטואלי',
+    'coming.loyalty.desc': 'צברו נקודות ותיהנו מהטבות בלעדיות',
+    'coming.videos.title': 'סרטוני לפני/אחרי',
+    'coming.videos.desc': 'ראו את התוצאות של השירותים שלנו במהירות מוגברת',
+    'coming.presentation.title': 'מצגת חזותית',
+    'coming.presentation.desc': 'ממשק אינטראקטיבי לגילוי הנוסחאות שלנו',
+    'coming.qr.title': 'QR code מותאם אישית',
+    'coming.qr.desc': 'הזמנה מהירה דרך QR code ייחודי',
+    
+    // Footer
+    'footer.tagline': 'המכונית שלכם, הגאווה שלנו',
+    'footer.description': 'שירות שטיפת רכבים פרימיום עד הבית. מקצועי, נייד ומכבד את הרכב שלכם.',
+    'footer.services.title': 'השירותים שלנו',
+    'footer.services.simple': 'שטיפה פשוטה',
+    'footer.services.deep': 'שטיפה מעמיקה',
+    'footer.services.premium': 'שטיפה פרימיום',
+    'footer.contact.title': 'קשר',
+    'footer.contact.phone': 'טלפון',
+    'footer.contact.whatsapp': 'WhatsApp',
+    'footer.contact.email': 'אימייל',
+    'footer.legal.title': 'מידע משפטי',
+    'footer.legal.terms': 'תנאי שימוש',
+    'footer.legal.privacy': 'מדיניות פרטיות',
+    'footer.legal.mentions': 'הודעות משפטיות',
+    'footer.rights': 'כל הזכויות שמורות.',
+  },
+  ru: {
+    // Header
+    'header.home': 'Главная',
+    'header.guarantees': 'Наши гарантии качества',
+    'header.pricing': 'Тарифы',
+    'header.services': 'Формулы мойки',
+    'header.contact': 'Забронировать сейчас',
+    'header.call': 'Позвонить',
+    'header.whatsapp': 'WhatsApp',
+    
+    // Hero
+    'hero.slogan': 'Ваш автомобиль, наша гордость.',
+    'hero.title': 'Услуга мойки автомобилей',
+    'hero.subtitle': 'премиум на дому',
+    'hero.description': 'Мобильный премиальный сервис, полностью ручной с вниманием к каждой детали. Мы приезжаем к вам со всем нашим профессиональным оборудованием.',
+    'hero.cta': 'Забронировать сейчас',
+    'hero.learn': 'Узнать больше',
+    
+    // Guarantees
+    'guarantees.title': 'Наши',
+    'guarantees.highlight': 'Гарантии Качества',
+    'guarantees.subtitle': 'Профессиональный и надежный сервис для вашего спокойствия',
+    'guarantees.mobile.title': '100% мобильный и автономный',
+    'guarantees.mobile.desc': 'Резерв воды, удлинители, адаптеры для зарядных станций в подвале',
+    'guarantees.products.title': 'Профессиональные продукты',
+    'guarantees.products.desc': 'Green Star, Meguiar\'s, Alchimy7 - признанные бренды по эффективности',
+    'guarantees.manual.title': 'Бережная ручная мойка',
+    'guarantees.manual.desc': 'Техника на заказ, адаптированная к каждому автомобилю и ситуации',
+    'guarantees.experience.title': 'Экспертиза и мастерство',
+    'guarantees.experience.desc': 'Команда, обученная профессиональным техникам детейлинга автомобилей',
+    
+    // Pricing
+    'pricing.title': 'Наши',
+    'pricing.highlight': 'Тарифы',
+    'pricing.subtitle': 'Прозрачное ценообразование в зависимости от типа автомобиля',
+    'pricing.badge': 'Цены для всех наших формул в зависимости от автомобиля',
+    'pricing.compact': 'Городской / Компактный',
+    'pricing.compact.desc': 'Автомобили до 4,2м',
+    'pricing.sedan': 'Седан / Стандартный SUV',
+    'pricing.sedan.desc': 'Стандартные автомобили',
+    'pricing.large': 'Большой автомобиль / 7 мест',
+    'pricing.large.desc': 'Минивэн и большие SUV',
+    'pricing.popular': 'Самый востребованный',
+    'pricing.reserve': 'Забронировать этот тариф',
+    'pricing.note.title': '💎 Почему эти тарифы?',
+    'pricing.note.desc': 'Эти цены отражают время, размер автомобиля, используемые продукты и уровень ухода за каждой услугой.',
+    'pricing.note.detail': 'Мы сделали выбор ценить каждое вмешательство, даже на меньших автомобилях. Наш премиальный сервис оправдывает этот подход качеством используемых продуктов, профессионализмом наших команд и удобством домашнего сервиса.',
+    'pricing.mobile.title': 'Сервис на дому включен',
+    'pricing.mobile.desc': 'Без платы за проезд в нашей зоне обслуживания',
+    'pricing.custom.title': 'Персональная смета',
+    'pricing.custom.desc': 'Для специальных услуг или особых автомобилей',
+    
+    // Services
+    'services.title': 'Наши',
+    'services.highlight': 'Формулы Мойки',
+    'services.subtitle': 'Мобильный премиум сервис, полностью ручной с вниманием к каждой детали',
+    'services.simple.title': 'Простая Мойка',
+    'services.simple.subtitle': 'Салон / Кузов',
+    'services.simple.desc': 'Идеально для регулярного обслуживания',
+    'services.simple.badge': 'Регулярная',
+    'services.deep.title': 'Глубокая Мойка',
+    'services.deep.subtitle': 'Комфорт и чистота',
+    'services.deep.desc': 'Для заметно более чистого салона',
+    'services.deep.badge': 'Популярная',
+    'services.premium.title': 'Премиум Мойка',
+    'services.premium.subtitle': '& Детейлинг',
+    'services.premium.desc': 'Автомобиль как новый',
+    'services.premium.badge': 'Премиум',
+    'services.popular': 'Самая популярная',
+    'services.choose': 'Выбрать эту формулу',
+    'services.additional.title': 'Услуги',
+    'services.additional.highlight': 'по меню',
+    'services.polishing': 'Полировка кузова',
+    'services.polishing.desc': 'Исправление микроцарапин и окисления',
+    'services.waxing': 'Премиум полировка',
+    'services.waxing.desc': 'Нанесение воска - блеск и защита',
+    'services.engine': 'Мойка двигателя',
+    'services.engine.desc': 'Безупречный моторный отсек',
+    'services.steam': 'Паровая чистка',
+    'services.steam.desc': 'Дезинфекция и полная асептизация',
+    'services.quote': 'Запросить персональную смету',
+    
+    // Booking
+    'booking.title': 'Забронировать',
+    'booking.highlight': 'Сейчас',
+    'booking.subtitle': 'Забронируйте за несколько кликов в удобном для вас месте и времени.',
+    'booking.cta': 'Забронировать сейчас',
+    'booking.description': 'Наша система онлайн-бронирования позволяет легко выбрать время и место обслуживания.',
+    
+    // Contact
+    'contact.title': 'Связаться',
+    'contact.highlight': 'с нами',
+    'contact.subtitle': 'Вопрос? Нужна персональная смета? Свяжитесь с нами!',
+    'contact.name': 'Полное имя',
+    'contact.phone': 'Телефон',
+    'contact.location': 'Место обслуживания',
+    'contact.vehicle': 'Тип автомобиля',
+    'contact.message': 'Сообщение (необязательно)',
+    'contact.send': 'Отправить запрос',
+    'contact.whatsapp': 'Написать в WhatsApp',
+    
+    // Coming Soon
+    'coming.title': 'Скоро',
+    'coming.highlight': '',
+    'coming.subtitle': 'Откройте для себя новые функции, которые мы готовим для вас',
+    'coming.loyalty.title': 'Виртуальная карта лояльности',
+    'coming.loyalty.desc': 'Накапливайте баллы и получайте эксклюзивные преимущества',
+    'coming.videos.title': 'Видео до/после',
+    'coming.videos.desc': 'Посмотрите результаты наших услуг в ускоренном режиме',
+    'coming.presentation.title': 'Визуальная презентация',
+    'coming.presentation.desc': 'Интерактивный интерфейс для знакомства с нашими формулами',
+    'coming.qr.title': 'Персональный QR код',
+    'coming.qr.desc': 'Быстрое бронирование через уникальный QR код',
+    
+    // Footer
+    'footer.tagline': 'Ваш автомобиль, наша гордость',
+    'footer.description': 'Премиальная услуга мойки автомобилей на дому. Профессионально, мобильно и с уважением к вашему автомобилю.',
+    'footer.services.title': 'Наши услуги',
+    'footer.services.simple': 'Простая мойка',
+    'footer.services.deep': 'Глубокая мойка',
+    'footer.services.premium': 'Премиум мойка',
+    'footer.contact.title': 'Контакт',
+    'footer.contact.phone': 'Телефон',
+    'footer.contact.whatsapp': 'WhatsApp',
+    'footer.contact.email': 'Email',
+    'footer.legal.title': 'Правовая информация',
+    'footer.legal.terms': 'Условия использования',
+    'footer.legal.privacy': 'Политика конфиденциальности',
+    'footer.legal.mentions': 'Правовые упоминания',
+    'footer.rights': 'Все права защищены.',
+  }
+};
+
+export const LanguageProvider = ({ children }: { children: ReactNode }) => {
+  const [language, setLanguage] = useState<Language>('fr');
+
+  const t = (key: string): string => {
+    return translations[language][key] || key;
+  };
+
+  return (
+    <LanguageContext.Provider value={{ language, setLanguage, t }}>
+      {children}
+    </LanguageContext.Provider>
+  );
+};
+
+export const useLanguage = () => {
+  const context = useContext(LanguageContext);
+  if (!context) {
+    throw new Error('useLanguage must be used within a LanguageProvider');
+  }
+  return context;
+};

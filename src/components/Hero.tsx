@@ -3,6 +3,7 @@ import { Phone, MapPin, Star } from "lucide-react";
 import heroImage from "@/assets/hero-car-wash.jpg";
 
 const Hero = () => {
+  const { t } = useLanguage();
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image */}

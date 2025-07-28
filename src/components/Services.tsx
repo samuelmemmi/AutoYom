@@ -2,16 +2,21 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Sparkles, Droplets, Shield, Zap, Brush, Waves } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
+import simpleWashImage from "@/assets/simple-wash.jpg";
+import deepWashImage from "@/assets/deep-wash.jpg";
+import premiumWashImage from "@/assets/premium-wash.jpg";
 
 const Services = () => {
+  const { t } = useLanguage();
+
   const formulas = [
     {
       id: 1,
-      title: "Lavage Simple",
-      subtitle: "Intérieur / Extérieur",
-      price: "À partir de 130 ₪",
+      title: t("services.simple.title"),
+      subtitle: t("services.simple.subtitle"),
       icon: <Droplets className="w-8 h-8" />,
-      description: "Idéal pour un entretien régulier",
+      description: t("services.simple.desc"),
       features: [
         "Aspiration complète de l'habitacle",
         "Nettoyage des passages de porte",
@@ -19,16 +24,16 @@ const Services = () => {
         "Lavage extérieur à la main",
         "Séchage manuel"
       ],
-      badge: "Régulier",
-      popular: false
+      badge: t("services.simple.badge"),
+      popular: false,
+      image: simpleWashImage
     },
     {
       id: 2,
-      title: "Lavage Approfondi",
-      subtitle: "Confort et propreté",
-      price: "À partir de 150 ₪",
+      title: t("services.deep.title"),
+      subtitle: t("services.deep.subtitle"),
       icon: <Shield className="w-8 h-8" />,
-      description: "Pour un intérieur visiblement plus propre",
+      description: t("services.deep.desc"),
       features: [
         "Tous les éléments de la formule 1",
         "Nettoyage intérieur des portes",
@@ -36,16 +41,16 @@ const Services = () => {
         "Attention particulière aux détails",
         "Finition soignée"
       ],
-      badge: "Populaire",
-      popular: true
+      badge: t("services.deep.badge"),
+      popular: true,
+      image: deepWashImage
     },
     {
       id: 3,
-      title: "Lavage Premium",
-      subtitle: "& Détail",
-      price: "À partir de 180 ₪",
+      title: t("services.premium.title"),
+      subtitle: t("services.premium.subtitle"),
       icon: <Sparkles className="w-8 h-8" />,
-      description: "Véhicule remis à neuf",
+      description: t("services.premium.desc"),
       features: [
         "Nettoyage approfondi des jantes",
         "Traitement des pneus (gel noir)",
@@ -55,30 +60,31 @@ const Services = () => {
         "Nettoyage vapeur intégral",
         "Application de cire protectrice"
       ],
-      badge: "Premium",
-      popular: false
+      badge: t("services.premium.badge"),
+      popular: false,
+      image: premiumWashImage
     }
   ];
 
   const additionalServices = [
     {
-      title: "Polissage carrosserie",
-      description: "Correction micro-rayures et oxydation",
+      title: t("services.polishing"),
+      description: t("services.polishing.desc"),
       icon: <Brush className="w-6 h-6" />
     },
     {
-      title: "Lustrage premium",
-      description: "Application de cire - brillance et protection",
+      title: t("services.waxing"),
+      description: t("services.waxing.desc"),
       icon: <Sparkles className="w-6 h-6" />
     },
     {
-      title: "Nettoyage moteur",
-      description: "Compartiment moteur impeccable",
+      title: t("services.engine"),
+      description: t("services.engine.desc"),
       icon: <Zap className="w-6 h-6" />
     },
     {
-      title: "Nettoyage vapeur",
-      description: "Désinfection et aseptisation complète",
+      title: t("services.steam"),
+      description: t("services.steam.desc"),
       icon: <Waves className="w-6 h-6" />
     }
   ];
@@ -89,10 +95,10 @@ const Services = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-premium-dark mb-4">
-            Nos <span className="text-premium-green">Prestations</span>
+            {t("services.title")} <span className="text-premium-green">{t("services.highlight")}</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Service mobile premium, entièrement manuel avec le souci du détail à chaque étape
+            {t("services.subtitle")}
           </p>
         </div>
 
@@ -107,11 +113,20 @@ const Services = () => {
             >
               {formula.popular && (
                 <Badge className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-premium-gold text-premium-dark">
-                  Le plus populaire
+                  {t("services.popular")}
                 </Badge>
               )}
               
               <CardHeader className="text-center pb-4">
+                {/* Formula Image */}
+                <div className="mb-4 rounded-lg overflow-hidden">
+                  <img 
+                    src={formula.image} 
+                    alt={formula.title}
+                    className="w-full h-40 object-cover"
+                  />
+                </div>
+                
                 <div className={`mx-auto p-3 rounded-full mb-4 ${
                   formula.popular 
                     ? 'bg-premium-gold text-premium-dark' 
@@ -131,10 +146,7 @@ const Services = () => {
                   {formula.subtitle}
                 </CardDescription>
                 
-                <div className="text-3xl font-bold text-premium-gold mt-4">
-                  {formula.price}
-                </div>
-                <p className="text-sm text-muted-foreground mt-2">
+                <p className="text-sm text-muted-foreground mt-4">
                   {formula.description}
                 </p>
               </CardHeader>
@@ -153,7 +165,7 @@ const Services = () => {
                   variant={formula.popular ? "gold" : "premium"} 
                   className="w-full"
                 >
-                  Choisir cette formule
+                  {t("services.choose")}
                 </Button>
               </CardContent>
             </Card>
@@ -163,7 +175,7 @@ const Services = () => {
         {/* Additional Services */}
         <div className="bg-premium-dark rounded-2xl p-8 md:p-12">
           <h3 className="text-3xl font-bold text-premium-light text-center mb-8">
-            Prestations <span className="text-premium-gold">à la carte</span>
+            {t("services.additional.title")} <span className="text-premium-gold">{t("services.additional.highlight")}</span>
           </h3>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -187,7 +199,7 @@ const Services = () => {
           
           <div className="text-center mt-8">
             <Button variant="gold" size="lg">
-              Demander un devis personnalisé
+              {t("services.quote")}
             </Button>
           </div>
         </div>

@@ -1,16 +1,19 @@
 import { Button } from "@/components/ui/button";
 import { Menu, Phone, MessageSquare } from "lucide-react";
 import { useState } from "react";
+import { useLanguage } from "@/contexts/LanguageContext";
+import LanguageSelector from "@/components/LanguageSelector";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { t } = useLanguage();
 
   const menuItems = [
-    { label: "Accueil", href: "#hero" },
-    { label: "Prestations", href: "#services" },
-    { label: "Pourquoi nous choisir", href: "#why-choose-us" },
-    { label: "Tarifs", href: "#pricing" },
-    { label: "Contact", href: "#contact" }
+    { label: t("header.home"), href: "#hero" },
+    { label: t("header.guarantees"), href: "#guarantees" },
+    { label: t("header.pricing"), href: "#pricing" },
+    { label: t("header.services"), href: "#services" },
+    { label: t("header.contact"), href: "#booking" }
   ];
 
   return (
@@ -37,15 +40,16 @@ const Header = () => {
             ))}
           </nav>
 
-          {/* CTA Buttons - Desktop */}
+          {/* Language Selector & CTA Buttons - Desktop */}
           <div className="hidden md:flex items-center space-x-4">
+            <LanguageSelector />
             <Button variant="outline" size="sm">
               <Phone className="w-4 h-4 mr-2" />
-              Appeler
+              {t("header.call")}
             </Button>
             <Button variant="gold" size="sm">
               <MessageSquare className="w-4 h-4 mr-2" />
-              WhatsApp
+              {t("header.whatsapp")}
             </Button>
           </div>
 
@@ -74,13 +78,16 @@ const Header = () => {
               ))}
               
               <div className="flex flex-col space-y-2 pt-4">
+                <div className="mb-2">
+                  <LanguageSelector />
+                </div>
                 <Button variant="outline" size="sm" className="w-full">
                   <Phone className="w-4 h-4 mr-2" />
-                  Appeler
+                  {t("header.call")}
                 </Button>
                 <Button variant="gold" size="sm" className="w-full">
                   <MessageSquare className="w-4 h-4 mr-2" />
-                  WhatsApp
+                  {t("header.whatsapp")}
                 </Button>
               </div>
             </div>
