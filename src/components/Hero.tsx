@@ -26,7 +26,7 @@ const Hero = () => {
           </h1>
           
           {/* Slogan */}
-          <p className="text-xl md:text-2xl lg:text-3xl font-medium mb-6 italic">
+          <p className="text-xl md:text-2xl lg:text-3xl font-medium mb-6 italic text-premium-light">
             "Votre voiture, notre fierté."
           </p>
           
@@ -38,7 +38,7 @@ const Hero = () => {
           </p>
 
           {/* Features */}
-          <div className="flex flex-wrap gap-6 mb-8 justify-center lg:justify-start">
+          <div className="flex flex-wrap gap-6 mb-8 justify-center">
             <div className="flex items-center gap-2 text-premium-light">
               <MapPin className="w-5 h-5 text-premium-gold" />
               <span>Service à domicile</span>
@@ -54,7 +54,7 @@ const Hero = () => {
           </div>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 
               variant="gold" 
               size="lg" 
