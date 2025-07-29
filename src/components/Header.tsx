@@ -12,8 +12,7 @@ const Header = () => {
     { label: t("header.home"), href: "#hero" },
     { label: t("header.guarantees"), href: "#guarantees" },
     { label: t("header.pricing"), href: "#pricing" },
-    { label: t("header.services"), href: "#services" },
-    { label: t("header.contact"), href: "#booking" }
+    { label: t("header.services"), href: "#services" }
   ];
 
   return (
