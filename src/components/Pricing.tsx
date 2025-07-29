@@ -101,11 +101,45 @@ const Pricing = () => {
               
               <CardContent>
                 <div className="mb-6">
+                  <h4 className="font-semibold text-premium-dark mb-3">{t("pricing.steps")} :</h4>
+                  <ul className="space-y-2">
+                    <li className="flex items-center gap-2 text-sm">
+                      <div className="w-2 h-2 bg-premium-green rounded-full"></div>
+                      <span>{t("pricing.step1")}</span>
+                    </li>
+                    <li className="flex items-center gap-2 text-sm">
+                      <div className="w-2 h-2 bg-premium-green rounded-full"></div>
+                      <span>{t("pricing.step2")}</span>
+                    </li>
+                    <li className="flex items-center gap-2 text-sm">
+                      <div className="w-2 h-2 bg-premium-green rounded-full"></div>
+                      <span>{t("pricing.step3")}</span>
+                    </li>
+                    <li className="flex items-center gap-2 text-sm">
+                      <div className="w-2 h-2 bg-premium-green rounded-full"></div>
+                      <span>{t("pricing.step4")}</span>
+                    </li>
+                    <li className="flex items-center gap-2 text-sm">
+                      <div className="w-2 h-2 bg-premium-green rounded-full"></div>
+                      <span>{t("pricing.step5")}</span>
+                    </li>
+                    <li className="flex items-center gap-2 text-sm">
+                      <div className="w-2 h-2 bg-premium-green rounded-full"></div>
+                      <span>{t("pricing.step6")}</span>
+                    </li>
+                    <li className="flex items-center gap-2 text-sm">
+                      <div className="w-2 h-2 bg-premium-green rounded-full"></div>
+                      <span>{t("pricing.step7")}</span>
+                    </li>
+                  </ul>
+                </div>
+                
+                <div className="mb-6">
                   <h4 className="font-semibold text-premium-dark mb-3">Exemples de véhicules :</h4>
                   <ul className="space-y-2">
                     {tier.examples.map((example, exampleIndex) => (
                       <li key={exampleIndex} className="flex items-center gap-2 text-sm">
-                        <div className="w-2 h-2 bg-premium-green rounded-full"></div>
+                        <div className="w-2 h-2 bg-premium-gold rounded-full"></div>
                         <span>{example}</span>
                       </li>
                     ))}

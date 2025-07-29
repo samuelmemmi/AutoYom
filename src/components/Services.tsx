@@ -6,6 +6,12 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import simpleWashImage from "@/assets/simple-wash.jpg";
 import deepWashImage from "@/assets/deep-wash.jpg";
 import premiumWashImage from "@/assets/premium-wash.jpg";
+import interiorCleaningImage from "@/assets/interior-cleaning.jpg";
+import steamCleaningImage from "@/assets/steam-cleaning.jpg";
+import exteriorPolishingImage from "@/assets/exterior-polishing.jpg";
+import carWashingImage from "@/assets/car-washing.jpg";
+import pressureWashingImage from "@/assets/pressure-washing.jpg";
+import doorCleaningImage from "@/assets/door-cleaning.jpg";
 
 const Services = () => {
   const { t } = useLanguage();
@@ -86,6 +92,16 @@ const Services = () => {
       title: t("services.steam"),
       description: t("services.steam.desc"),
       icon: <Waves className="w-6 h-6" />
+    },
+    {
+      title: t("services.gel"),
+      description: t("services.gel.desc"),
+      icon: <Droplets className="w-6 h-6" />
+    },
+    {
+      title: t("services.vapor"),
+      description: t("services.vapor.desc"),
+      icon: <Waves className="w-6 h-6" />
     }
   ];
 
@@ -119,13 +135,13 @@ const Services = () => {
               
               <CardHeader className="text-center pb-4">
                 {/* Formula Image */}
-                <div className="mb-4 rounded-lg overflow-hidden">
-                  <img 
-                    src={formula.image} 
-                    alt={formula.title}
-                    className="w-full h-40 object-cover"
-                  />
-                </div>
+                 <div className="mb-4 rounded-lg overflow-hidden">
+                   <img 
+                     src={formula.image} 
+                     alt={formula.title}
+                     className="w-full h-40 object-cover hover:scale-105 transition-transform duration-300"
+                   />
+                 </div>
                 
                 <div className={`mx-auto p-3 rounded-full mb-4 ${
                   formula.popular 
@@ -178,7 +194,7 @@ const Services = () => {
             {t("services.additional.title")} <span className="text-premium-gold">{t("services.additional.highlight")}</span>
           </h3>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {additionalServices.map((service, index) => (
               <div 
                 key={index}
