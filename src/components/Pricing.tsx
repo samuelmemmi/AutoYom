@@ -4,7 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { Car, Truck, Users } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import compactCarImage from "@/assets/lavage-auto.jpg";
-import sedanCarImage from "@/assets/pressure-washing.jpg";
+import sedanCarImage from "@/assets/lavage-auto-866x505.jpg";
 import largeCarImage from "@/assets/steam-cleaning.jpg";
 
 const Pricing = () => {
@@ -52,9 +52,9 @@ const Pricing = () => {
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-6">
             {t("pricing.subtitle")}
           </p>
-          <Badge variant="outline" className="text-base px-6 py-2">
+          {/*<Badge variant="outline" className="text-base px-6 py-2">
             {t("pricing.badge")}
-          </Badge>
+          </Badge> */}
         </div>
 
         {/* Pricing Cards */}
