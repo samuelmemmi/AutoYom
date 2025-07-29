@@ -29,10 +29,10 @@ const Booking = () => {
               </div>
               <div>
                 <h3 className="text-xl font-semibold text-premium-light mb-2">
-                  Planification flexible
+                  {t("booking.flexible")}
                 </h3>
                 <p className="text-premium-light/80">
-                  Choisissez le créneau qui vous convient
+                  {t("booking.chooseSlot")}
                 </p>
               </div>
             </div>
@@ -43,10 +43,10 @@ const Booking = () => {
               </div>
               <div>
                 <h3 className="text-xl font-semibold text-premium-light mb-2">
-                  À votre domicile
+                  {t("booking.atHome")}
                 </h3>
                 <p className="text-premium-light/80">
-                  Nous venons directement chez vous ou à votre bureau
+                  {t("booking.comeToYou")}
                 </p>
               </div>
             </div>
@@ -57,10 +57,10 @@ const Booking = () => {
               </div>
               <div>
                 <h3 className="text-xl font-semibold text-premium-light mb-2">
-                  Confirmation immédiate
+                  {t("booking.instant")}
                 </h3>
                 <p className="text-premium-light/80">
-                  Réservation confirmée instantanément
+                  {t("booking.confirmed")}
                 </p>
               </div>
             </div>
@@ -70,7 +70,7 @@ const Booking = () => {
           <Card className="bg-premium-light border-premium-gold/20">
             <CardHeader className="text-center">
               <CardTitle className="text-2xl font-bold text-premium-dark mb-4">
-                Réservation en ligne
+                {t("booking.onlineTitle")}
               </CardTitle>
               <p className="text-muted-foreground">
                 {t("booking.description")}
@@ -94,7 +94,7 @@ const Booking = () => {
               
               <div className="text-center">
                 <p className="text-sm text-muted-foreground mb-4">
-                  Ou contactez-nous directement
+                  {t("booking.orContact")}
                 </p>
                 <div className="flex gap-3 justify-center">
                   <a href="tel:+972XXXXXXXXX">

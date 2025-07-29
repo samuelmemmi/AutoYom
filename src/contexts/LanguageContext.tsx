@@ -110,6 +110,15 @@ const translations = {
     'booking.subtitle': 'Réservez en quelques clics à l\'endroit et à l\'horaire qui vous conviennent.',
     'booking.cta': 'Réserver maintenant',
     'booking.description': 'Notre système de réservation en ligne vous permet de choisir facilement votre créneau et le lieu d\'intervention.',
+
+    'booking.flexible': "Planification flexible",
+    'booking.chooseSlot': "Choisissez le créneau qui vous convient",
+    'booking.atHome': "À votre domicile",
+    'booking.comeToYou': "Nous venons directement chez vous ou à votre bureau",
+    'booking.instant': "Confirmation immédiate",
+    'booking.confirmed': "Réservation confirmée instantanément",
+    'booking.onlineTitle': "Réservation en ligne",
+    'booking.orContact': "Ou contactez-nous directement",
     
     // Contact
     'contact.title': 'Nous',
