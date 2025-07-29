@@ -55,20 +55,24 @@ const Hero = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button 
-              variant="gold" 
-              size="lg" 
-              className="text-lg px-8 py-6 font-semibold"
-            >
-              Réserver maintenant
-            </Button>
-            <Button 
-              variant="outline" 
-              size="lg" 
-              className="text-lg px-8 py-6 border-premium-light text-black hover:bg-premium-light hover:text-premium-dark"
-            >
-              Nos tarifs
-            </Button>
+            <a href="#booking">
+              <Button 
+                variant="gold" 
+                size="lg" 
+                className="text-lg px-8 py-6 font-semibold"
+              >
+                Réserver maintenant
+              </Button>
+            </a>
+            <a href="#pricing">
+              <Button 
+                variant="outline" 
+                size="lg" 
+                className="text-lg px-8 py-6 border-premium-light text-black hover:bg-premium-light hover:text-premium-dark"
+              >
+                Nos tarifs
+              </Button>
+            </a>
           </div>
         </div>
       </div>

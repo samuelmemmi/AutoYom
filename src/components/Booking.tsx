@@ -77,18 +77,20 @@ const Booking = () => {
               </p>
             </CardHeader>
             <CardContent className="space-y-6">
-              <Button 
-                size="lg" 
-                variant="gold" 
-                className="w-full text-lg py-6"
-                onClick={() => {
-                  // Placeholder for Calendly integration
-                  console.log("Opening Calendly booking");
-                }}
+              <a
+                href="https://calendly.com/mickaelcarwash/30min"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                <Calendar className="w-5 h-5 mr-2" />
-                {t("booking.cta")}
-              </Button>
+                <Button 
+                  size="lg" 
+                  variant="gold" 
+                  className="w-full text-lg py-6"
+                >
+                  <Calendar className="w-5 h-5 mr-2" />
+                  {t("booking.cta")}
+                </Button>
+              </a>
               
               <div className="text-center">
                 <p className="text-sm text-muted-foreground mb-4">

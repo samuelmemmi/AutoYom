@@ -176,13 +176,14 @@ const Services = () => {
                     </li>
                   ))}
                 </ul>
-                
+                {/*
                 <Button 
                   variant={formula.popular ? "gold" : "premium"} 
                   className="w-full"
                 >
+
                   {t("services.choose")}
-                </Button>
+                </Button> */}
               </CardContent>
             </Card>
           ))}
@@ -214,9 +215,11 @@ const Services = () => {
           </div>
           
           <div className="text-center mt-8">
-            <Button variant="gold" size="lg">
-              {t("services.quote")}
-            </Button>
+            <a href="#contact">
+              <Button variant="gold" size="lg">
+                {t("services.quote")}
+              </Button>
+            </a>
           </div>
         </div>
       </div>

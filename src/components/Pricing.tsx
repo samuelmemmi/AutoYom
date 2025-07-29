@@ -18,7 +18,8 @@ const Pricing = () => {
       description: t("pricing.compact.desc"),
       examples: ["Peugeot 208", "Renault Clio", "Citroën C3", "Volkswagen Polo"],
       color: "bg-premium-green",
-      image: compactCarImage
+      image: compactCarImage,
+      link: "https://calendly.com/mickaelcarwash/30min"
     },
     {
       type: t("pricing.sedan"),
@@ -28,7 +29,8 @@ const Pricing = () => {
       examples: ["Peugeot 308", "Renault Mégane", "BMW Série 3", "Audi A4"],
       color: "bg-premium-gold",
       popular: true,
-      image: sedanCarImage
+      image: sedanCarImage,
+      link: "https://calendly.com/mickaelcarwash/45-minute-meeting-clone"
     },
     {
       type: t("pricing.large"),
@@ -37,7 +39,8 @@ const Pricing = () => {
       description: t("pricing.large.desc"),
       examples: ["Peugeot 5008", "Renault Espace", "BMW X5", "Audi Q7"],
       color: "bg-premium-dark",
-      image: largeCarImage
+      image: largeCarImage,
+      link: "https://calendly.com/mickaelcarwash/60-minute-meeting-clone-clone"
     }
   ];
 
@@ -111,13 +114,14 @@ const Pricing = () => {
                     ))}
                   </ul>
                 </div>
-                
-                <Button 
-                  variant={tier.popular ? "gold" : "premium"} 
-                  className="w-full"
-                >
-                  {t("pricing.reserve")}
-                </Button>
+                <a href={tier.link} target="_blank" rel="noopener noreferrer">
+                  <Button 
+                    variant={tier.popular ? "gold" : "premium"} 
+                    className="w-full"
+                  >
+                    {t("pricing.reserve")}
+                  </Button>
+                </a>
               </CardContent>
             </Card>
           ))}

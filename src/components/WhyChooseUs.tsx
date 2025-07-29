@@ -67,7 +67,7 @@ const WhyChooseUs = () => {
   ];
 
   return (
-    <section id="why-choose-us" className="py-20 bg-muted/30">
+    <section id="guarantees" className="py-20 bg-muted/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
