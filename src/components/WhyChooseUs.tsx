@@ -80,7 +80,7 @@ const WhyChooseUs = () => {
         </div>
 
         {/* Features Grid */}
-        <div className="grid md:grid-cols-2 gap-8 mb-16">
+        <div className="grid md:grid-cols-2 gap-8 mb-6">
           {features.map((feature, index) => (
             <Card key={index} className="group hover:shadow-lg transition-all duration-300 border-0 bg-card/50 backdrop-blur-sm">
               <CardContent className="p-8">
