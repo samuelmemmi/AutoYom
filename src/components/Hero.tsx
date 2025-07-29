@@ -11,7 +11,7 @@ const Hero = () => {
       <div className="absolute inset-0 z-0">
         <img 
           src={heroImage} 
-          alt="Lavage automobile professionnel" 
+          alt={t("hero.imageAlt")}
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-premium-dark/80 via-premium-dark/60 to-transparent"></div>
@@ -22,34 +22,34 @@ const Hero = () => {
         <div className="text-center max-w-4xl">
           {/* Logo/Brand */}
           <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-premium-light mb-4">
-            Lavage Auto Premium À Domicile
+            {t("hero.titlee")}
           </h1>
           
           {/* Slogan */}
           <p className="text-xl md:text-2xl lg:text-3xl font-medium mb-6 italic text-premium-light">
-            "Votre voiture, notre fierté."
+            {t("hero.slogan")}
           </p>
           
           {/* Description */}
           <p className="text-lg md:text-xl text-premium-light/90 mb-8 leading-relaxed">
-            Service de lavage automobile haut de gamme à domicile. 
+            {t("hero.description")}
             <br className="hidden md:block" />
-            Intervention mobile, 100% manuel et respectueux de votre véhicule.
+            {t("hero.description2")}
           </p>
 
           {/* Features */}
           <div className="flex flex-wrap gap-6 mb-8 justify-center">
             <div className="flex items-center gap-2 text-premium-light">
               <MapPin className="w-5 h-5 text-premium-gold" />
-              <span>Service à domicile</span>
+              <span>{t("hero.featureHome")}</span>
             </div>
             <div className="flex items-center gap-2 text-premium-light">
               <Star className="w-5 h-5 text-premium-gold" />
-              <span>Produits professionnels</span>
+              <span>{t("hero.featureProducts")}</span>
             </div>
             <div className="flex items-center gap-2 text-premium-light">
               <Phone className="w-5 h-5 text-premium-gold" />
-              <span>100% autonome</span>
+              <span>{t("hero.featureAutonomous")}</span>
             </div>
           </div>
 
@@ -61,7 +61,7 @@ const Hero = () => {
                 size="lg" 
                 className="text-lg px-8 py-6 font-semibold"
               >
-                Réserver maintenant
+                {t("hero.cta")}
               </Button>
             </a>
             <a href="#pricing">
@@ -70,7 +70,7 @@ const Hero = () => {
                 size="lg" 
                 className="text-lg px-8 py-6 border-premium-light text-black hover:bg-premium-light hover:text-premium-dark"
               >
-                Nos tarifs
+                {t("hero.pricing")}
               </Button>
             </a>
           </div>

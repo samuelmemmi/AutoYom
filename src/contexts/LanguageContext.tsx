@@ -27,6 +27,14 @@ const translations = {
     'hero.description': 'Service mobile haut de gamme, entièrement manuel avec le souci du détail à chaque étape. Nous venons chez vous avec tout notre équipement professionnel.',
     'hero.cta': 'Réserver maintenant',
     'hero.learn': 'En savoir plus',
+    'hero.titlee': "Lavage Auto Premium À Domicile",
+    'herodescription': "Service de lavage automobile haut de gamme à domicile.",
+    'herodescription2': "Intervention mobile, 100% manuel et respectueux de votre véhicule.",
+    'herofeatureHome': "Service à domicile",
+    'herofeatureProducts': "Produits professionnels",
+    'herofeatureAutonomous': "100% autonome",
+    'heropricing': "Nos tarifs",
+    'heroimageAlt': "Lavage automobile professionnel",
     
     // Guarantees (ex Why Choose Us)
     'guarantees.title': 'Nos',
@@ -178,7 +186,15 @@ const translations = {
     'hero.description': 'שירות נייד יוקרתי, ידני לחלוטין עם תשומת לב לכל פרט. אנו מגיעים אליכם עם כל הציוד המקצועי שלנו.',
     'hero.cta': 'הזמן עכשיו',
     'hero.learn': 'למידע נוסף',
-    
+    'hero.titlee': 'שטיפת רכב פרימיום עד הבית',
+    'herodescription': 'שירות שטיפת רכב יוקרתי עד הבית.',
+    'herodescription2': 'הגעה עד אליכם, עבודה ידנית בלבד ושמירה מלאה על הרכב.',
+    'herofeatureHome': 'שירות עד הבית',
+    'herofeatureProducts': 'מוצרים מקצועיים',
+    'herofeatureAutonomous': '100% עצמאי',
+    'heropricing': 'המחירים שלנו',
+    'heroimageAlt': 'שטיפת רכב מקצועית',
+
     // Guarantees
     'guarantees.title': 'הבטחות',
     'guarantees.highlight': 'האיכות שלנו',
@@ -330,6 +346,15 @@ const translations = {
     'hero.description': 'Мобильный премиальный сервис, полностью ручной с вниманием к каждой детали. Мы приезжаем к вам со всем нашим профессиональным оборудованием.',
     'hero.cta': 'Забронировать сейчас',
     'hero.learn': 'Узнать больше',
+    'hero.titlee': 'Премиум автомойка на дому',
+    'herodescription': 'Элитная услуга мойки автомобиля у вас дома.',
+    'herodescription2': 'Мобильное обслуживание, 100% ручная мойка с заботой о вашем авто.',
+    'herofeatureHome': 'Обслуживание на дому',
+    'herofeatureProducts': 'Профессиональные средства',
+    'herofeatureAutonomous': '100% автономно',
+    'heropricing': 'Наши тарифы',
+    'heroimageAlt': 'Профессиональная автомойка',
+
     
     // Guarantees
     'guarantees.title': 'Наши',
