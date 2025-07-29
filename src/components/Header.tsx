@@ -23,7 +23,7 @@ const Header = () => {
           {/* Logo */}
           <div className="flex-shrink-0">
             <h1 className="text-xl md:text-2xl font-bold text-premium-dark">
-              Lavage Pro <span className="text-premium-gold">Premium</span>
+              Mc Clean <span className="text-premium-gold">Washing</span>
             </h1>
           </div>
 

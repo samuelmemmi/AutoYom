@@ -15,7 +15,7 @@ const Contact = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-premium-dark mb-4">
-            Réservation & <span className="text-premium-green">Contact</span>
+            <span className="text-premium-green">Contact</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Réservez votre créneau en quelques clics ou contactez-nous directement

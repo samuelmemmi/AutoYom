@@ -72,7 +72,7 @@ const WhyChooseUs = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-premium-dark mb-4">
-            Pourquoi nous <span className="text-premium-green">choisir ?</span>
+            Nos garanties <span className="text-premium-green">qualité</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             L'excellence à votre service avec une approche 100% mobile et professionnelle
@@ -113,6 +113,7 @@ const WhyChooseUs = () => {
         </div>
 
         {/* Autonomy Section */}
+        {/*
         <div className="bg-premium-dark rounded-2xl p-8 md:p-12 mb-12">
           <div className="grid lg:grid-cols-2 gap-8 items-center">
             <div>
@@ -160,9 +161,10 @@ const WhyChooseUs = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
 
         {/* Brands Section */}
+        {/*
         <div className="text-center">
           <h3 className="text-2xl font-bold text-premium-dark mb-6">
             Marques <span className="text-premium-green">professionnelles</span>
@@ -186,6 +188,7 @@ const WhyChooseUs = () => {
             leur respect des surfaces et leur qualité professionnelle.
           </p>
         </div>
+        */}
       </div>
     </section>
   );
