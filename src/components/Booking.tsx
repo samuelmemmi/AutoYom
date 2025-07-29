@@ -32,7 +32,7 @@ const Booking = () => {
                   Planification flexible
                 </h3>
                 <p className="text-premium-light/80">
-                  Choisissez le créneau qui vous convient, 7j/7
+                  Choisissez le créneau qui vous convient
                 </p>
               </div>
             </div>
@@ -97,14 +97,18 @@ const Booking = () => {
                   Ou contactez-nous directement
                 </p>
                 <div className="flex gap-3 justify-center">
-                  <Button variant="outline" size="sm">
-                    <Phone className="w-4 h-4 mr-2" />
-                    {t("header.call")}
-                  </Button>
-                  <Button variant="premium" size="sm">
-                    <span className="mr-2">💬</span>
-                    {t("header.whatsapp")}
-                  </Button>
+                  <a href="tel:+972XXXXXXXXX">
+                    <Button variant="outline" size="sm">
+                      <Phone className="w-4 h-4 mr-2" />
+                      {t("header.call")}
+                    </Button>
+                  </a>
+                  <a href="https://wa.me/972XXXXXXXXX" target="_blank" rel="noopener noreferrer">
+                    <Button variant="premium" size="sm">
+                      <span className="mr-2">💬</span>
+                      {t("header.whatsapp")}
+                    </Button>
+                  </a>
                 </div>
               </div>
             </CardContent>

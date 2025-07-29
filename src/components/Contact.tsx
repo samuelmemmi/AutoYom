@@ -115,17 +115,18 @@ const Contact = () => {
                     <p className="text-premium-light/80">+972 XX XXX XXXX</p>
                   </div>
                 </div>
+                <a href="https://wa.me/972XXXXXXXXX" target="_blank" rel="noopener noreferrer">
+                  <Button 
+                    variant="gold" 
+                    className="w-full" 
+                    size="lg"
+                  >
+                    <MessageSquare className="w-5 h-5 mr-2" />
+                    Contacter via WhatsApp
+                  </Button>
+                </a>
 
-                <Button 
-                  variant="gold" 
-                  className="w-full" 
-                  size="lg"
-                >
-                  <MessageSquare className="w-5 h-5 mr-2" />
-                  Contacter via WhatsApp
-                </Button>
-
-                <div className="text-center">
+                {/*<div className="text-center">
                   <div className="bg-premium-light/10 rounded-lg p-4">
                     <QrCode className="w-8 h-8 text-premium-gold mx-auto mb-2" />
                     <p className="text-sm text-premium-gold font-medium">
@@ -135,7 +136,7 @@ const Contact = () => {
                       Bientôt disponible pour réservation instantanée
                     </p>
                   </div>
-                </div>
+                </div>*/}
               </CardContent>
             </Card>
 
@@ -154,7 +155,7 @@ const Contact = () => {
                   <Clock className="w-5 h-5 text-premium-green mt-1 flex-shrink-0" />
                   <div>
                     <p className="font-semibold text-premium-dark">Horaires flexibles</p>
-                    <p className="text-sm text-muted-foreground">Du lundi au samedi, créneaux adaptables</p>
+                    <p className="text-sm text-muted-foreground">Du lundi au vendredi, créneaux adaptables</p>
                   </div>
                 </div>
               </CardContent>
@@ -179,10 +180,6 @@ const Contact = () => {
                 <div className="flex items-center gap-3">
                   <div className="w-2 h-2 bg-premium-gold rounded-full"></div>
                   <span className="text-sm">Présentation visuelle des formules</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <div className="w-2 h-2 bg-premium-gold rounded-full"></div>
-                  <span className="text-sm">Réservation en ligne instantanée</span>
                 </div>
               </CardContent>
             </Card>
