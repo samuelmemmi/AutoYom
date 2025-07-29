@@ -261,6 +261,16 @@ const translations = {
     'booking.subtitle': 'הזמינו בכמה קליקים במקום ובזמן שנוח לכם.',
     'booking.cta': 'הזמן עכשיו',
     'booking.description': 'מערכת ההזמנות המקוונת שלנו מאפשרת לכם לבחור בקלות את המועד ומקום ההתערבות.',
+
+    'booking.flexible': 'תכנון גמיש',
+    'booking.chooseSlot': 'בחרו את המועד שנוח לכם',
+    'booking.atHome': 'בביתכם',
+    'booking.comeToYou': 'אנחנו מגיעים ישירות אליכם הביתה או למשרד',
+    'booking.instant': 'אישור מיידי',
+    'booking.confirmed': 'ההזמנה אושרה באופן מיידי',
+    'booking.onlineTitle': 'הזמנה אונליין',
+    'booking.orContact': 'או צרו איתנו קשר ישיר',
+
     
     // Contact
     'contact.title': 'צור',
@@ -403,6 +413,15 @@ const translations = {
     'booking.subtitle': 'Забронируйте за несколько кликов в удобном для вас месте и времени.',
     'booking.cta': 'Забронировать сейчас',
     'booking.description': 'Наша система онлайн-бронирования позволяет легко выбрать время и место обслуживания.',
+    'booking.flexible': 'Гибкое планирование',
+    'booking.chooseSlot': 'Выберите удобное для вас время',
+    'booking.atHome': 'У вас дома',
+    'booking.comeToYou': 'Мы приедем к вам домой или в офис',
+    'booking.instant': 'Мгновенное подтверждение',
+    'booking.confirmed': 'Бронирование подтверждено мгновенно',
+    'booking.onlineTitle': 'Онлайн-бронирование',
+    'booking.orContact': 'Или свяжитесь с нами напрямую',
+
     
     // Contact
     'contact.title': 'Связаться',
