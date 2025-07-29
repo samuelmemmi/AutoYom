@@ -22,7 +22,7 @@ const Hero = () => {
         <div className="text-center lg:text-left max-w-3xl">
           {/* Logo/Brand */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-premium-light mb-4">
-            Lavage Pro <span className="text-premium-gold">Premium</span>
+            Lavage Auto Premium <span className="text-premium-gold">À Domicile</span>
           </h1>
           
           {/* Slogan */}

@@ -14,10 +14,9 @@ const translations = {
   fr: {
     // Header
     'header.home': 'Accueil',
-    'header.guarantees': 'Nos garanties qualité',
+    'header.guarantees': 'Nos garanties',
     'header.pricing': 'Tarifs',
-    'header.services': 'Formules de lavage',
-    'header.contact': 'Réserver maintenant',
+    'header.services': 'Formules',
     'header.call': 'Appeler',
     'header.whatsapp': 'WhatsApp',
     
@@ -160,7 +159,6 @@ const translations = {
     'header.guarantees': 'הבטחות האיכות שלנו',
     'header.pricing': 'תעריפים',
     'header.services': 'נוסחאות שטיפה',
-    'header.contact': 'הזמן עכשיו',
     'header.call': 'התקשר',
     'header.whatsapp': 'WhatsApp',
     
@@ -303,7 +301,6 @@ const translations = {
     'header.guarantees': 'Наши гарантии качества',
     'header.pricing': 'Тарифы',
     'header.services': 'Формулы мойки',
-    'header.contact': 'Забронировать сейчас',
     'header.call': 'Позвонить',
     'header.whatsapp': 'WhatsApp',
     

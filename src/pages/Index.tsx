@@ -6,7 +6,6 @@ import Pricing from "@/components/Pricing";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import Booking from "@/components/Booking";
-import ComingSoon from "@/components/ComingSoon";
 
 const Index = () => {
   return (
@@ -21,7 +20,6 @@ const Index = () => {
         <Services />
         <Booking />
         <Contact />
-        <ComingSoon />
       </main>
       <Footer />
     </div>
