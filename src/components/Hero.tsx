@@ -21,12 +21,12 @@ const Hero = () => {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center lg:text-left max-w-3xl">
           {/* Logo/Brand */}
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-premium-light mb-4">
-            Lavage Auto Premium <span className="text-premium-gold">À Domicile</span>
+          <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-premium-light mb-4">
+            Lavage Auto Premium <span className="text-premium-green">À Domicile</span>
           </h1>
           
           {/* Slogan */}
-          <p className="text-xl md:text-2xl lg:text-3xl text-premium-gold font-medium mb-6 italic">
+          <p className="text-xl md:text-2xl lg:text-3xl text-premium-green font-medium mb-6 italic">
             "Votre voiture, notre fierté."
           </p>
           

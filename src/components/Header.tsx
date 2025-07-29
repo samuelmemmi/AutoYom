@@ -46,7 +46,7 @@ const Header = () => {
               <Phone className="w-4 h-4 mr-2" />
               {t("header.call")}
             </Button>
-            <Button variant="gold" size="sm">
+            <Button variant="gold" size="sm" className="text-premium-green">
               <MessageSquare className="w-4 h-4 mr-2" />
               {t("header.whatsapp")}
             </Button>
