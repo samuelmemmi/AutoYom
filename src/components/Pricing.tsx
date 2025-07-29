@@ -3,9 +3,9 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Car, Truck, Users } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
-import compactCarImage from "@/assets/compact-car.jpg";
-import sedanCarImage from "@/assets/sedan-car.jpg";
-import largeCarImage from "@/assets/large-car.jpg";
+import compactCarImage from "@/assets/lavage-auto.jpg";
+import sedanCarImage from "@/assets/pressure-washing.jpg";
+import largeCarImage from "@/assets/steam-cleaning.jpg";
 
 const Pricing = () => {
   const { t } = useLanguage();
