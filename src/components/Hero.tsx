@@ -19,14 +19,14 @@ const Hero = () => {
 
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center lg:text-left max-w-3xl">
+        <div className="text-center max-w-4xl">
           {/* Logo/Brand */}
           <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-premium-light mb-4">
-            Lavage Auto Premium <span className="text-premium-green">À Domicile</span>
+            Lavage Auto Premium À Domicile
           </h1>
           
           {/* Slogan */}
-          <p className="text-xl md:text-2xl lg:text-3xl text-premium-green font-medium mb-6 italic">
+          <p className="text-xl md:text-2xl lg:text-3xl font-medium mb-6 italic">
             "Votre voiture, notre fierté."
           </p>
           
