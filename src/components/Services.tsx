@@ -3,15 +3,15 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Sparkles, Droplets, Shield, Zap, Brush, Waves } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
-import simpleWashImage from "@/assets/simple-wash.jpg";
-import deepWashImage from "@/assets/deep-wash.jpg";
-import premiumWashImage from "@/assets/premium-wash.jpg";
-import interiorCleaningImage from "@/assets/interior-cleaning.jpg";
-import steamCleaningImage from "@/assets/steam-cleaning.jpg";
-import exteriorPolishingImage from "@/assets/exterior-polishing.jpg";
-import carWashingImage from "@/assets/car-washing.jpg";
+import simpleWashImage from "@/assets/114.jpg";
+import deepWashImage from "@/assets/car-washing.jpg";
+import premiumWashImage from "@/assets/door-cleaning.jpg";
+import interiorCleaningImage from "@/assets/dsc03094.jpg";
+import steamCleaningImage from "@/assets/interior-cleaning.jpg";
+import exteriorPolishingImage from "@/assets/lavage-auto.jpg";
+import carWashingImage from "@/assets/hero-car-wash.jpg";
 import pressureWashingImage from "@/assets/pressure-washing.jpg";
-import doorCleaningImage from "@/assets/door-cleaning.jpg";
+import doorCleaningImage from "@/assets/steam-cleaning.jpg";
 
 const Services = () => {
   const { t } = useLanguage();
