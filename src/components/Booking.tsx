@@ -97,13 +97,13 @@ const Booking = () => {
                   {t("booking.orContact")}
                 </p>
                 <div className="flex gap-3 justify-center">
-                  <a href="tel:+972XXXXXXXXX">
+                  <a href="tel:+972538478659">
                     <Button variant="outline" size="sm">
                       <Phone className="w-4 h-4 mr-2" />
                       {t("header.call")}
                     </Button>
                   </a>
-                  <a href="https://wa.me/972XXXXXXXXX" target="_blank" rel="noopener noreferrer">
+                  <a href="https://wa.me/972538478659" target="_blank" rel="noopener noreferrer">
                     <Button variant="premium" size="sm">
                       <span className="mr-2">💬</span>
                       {t("header.whatsapp")}
