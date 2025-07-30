@@ -21,7 +21,7 @@ const translations = {
     'header.whatsapp': 'WhatsApp',
     
     // Hero
-    'hero.slogan': 'Votre voiture, notre fierté.',
+    'hero.slogan': '"Votre voiture, notre fierté."',
     'hero.title': 'Service de lavage automobile',
     'hero.subtitle': 'premium à domicile',
     //'hero.description': 'Service mobile haut de gamme, entièrement manuel avec le souci du détail à chaque étape. Nous venons chez vous avec tout notre équipement professionnel.',
@@ -200,7 +200,7 @@ const translations = {
     'header.whatsapp': 'WhatsApp',
     
     // Hero
-    'hero.slogan': 'המכונית שלך, הגאווה שלנו.',
+    'hero.slogan': '"המכונית שלך, הגאווה שלנו"',
     'hero.title': 'שירות שטיפת רכבים',
     'hero.subtitle': 'פרימיום עד הבית',
     //'hero.description': 'שירות נייד יוקרתי, ידני לחלוטין עם תשומת לב לכל פרט. אנו מגיעים אליכם עם כל הציוד המקצועי שלנו.',
@@ -380,7 +380,7 @@ const translations = {
     'header.whatsapp': 'WhatsApp',
     
     // Hero
-    'hero.slogan': 'Ваш автомобиль, наша гордость.',
+    'hero.slogan': '"Ваш автомобиль, наша гордость"',
     'hero.title': 'Услуга мойки автомобилей',
     'hero.subtitle': 'премиум на дому',
     //'hero.description': 'Мобильный премиальный сервис, полностью ручной с вниманием к каждой детали. Мы приезжаем к вам со всем нашим профессиональным оборудованием.',
