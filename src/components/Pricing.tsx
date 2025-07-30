@@ -128,39 +128,41 @@ const Pricing = () => {
         </div>
 
         {/* Étapes communes */}
-        <div className="bg-muted/30 rounded-xl p-8 mb-12">
-          <h3 className="text-2xl font-bold text-premium-dark text-center mb-6">
-            {t("pricing.steps")}
-          </h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 max-w-4xl mx-auto">
-            <div className="flex items-center gap-3 bg-background rounded-lg p-4">
-              <div className="w-3 h-3 bg-premium-green rounded-full flex-shrink-0"></div>
-              <span className="text-sm font-medium">{t("pricing.step1")}</span>
-            </div>
-            <div className="flex items-center gap-3 bg-background rounded-lg p-4">
-              <div className="w-3 h-3 bg-premium-green rounded-full flex-shrink-0"></div>
-              <span className="text-sm font-medium">{t("pricing.step2")}</span>
-            </div>
-            <div className="flex items-center gap-3 bg-background rounded-lg p-4">
-              <div className="w-3 h-3 bg-premium-green rounded-full flex-shrink-0"></div>
-              <span className="text-sm font-medium">{t("pricing.step3")}</span>
-            </div>
-            <div className="flex items-center gap-3 bg-background rounded-lg p-4">
-              <div className="w-3 h-3 bg-premium-green rounded-full flex-shrink-0"></div>
-              <span className="text-sm font-medium">{t("pricing.step4")}</span>
-            </div>
-            <div className="flex items-center gap-3 bg-background rounded-lg p-4">
-              <div className="w-3 h-3 bg-premium-green rounded-full flex-shrink-0"></div>
-              <span className="text-sm font-medium">{t("pricing.step5")}</span>
-            </div>
-            <div className="flex items-center gap-3 bg-background rounded-lg p-4">
-              <div className="w-3 h-3 bg-premium-green rounded-full flex-shrink-0"></div>
-              <span className="text-sm font-medium">{t("pricing.step6")}</span>
-            </div>
-            <div className="flex items-center gap-3 bg-background rounded-lg p-4">
-              <div className="w-3 h-3 bg-premium-green rounded-full flex-shrink-0"></div>
-              <span className="text-sm font-medium">{t("pricing.step7")}</span>
-            </div>
+        <div className="bg-gradient-to-br from-premium-dark/5 to-premium-green/5 rounded-2xl p-8 mb-12 border border-premium-green/10">
+          <div className="text-center mb-8">
+            <h3 className="text-2xl md:text-3xl font-bold text-premium-dark mb-3">
+              {t("pricing.steps")}
+            </h3>
+            <div className="w-20 h-1 bg-gradient-to-r from-premium-green to-premium-gold mx-auto rounded-full"></div>
+          </div>
+          
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 max-w-6xl mx-auto">
+            {[
+              { key: "step1", number: "01" },
+              { key: "step2", number: "02" },
+              { key: "step3", number: "03" },
+              { key: "step4", number: "04" },
+              { key: "step5", number: "05" },
+              { key: "step6", number: "06" },
+              { key: "step7", number: "07" }
+            ].map((step, index) => (
+              <div key={step.key} className="group relative">
+                <div className="bg-white/80 backdrop-blur-sm rounded-xl p-4 shadow-sm border border-premium-green/10 hover:shadow-md hover:border-premium-green/20 transition-all duration-300 hover:scale-105">
+                  <div className="flex items-start gap-3">
+                    <div className="flex-shrink-0">
+                      <div className="w-8 h-8 bg-gradient-to-br from-premium-green to-premium-gold rounded-full flex items-center justify-center shadow-sm">
+                        <span className="text-xs font-bold text-white">{step.number}</span>
+                      </div>
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <span className="text-sm font-medium text-premium-dark leading-tight block">
+                        {t(`pricing.${step.key}`)}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
 
