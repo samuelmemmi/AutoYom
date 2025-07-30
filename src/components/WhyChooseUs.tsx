@@ -1,69 +1,63 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { 
-  Truck, 
-  Droplets, 
-  Zap, 
-  Award, 
-  Wrench, 
-  HandHeart,
-  Gauge,
-  Leaf
-} from "lucide-react";
+import { Truck, Droplets, Zap, Award, Wrench, HandHeart, Gauge, Leaf } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const WhyChooseUs = () => {
+  const { t } = useLanguage();
+
   const features = [
     {
       icon: <Truck className="w-8 h-8" />,
-      title: "100% Mobile et Autonome",
-      description: "Nous intervenons partout : domicile, bureau, parking souterrain",
+      title: t("guarantees.mobileTitle"),
+      description: t("guarantees.mobileDesc"),
       details: [
-        "Réserve d'eau propre embarquée",
-        "Générateur électrique autonome",
-        "Rallonges jusqu'à 30 mètres",
-        "Adaptateurs pour bornes électriques"
+        t("guarantees.mobileDetail1"),
+        t("guarantees.mobileDetail2"),
+        t("guarantees.mobileDetail3"),
+        t("guarantees.mobileDetail4")
       ]
     },
     {
       icon: <Award className="w-8 h-8" />,
-      title: "Produits Professionnels",
-      description: "Nous utilisons exclusivement des marques reconnues",
+      title: t("guarantees.productsTitle"),
+      description: t("guarantees.productsDesc"),
       details: [
-        "Green Star (écologique)",
-        "Meguiar's (premium)",
-        "Alchimy7 (professionnel)",
-        "Addict Auto (spécialisé)"
+        t("guarantees.productsDetail1"),
+        t("guarantees.productsDetail2"),
+        t("guarantees.productsDetail3"),
+        t("guarantees.productsDetail4")
       ]
     },
     {
       icon: <HandHeart className="w-8 h-8" />,
-      title: "Lavage Manuel et Respectueux",
-      description: "Chaque véhicule traité avec le plus grand soin",
+      title: t("guarantees.manualTitle"),
+      description: t("guarantees.manualDesc"),
       details: [
-        "Pinceaux et brosses adaptés",
-        "Techniques de lavage sans rayures",
-        "Attention aux détails",
-        "Respect de la carrosserie"
+        t("guarantees.manualDetail1"),
+        t("guarantees.manualDetail2"),
+        t("guarantees.manualDetail3"),
+        t("guarantees.manualDetail4")
       ]
     },
     {
       icon: <Gauge className="w-8 h-8" />,
-      title: "Service Sur-Mesure",
-      description: "Nous adaptons notre intervention à vos besoins",
+      title: t("guarantees.customTitle"),
+      description: t("guarantees.customDesc"),
       details: [
-        "Lavage à l'eau ou vapeur",
-        "Horaires flexibles",
-        "Devis personnalisés",
-        "Conseils d'entretien"
+        t("guarantees.customDetail1"),
+        t("guarantees.customDetail2"),
+        t("guarantees.customDetail3"),
+        t("guarantees.customDetail4")
       ]
     }
   ];
 
   const brands = [
-    "Green Star",
-    "Meguiar's", 
-    "Alchimy7",
-    "Addict Auto"
+    t("guarantees.brand1"),
+    t("guarantees.brand2"),
+    t("guarantees.brand3"),
+    t("guarantees.brand4")
   ];
 
   return (
@@ -72,10 +66,10 @@ const WhyChooseUs = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-premium-dark mb-4">
-            Nos garanties <span className="text-premium-green">qualité</span>
+            {t("guarantees.title")} <span className="text-premium-green">{t("guarantees.highlight")}</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            L'excellence à votre service avec une approche 100% mobile et professionnelle
+            {t("guarantees.subtitle")}
           </p>
         </div>
 
@@ -88,7 +82,6 @@ const WhyChooseUs = () => {
                   <div className="bg-premium-green text-premium-light p-3 rounded-xl group-hover:bg-premium-gold group-hover:text-premium-dark transition-colors duration-300">
                     {feature.icon}
                   </div>
-                  
                   <div className="flex-1">
                     <h3 className="text-xl font-bold text-premium-dark mb-2">
                       {feature.title}
@@ -96,7 +89,6 @@ const WhyChooseUs = () => {
                     <p className="text-muted-foreground mb-4">
                       {feature.description}
                     </p>
-                    
                     <ul className="space-y-2">
                       {feature.details.map((detail, detailIndex) => (
                         <li key={detailIndex} className="flex items-center gap-2 text-sm">
@@ -111,84 +103,6 @@ const WhyChooseUs = () => {
             </Card>
           ))}
         </div>
-
-        {/* Autonomy Section */}
-        {/*
-        <div className="bg-premium-dark rounded-2xl p-8 md:p-12 mb-12">
-          <div className="grid lg:grid-cols-2 gap-8 items-center">
-            <div>
-              <h3 className="text-3xl font-bold text-premium-light mb-6">
-                <Zap className="w-8 h-8 inline-block text-premium-gold mr-3" />
-                Intervention 100% <span className="text-premium-gold">Autonome</span>
-              </h3>
-              
-              <div className="space-y-4 text-premium-light/90">
-                <div className="flex items-start gap-3">
-                  <Droplets className="w-5 h-5 text-premium-gold mt-1 flex-shrink-0" />
-                  <div>
-                    <p className="font-semibold mb-1">Autonomie totale en eau</p>
-                    <p className="text-sm">Nous apportons notre propre réserve d'eau propre</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start gap-3">
-                  <Zap className="w-5 h-5 text-premium-gold mt-1 flex-shrink-0" />
-                  <div>
-                    <p className="font-semibold mb-1">Électricité flexible</p>
-                    <p className="text-sm">Générateur ou raccordement (rallonges jusqu'à 30m)</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start gap-3">
-                  <Wrench className="w-5 h-5 text-premium-gold mt-1 flex-shrink-0" />
-                  <div>
-                    <p className="font-semibold mb-1">Parkings souterrains</p>
-                    <p className="text-sm">Adaptateurs pour bornes de recharge électrique</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            
-            <div className="text-center lg:text-right">
-              <div className="bg-premium-light/10 rounded-lg p-6 inline-block">
-                <Gauge className="w-16 h-16 text-premium-gold mx-auto mb-4" />
-                <p className="text-premium-gold font-bold text-lg">
-                  Adaptabilité totale
-                </p>
-                <p className="text-premium-light/80 text-sm">
-                  Nous nous adaptons à tous les environnements
-                </p>
-              </div>
-            </div>
-          </div>
-        </div> */}
-
-        {/* Brands Section */}
-        {/*
-        <div className="text-center">
-          <h3 className="text-2xl font-bold text-premium-dark mb-6">
-            Marques <span className="text-premium-green">professionnelles</span>
-          </h3>
-          
-          <div className="flex flex-wrap justify-center gap-4">
-            {brands.map((brand, index) => (
-              <Badge 
-                key={index}
-                variant="outline"
-                className="px-6 py-2 text-base font-medium border-premium-green text-premium-green hover:bg-premium-green hover:text-premium-light transition-colors duration-300"
-              >
-                <Award className="w-4 h-4 mr-2" />
-                {brand}
-              </Badge>
-            ))}
-          </div>
-          
-          <p className="text-sm text-muted-foreground mt-4 max-w-2xl mx-auto">
-            Nous travaillons uniquement avec des marques reconnues pour leur efficacité, 
-            leur respect des surfaces et leur qualité professionnelle.
-          </p>
-        </div>
-        */}
       </div>
     </section>
   );
