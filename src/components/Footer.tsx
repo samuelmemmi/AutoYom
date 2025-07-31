@@ -43,10 +43,12 @@ const Footer = () => {
                 <Phone className="w-4 h-4 text-premium-gold" />
                 <span>+972 538478659</span>
               </div>
-              <div className="flex items-center gap-2">
-                <MessageSquare className="w-4 h-4 text-premium-gold" />
-                <span>WhatsApp disponible</span>
-              </div>
+              <a href="https://wa.me/972538478659" target="_blank" rel="noopener noreferrer">
+                <div className="flex items-center gap-2">
+                  <MessageSquare className="w-4 h-4 text-premium-gold" />
+                  <span>WhatsApp</span>
+                </div>
+              </a>
               <div className="flex items-center gap-2">
                 <MapPin className="w-4 h-4 text-premium-gold" />
                 <span>Service à domicile</span>

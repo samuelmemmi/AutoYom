@@ -46,10 +46,12 @@ const Header = () => {
               <Phone className="w-4 h-4 mr-2" />
               {t("header.call")}
             </Button>
-            <Button size="sm" className="bg-premium-green text-white hover:bg-premium-gold hover:text-premium-dark border-0">
-              <MessageSquare className="w-4 h-4 mr-2" />
-              {t("header.whatsapp")}
-            </Button>
+            <a href="https://wa.me/972538478659" target="_blank" rel="noopener noreferrer">
+              <Button size="sm" className="bg-premium-green text-white hover:bg-premium-gold hover:text-premium-dark border-0">
+                <MessageSquare className="w-4 h-4 mr-2" />
+                {t("header.whatsapp")}
+              </Button>
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -84,10 +86,12 @@ const Header = () => {
                   <Phone className="w-4 h-4 mr-2" />
                   {t("header.call")}
                 </Button>
-                <Button variant="gold" size="sm" className="w-full">
-                  <MessageSquare className="w-4 h-4 mr-2" />
-                  {t("header.whatsapp")}
-                </Button>
+                <a href="https://wa.me/972538478659" target="_blank" rel="noopener noreferrer">
+                  <Button variant="gold" size="sm" className="w-full">
+                    <MessageSquare className="w-4 h-4 mr-2" />
+                      {t("header.whatsapp")}
+                  </Button>
+                </a>
               </div>
             </div>
           </div>
