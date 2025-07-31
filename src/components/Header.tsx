@@ -42,10 +42,12 @@ const Header = () => {
           {/* Language Selector & CTA Buttons - Desktop */}
           <div className="hidden md:flex items-center space-x-4">
             <LanguageSelector />
-            <Button variant="outline" size="sm">
-              <Phone className="w-4 h-4 mr-2" />
-              {t("header.call")}
-            </Button>
+            <a href="tel:+972538478659">
+              <Button variant="outline" size="sm">
+                <Phone className="w-4 h-4 mr-2" />
+                {t("header.call")}
+              </Button>
+            </a>
             <a href="https://wa.me/972538478659" target="_blank" rel="noopener noreferrer">
               <Button size="sm" className="bg-premium-green text-white hover:bg-premium-gold hover:text-premium-dark border-0">
                 <MessageSquare className="w-4 h-4 mr-2" />
@@ -82,10 +84,12 @@ const Header = () => {
                 <div className="mb-2">
                   <LanguageSelector />
                 </div>
-                <Button variant="outline" size="sm" className="w-full">
-                  <Phone className="w-4 h-4 mr-2" />
-                  {t("header.call")}
-                </Button>
+                <a href="tel:+972538478659">
+                  <Button variant="outline" size="sm" className="w-full">
+                    <Phone className="w-4 h-4 mr-2" />
+                    {t("header.call")}
+                  </Button>
+                </a>
                 <a href="https://wa.me/972538478659" target="_blank" rel="noopener noreferrer">
                   <Button variant="gold" size="sm" className="w-full">
                     <MessageSquare className="w-4 h-4 mr-2" />
