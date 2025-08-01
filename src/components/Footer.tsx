@@ -126,6 +126,23 @@ const Footer = () => {
               <span>Satisfaction garantie</span>
             </div>
           </div>
+          
+          {/* Legal Links */}
+          <div className="flex flex-col md:flex-row justify-center items-center gap-4 mt-4 pt-4 border-t border-premium-light/10">
+            <div className="flex items-center gap-4 text-xs text-premium-light/50">
+              <a href="/mentions-legales" className="hover:text-premium-gold transition-colors">
+                Mentions légales
+              </a>
+              <span>•</span>
+              <a href="/politique-confidentialite" className="hover:text-premium-gold transition-colors">
+                Politique de confidentialité
+              </a>
+              <span>•</span>
+              <a href="/conditions-utilisation" className="hover:text-premium-gold transition-colors">
+                Conditions d'utilisation
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </footer>
