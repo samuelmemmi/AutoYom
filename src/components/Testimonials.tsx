@@ -8,39 +8,40 @@ const Testimonials = () => {
   const { t } = useLanguage();
 
   const testimonials = [
-    {
-      name: "Damien OLMOS",
-      date: "2024-05-09",
-      rating: 5,
-      text: "Merci à Yoobi pour la refonte de notre site internet Ticket Immobilier, et un grand merci à Louis pour son accompagnement plus que rigoureux...",
-      platform: "Google",
-      verified: true,
-    },
-    {
-      name: "Aristocar",
-      date: "2024-05-09",
-      rating: 5,
-      text: "Super travail, très satisfait du rendu. Équipe très professionnelle et sérieuse. Je recommande !!",
-      platform: "Google",
-      verified: true,
-    },
-    {
-      name: "Reza Fazlollahi",
-      date: "2024-04-26",
-      rating: 5,
-      text: "Très satisfait du travail et du professionnalisme de l'équipe Yoobi pour mon site internet ! Ils ont été à l'écoute et ont travaillé...",
-      platform: "Google",
-      verified: true,
-    },
-    {
-      name: "pierre-louis Cros",
-      date: "2023-10-06",
-      rating: 5,
-      text: "Un très grand merci à vous trois, Louis Pusset, Lucas Pusset, Yoan Mangel.",
-      platform: "Google",
-      verified: true,
-    }
-  ];
+  {
+    name: "David Benhamou",
+    date: "2025-04-09",
+    rating: 5,
+    text: "Service impeccable ! Ma voiture n’a jamais été aussi propre. Le technicien est venu à l’heure, super équipé, et très professionnel. Je recommande à 100%.",
+    platform: "Google",
+    verified: true,
+  },
+  {
+    name: "Sarah Cohen",
+    date: "2025-05-15",
+    rating: 5,
+    text: "Un nettoyage intérieur/extérieur au top, directement devant chez moi. L’équipe est ponctuelle, efficace, et le résultat est impressionnant.",
+    platform: "Google",
+    verified: true,
+  },
+  {
+    name: "Jonathan Abitbol",
+    date: "2024-11-26",
+    rating: 5,
+    text: "Très satisfait de leur service à domicile. Plus besoin de me déplacer pour avoir une voiture nickel, même les jantes brillent comme neuves !",
+    platform: "Google",
+    verified: true,
+  },
+  {
+    name: "Rachel Attal",
+    date: "2024-10-06",
+    rating: 5,
+    text: "Ponctuels, souriants et méticuleux. Ils ont réussi à enlever des taches que je pensais impossibles. Je referai appel à eux sans hésiter.",
+    platform: "Google",
+    verified: true,
+  }
+];
+
 
   const [expandedIndexes, setExpandedIndexes] = useState([]);
 

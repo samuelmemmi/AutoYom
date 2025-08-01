@@ -16,7 +16,7 @@ const Pricing = () => {
       price: "130 ₪",
       icon: <Car className="w-8 h-8" />,
       description: t("pricing.compact.desc"),
-      examples: ["Peugeot 208", "Renault Clio", "Citroën C3", "Volkswagen Polo"],
+      examples: ["Kia Picanto", "Fiat 500", "Austin Cooper", "Volkswagen Polo"],
       color: "bg-premium-green",
       image: compactCarImage,
       link: "https://calendly.com/mickaelcarwash/30min"
@@ -26,7 +26,7 @@ const Pricing = () => {
       price: "150 ₪",
       icon: <CarFront className="w-8 h-8" />,
       description: t("pricing.sedan.desc"),
-      examples: ["Peugeot 308", "Renault Mégane", "BMW Série 3", "Audi A4"],
+      examples: ["Kia Sportage", "Toyota Juke", "Kangoo, Berlingo", "Range Rover", "Tigoo 4", "Kia Sorento"],
       color: "bg-premium-gold",
       popular: true,
       image: sedanCarImage,
@@ -37,7 +37,7 @@ const Pricing = () => {
       price: "180 ₪",
       icon: <Truck className="w-8 h-8" />,
       description: t("pricing.large.desc"),
-      examples: ["Peugeot 5008", "Renault Espace", "BMW X5", "Audi Q7"],
+      examples: ["Mercedes SUV", "RAM", "BMW X5", "Audi Q7"],
       color: "bg-premium-dark",
       image: largeCarImage,
       link: "https://calendly.com/mickaelcarwash/60-minute-meeting-clone-clone"
