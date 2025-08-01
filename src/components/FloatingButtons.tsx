@@ -19,7 +19,7 @@ const FloatingButtons = () => {
           size="lg"
           className="bg-green-500 hover:bg-green-600 text-white rounded-full w-14 h-14 shadow-lg hover:shadow-xl transition-all duration-300 group-hover:scale-110"
         >
-          <FaWhatsapp className="text-[36px] text-white" />
+          <FaWhatsapp style={{ fontSize: '36px' }} className="text-white" />
         </Button>
       </a>
 
