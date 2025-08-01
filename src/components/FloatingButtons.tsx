@@ -17,9 +17,9 @@ const FloatingButtons = () => {
       >
         <Button
           size="lg"
-          className="bg-green-500 hover:bg-green-600 text-white rounded-full w-12 h-12 shadow-lg hover:shadow-xl transition-all duration-300 group-hover:scale-110"
+          className="bg-green-500 hover:bg-green-600 text-white rounded-full w-10 h-10 shadow-lg hover:shadow-xl transition-all duration-300 group-hover:scale-110"
         >
-          <FaWhatsapp style={{ width: '32px', height: '32px' }} className="text-white" />
+          <FaWhatsapp style={{ width: '28px', height: '28px' }} className="text-white" />
         </Button>
       </a>
 
@@ -28,9 +28,9 @@ const FloatingButtons = () => {
       <a href="tel:+972538478659" className="group">
         <Button
           size="lg"
-          className="bg-blue-500 hover:bg-blue-600 text-white rounded-full w-12 h-12 shadow-lg hover:shadow-xl transition-all duration-300 group-hover:scale-110"
+          className="bg-blue-500 hover:bg-blue-600 text-white rounded-full w-10 h-10 shadow-lg hover:shadow-xl transition-all duration-300 group-hover:scale-110"
         >
-          <Phone style={{ width: '32px', height: '32px' }} className="text-white" />
+          <Phone style={{ width: '28px', height: '28px' }} className="text-white" />
         </Button>
       </a>
 
@@ -43,9 +43,9 @@ const FloatingButtons = () => {
       >
         <Button
           size="lg"
-          className="bg-premium-gold hover:bg-premium-gold/90 text-premium-dark rounded-full w-12 h-12 shadow-lg hover:shadow-xl transition-all duration-300 group-hover:scale-110"
+          className="bg-premium-gold hover:bg-premium-gold/90 text-premium-dark rounded-full w-10 h-10 shadow-lg hover:shadow-xl transition-all duration-300 group-hover:scale-110"
         >
-          <Calendar style={{ width: '32px', height: '32px' }} className="text-white" />
+          <Calendar style={{ width: '28px', height: '28px' }} className="text-white" />
         </Button>
       </a>
 
