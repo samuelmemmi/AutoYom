@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Phone, MessageSquare, MapPin, Clock, Mail, Star } from "lucide-react";
+import { Phone, MessageSquare, MapPin, Clock, Mail, Star, Facebook, Instagram } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const Footer = () => {
@@ -56,6 +56,24 @@ const Footer = () => {
               <div className="flex items-center gap-2">
                 <Clock className="w-4 h-4 text-premium-gold" />
                 <span>Lun-Ven, horaires flexibles</span>
+              </div>
+              
+              {/* Social Media Links */}
+              <div className="mt-4">
+                <h5 className="font-semibold text-premium-gold mb-2">Suivez-nous</h5>
+                <div className="flex gap-3">
+                  <a href="#" target="_blank" rel="noopener noreferrer" className="text-premium-light/70 hover:text-premium-gold transition-colors">
+                    <Facebook className="w-5 h-5" />
+                  </a>
+                  <a href="#" target="_blank" rel="noopener noreferrer" className="text-premium-light/70 hover:text-premium-gold transition-colors">
+                    <Instagram className="w-5 h-5" />
+                  </a>
+                  <a href="#" target="_blank" rel="noopener noreferrer" className="text-premium-light/70 hover:text-premium-gold transition-colors">
+                    <div className="w-5 h-5 bg-premium-light/70 rounded-sm flex items-center justify-center text-xs font-bold hover:bg-premium-gold transition-colors">
+                      T
+                    </div>
+                  </a>
+                </div>
               </div>
             </div>
           </div>

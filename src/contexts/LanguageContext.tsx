@@ -98,6 +98,11 @@ const translations = {
     'pricing.custom.title': 'Devis personnalisé',
     'pricing.custom.desc': 'Pour les prestations spéciales ou véhicules particuliers',
     
+    // Testimonials
+    'testimonials.title': 'Quelques avis de nos',
+    'testimonials.highlight': 'clients',
+    'testimonials.subtitle': 'Découvrez ce que les clients pensent de nous',
+    
     // Services
     'services.title': 'Nos',
     'services.highlight': 'Formules de Lavage',

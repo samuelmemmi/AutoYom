@@ -4,7 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
-import { Phone, MessageSquare, MapPin, Clock, QrCode } from "lucide-react";
+import { Phone, MessageSquare, MapPin, Clock, QrCode, Facebook, Instagram } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const Contact = () => {
@@ -125,6 +125,24 @@ const Contact = () => {
                     Contacter via WhatsApp
                   </Button>
                 </a>
+
+                {/* Social Media Links */}
+                <div className="mt-6">
+                  <h5 className="font-semibold text-premium-gold mb-3">Suivez-nous</h5>
+                  <div className="flex gap-4 justify-center">
+                    <a href="#" target="_blank" rel="noopener noreferrer" className="text-premium-light/70 hover:text-premium-gold transition-colors">
+                      <Facebook className="w-6 h-6" />
+                    </a>
+                    <a href="#" target="_blank" rel="noopener noreferrer" className="text-premium-light/70 hover:text-premium-gold transition-colors">
+                      <Instagram className="w-6 h-6" />
+                    </a>
+                    <a href="#" target="_blank" rel="noopener noreferrer" className="text-premium-light/70 hover:text-premium-gold transition-colors">
+                      <div className="w-6 h-6 bg-premium-light/70 rounded-sm flex items-center justify-center text-sm font-bold hover:bg-premium-gold transition-colors">
+                        T
+                      </div>
+                    </a>
+                  </div>
+                </div>
 
                 {/*<div className="text-center">
                   <div className="bg-premium-light/10 rounded-lg p-4">

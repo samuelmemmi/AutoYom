@@ -1,7 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Car, Truck, Users } from "lucide-react";
+import { Car, Truck, Users, CarFront } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import compactCarImage from "@/assets/lavage-auto.jpg";
 import sedanCarImage from "@/assets/lavage-auto-866x505.jpg";
@@ -24,7 +24,7 @@ const Pricing = () => {
     {
       type: t("pricing.sedan"),
       price: "150 ₪",
-      icon: <Car className="w-8 h-8" />,
+      icon: <CarFront className="w-8 h-8" />,
       description: t("pricing.sedan.desc"),
       examples: ["Peugeot 308", "Renault Mégane", "BMW Série 3", "Audi A4"],
       color: "bg-premium-gold",
@@ -35,7 +35,7 @@ const Pricing = () => {
     {
       type: t("pricing.large"),
       price: "180 ₪",
-      icon: <Users className="w-8 h-8" />,
+      icon: <Truck className="w-8 h-8" />,
       description: t("pricing.large.desc"),
       examples: ["Peugeot 5008", "Renault Espace", "BMW X5", "Audi Q7"],
       color: "bg-premium-dark",
