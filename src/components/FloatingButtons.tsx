@@ -19,7 +19,7 @@ const FloatingButtons = () => {
           size="lg"
           className="bg-green-500 hover:bg-green-600 text-white rounded-full w-14 h-14 shadow-lg hover:shadow-xl transition-all duration-300 group-hover:scale-110"
         >
-          <FaWhatsapp className="w-10 h-10 text-white" />
+          <FaWhatsapp className="text-[32px] text-white" />
         </Button>
       </a>
 
@@ -30,7 +30,7 @@ const FloatingButtons = () => {
           size="lg"
           className="bg-blue-500 hover:bg-blue-600 text-white rounded-full w-14 h-14 shadow-lg hover:shadow-xl transition-all duration-300 group-hover:scale-110"
         >
-          <Phone className="w-10 h-10" />
+          <Phone className="text-[32px] text-white" />
         </Button>
       </a>
 
@@ -45,7 +45,7 @@ const FloatingButtons = () => {
           size="lg"
           className="bg-premium-gold hover:bg-premium-gold/90 text-premium-dark rounded-full w-14 h-14 shadow-lg hover:shadow-xl transition-all duration-300 group-hover:scale-110"
         >
-          <Calendar className="w-10 h-10" />
+          <Calendar className="text-[32px] text-white" />
         </Button>
       </a>
 
