@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Phone, MessageSquare, Calendar } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { FaWhatsapp } from "react-icons/fa";
 
 const FloatingButtons = () => {
   const { t } = useLanguage();
@@ -18,9 +19,10 @@ const FloatingButtons = () => {
           size="lg"
           className="bg-green-500 hover:bg-green-600 text-white rounded-full w-14 h-14 shadow-lg hover:shadow-xl transition-all duration-300 group-hover:scale-110"
         >
-          <MessageSquare className="w-6 h-6" />
+          <FaWhatsapp className="w-6 h-6 text-white" />
         </Button>
       </a>
+
 
       {/* Phone Button */}
       <a href="tel:+972538478659" className="group">

@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Phone, MessageSquare, MapPin, Clock, Mail, Star, Facebook, Instagram } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { FaTiktok } from "react-icons/fa";
 
 const Footer = () => {
   const { t } = useLanguage();
@@ -69,9 +70,7 @@ const Footer = () => {
                     <Instagram className="w-5 h-5" />
                   </a>
                   <a href="#" target="_blank" rel="noopener noreferrer" className="text-premium-light/70 hover:text-premium-gold transition-colors">
-                    <div className="w-5 h-5 bg-premium-light/70 rounded-sm flex items-center justify-center text-xs font-bold hover:bg-premium-gold transition-colors">
-                      T
-                    </div>
+                    <FaTiktok className="w-6 h-6" />
                   </a>
                 </div>
               </div>

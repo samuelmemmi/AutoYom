@@ -1,6 +1,8 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Star } from "lucide-react";
+import { Star, CheckCircle } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { useState } from "react";
+import { FcGoogle } from "react-icons/fc";
 
 const Testimonials = () => {
   const { t } = useLanguage();
@@ -12,7 +14,7 @@ const Testimonials = () => {
       rating: 5,
       text: "Merci à Yoobi pour la refonte de notre site internet Ticket Immobilier, et un grand merci à Louis pour son accompagnement plus que rigoureux...",
       platform: "Google",
-      verified: true
+      verified: true,
     },
     {
       name: "Aristocar",
@@ -20,7 +22,7 @@ const Testimonials = () => {
       rating: 5,
       text: "Super travail, très satisfait du rendu. Équipe très professionnelle et sérieuse. Je recommande !!",
       platform: "Google",
-      verified: true
+      verified: true,
     },
     {
       name: "Reza Fazlollahi",
@@ -28,7 +30,7 @@ const Testimonials = () => {
       rating: 5,
       text: "Très satisfait du travail et du professionnalisme de l'équipe Yoobi pour mon site internet ! Ils ont été à l'écoute et ont travaillé...",
       platform: "Google",
-      verified: true
+      verified: true,
     },
     {
       name: "pierre-louis Cros",
@@ -36,9 +38,17 @@ const Testimonials = () => {
       rating: 5,
       text: "Un très grand merci à vous trois, Louis Pusset, Lucas Pusset, Yoan Mangel.",
       platform: "Google",
-      verified: true
+      verified: true,
     }
   ];
+
+  const [expandedIndexes, setExpandedIndexes] = useState([]);
+
+  const toggleExpand = (index) => {
+    setExpandedIndexes((prev) =>
+      prev.includes(index) ? prev.filter((i) => i !== index) : [...prev, index]
+    );
+  };
 
   return (
     <section id="testimonials" className="py-20 bg-gradient-to-br from-muted/30 to-background">
@@ -55,60 +65,66 @@ const Testimonials = () => {
 
         {/* Testimonials Grid */}
         <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-6">
-          {testimonials.map((testimonial, index) => (
-            <Card key={index} className="border-0 shadow-lg hover:shadow-xl transition-shadow duration-300 bg-white">
-              <CardContent className="p-6">
-                {/* Header with platform and verified badge */}
-                <div className="flex items-center justify-between mb-4">
-                  <div className="flex items-center gap-2">
-                    <div className="w-5 h-5 bg-blue-500 rounded-full flex items-center justify-center">
-                      <span className="text-white text-xs font-bold">G</span>
+          {testimonials.map((testimonial, index) => {
+            const isExpanded = expandedIndexes.includes(index);
+            const isLong = testimonial.text.length > 100;
+            const displayText = isExpanded || !isLong
+              ? testimonial.text
+              : testimonial.text.slice(0, 100) + "…";
+
+            return (
+              <Card key={index} className="border-0 shadow-lg hover:shadow-xl transition-shadow duration-300 bg-white">
+                <CardContent className="p-6">
+                  {/* Header with platform and verified badge */}
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="flex items-center gap-2">
+                      <FcGoogle className="w-5 h-5" />
+                      <span className="text-sm font-medium text-muted-foreground">
+                        {testimonial.platform}
+                      </span>
                     </div>
-                    <span className="text-sm font-medium text-muted-foreground">{testimonial.platform}</span>
+                    {testimonial.verified && (
+                      <CheckCircle className="w-4 h-4 text-green-500" aria-label="Avis vérifié" role="img" />
+                    )}
                   </div>
-                  {testimonial.verified && (
-                    <div className="flex items-center gap-1">
-                      <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
-                      <span className="text-xs text-muted-foreground">Vérifié</span>
+
+                  {/* User Info */}
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-10 h-10 bg-premium-green rounded-full flex items-center justify-center">
+                      <span className="text-white font-semibold text-lg">
+                        {testimonial.name.charAt(0)}
+                      </span>
                     </div>
+                    <div>
+                      <h4 className="font-semibold text-premium-dark">{testimonial.name}</h4>
+                      <p className="text-sm text-muted-foreground">{testimonial.date}</p>
+                    </div>
+                  </div>
+
+                  {/* Rating */}
+                  <div className="flex items-center gap-1 mb-4">
+                    {[...Array(testimonial.rating)].map((_, starIndex) => (
+                      <Star key={starIndex} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                    ))}
+                  </div>
+
+                  {/* Review Text */}
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    {displayText}
+                  </p>
+
+                  {isLong && (
+                    <button
+                      onClick={() => toggleExpand(index)}
+                      className="text-xs text-premium-green hover:text-premium-gold mt-2 font-medium"
+                    >
+                      {isExpanded ? "Voir moins" : "Lire la suite"}
+                    </button>
                   )}
-                </div>
-
-                {/* User Info */}
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-10 h-10 bg-premium-green rounded-full flex items-center justify-center">
-                    <span className="text-white font-semibold text-lg">
-                      {testimonial.name.charAt(0)}
-                    </span>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-premium-dark">{testimonial.name}</h4>
-                    <p className="text-sm text-muted-foreground">{testimonial.date}</p>
-                  </div>
-                </div>
-
-                {/* Rating */}
-                <div className="flex items-center gap-1 mb-4">
-                  {[...Array(testimonial.rating)].map((_, starIndex) => (
-                    <Star 
-                      key={starIndex} 
-                      className="w-4 h-4 fill-yellow-400 text-yellow-400" 
-                    />
-                  ))}
-                </div>
-
-                {/* Review Text */}
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  {testimonial.text}
-                </p>
-
-                {/* Read More Link */}
-                <button className="text-xs text-premium-green hover:text-premium-gold mt-2 font-medium">
-                  Lire la suite
-                </button>
-              </CardContent>
-            </Card>
-          ))}
+                </CardContent>
+              </Card>
+            );
+          })}
         </div>
 
         {/* Bottom CTA */}

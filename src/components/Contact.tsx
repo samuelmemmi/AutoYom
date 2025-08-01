@@ -6,6 +6,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Textarea } from "@/components/ui/textarea";
 import { Phone, MessageSquare, MapPin, Clock, QrCode, Facebook, Instagram } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { FaTiktok } from "react-icons/fa";
 
 const Contact = () => {
   const { t } = useLanguage();
@@ -137,9 +138,7 @@ const Contact = () => {
                       <Instagram className="w-6 h-6" />
                     </a>
                     <a href="#" target="_blank" rel="noopener noreferrer" className="text-premium-light/70 hover:text-premium-gold transition-colors">
-                      <div className="w-6 h-6 bg-premium-light/70 rounded-sm flex items-center justify-center text-sm font-bold hover:bg-premium-gold transition-colors">
-                        T
-                      </div>
+                      <FaTiktok className="w-6 h-6" />
                     </a>
                   </div>
                 </div>
