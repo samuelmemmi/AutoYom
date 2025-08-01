@@ -24,10 +24,10 @@ const LegalNotice = () => {
           <section>
             <h2 className="text-xl font-semibold text-premium-dark mb-4">Éditeur du site</h2>
             <div className="text-gray-700 leading-relaxed space-y-2">
-              <p><strong>Nom de l'entreprise :</strong> Lavage Pro Premium</p>
+              <p><strong>Nom de l'entreprise :</strong> Mc Clean</p>
               <p><strong>Activité :</strong> Service de lavage automobile à domicile</p>
               <p><strong>Téléphone :</strong> +972 538478659</p>
-              <p><strong>Zone d'intervention :</strong> Service à domicile</p>
+              <p><strong>Zone d'intervention :</strong> Service à domicile dans les environs de Netanya</p>
             </div>
           </section>
 
@@ -36,14 +36,6 @@ const LegalNotice = () => {
             <p className="text-gray-700 leading-relaxed">
               Le directeur de la publication est le représentant légal de Lavage Pro Premium.
             </p>
-          </section>
-
-          <section>
-            <h2 className="text-xl font-semibold text-premium-dark mb-4">Hébergement</h2>
-            <div className="text-gray-700 leading-relaxed space-y-2">
-              <p><strong>Hébergeur :</strong> Lovable</p>
-              <p><strong>Site web :</strong> https://lovable.dev</p>
-            </div>
           </section>
 
           <section>
