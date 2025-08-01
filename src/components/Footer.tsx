@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Phone, MessageSquare, MapPin, Clock, Mail, Star, Facebook, Instagram } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { FaTiktok } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const { t } = useLanguage();
@@ -130,17 +131,17 @@ const Footer = () => {
           {/* Legal Links */}
           <div className="flex flex-col md:flex-row justify-center items-center gap-4 mt-4 pt-4 border-t border-premium-light/10">
             <div className="flex items-center gap-4 text-xs text-premium-light/50">
-              <a href="/mentions-legales" className="hover:text-premium-gold transition-colors">
+              <Link to="/mentions-legales" className="hover:text-premium-gold transition-colors">
                 Mentions légales
-              </a>
+              </Link>
               <span>•</span>
-              <a href="/politique-confidentialite" className="hover:text-premium-gold transition-colors">
+              <Link to="/politique-confidentialite" className="hover:text-premium-gold transition-colors">
                 Politique de confidentialité
-              </a>
+              </Link>
               <span>•</span>
-              <a href="/conditions-utilisation" className="hover:text-premium-gold transition-colors">
+              <Link to="/conditions-utilisation" className="hover:text-premium-gold transition-colors">
                 Conditions d'utilisation
-              </a>
+              </Link>
             </div>
           </div>
         </div>
