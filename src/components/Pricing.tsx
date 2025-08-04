@@ -26,7 +26,7 @@ const Pricing = () => {
       price: "150 ₪",
       icon: <CarFront className="w-8 h-8" />,
       description: t("pricing.sedan.desc"),
-      examples: ["Kia Sportage", "Toyota Juke", "Kangoo, Berlingo", "Range Rover", "Tigoo 4", "Kia Sorento"],
+      examples: ["Kia Sportage", "Toyota Juke", "Kangoo, Berlingo", "Range Rover", "Cherry Tiggo", "Kia Sorento"],
       color: "bg-premium-gold",
       popular: true,
       image: sedanCarImage,
