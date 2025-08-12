@@ -26,7 +26,7 @@ const Pricing = () => {
       price: "150 ₪",
       icon: <CarFront className="w-8 h-8" />,
       description: t("pricing.sedan.desc"),
-      examples: ["Kia Sportage", "Toyota Juke", "Kangoo, Berlingo", "Range Rover", "Cherry Tiggo", "Kia Sorento"],
+      examples: ["Kia Sportage", "Nissan Juke", "Range Rover", "Cherry Tiggo", "Kia Sorento", "Tesla Model 1 & 2"],
       color: "bg-premium-gold",
       popular: true,
       image: sedanCarImage,
@@ -37,7 +37,7 @@ const Pricing = () => {
       price: "180 ₪",
       icon: <Truck className="w-8 h-8" />,
       description: t("pricing.large.desc"),
-      examples: ["Mercedes SUV", "RAM", "BMW X5", "Audi Q7"],
+      examples: ["Mercedes SUV", "RAM", "BMW X5", "Audi Q7", "Tesla Model 3"],
       color: "bg-premium-dark",
       image: largeCarImage,
       link: "https://calendly.com/mickaelcarwash/60-minute-meeting-clone-clone"
@@ -144,7 +144,9 @@ const Pricing = () => {
               { key: "step4", number: "04" },
               { key: "step5", number: "05" },
               { key: "step6", number: "06" },
-              { key: "step7", number: "07" }
+              { key: "step7", number: "07" },
+              { key: "step8", number: "08" },
+              { key: "step9", number: "09" }
             ].map((step, index) => (
               <div key={step.key} className="group relative">
                 <div className="bg-white/80 backdrop-blur-sm rounded-xl p-4 shadow-sm border border-premium-green/10 hover:shadow-md hover:border-premium-green/20 transition-all duration-300 hover:scale-105">

@@ -24,7 +24,7 @@ const LegalNotice = () => {
           <section>
             <h2 className="text-xl font-semibold text-premium-dark mb-4">Éditeur du site</h2>
             <div className="text-gray-700 leading-relaxed space-y-2">
-              <p><strong>Nom de l'entreprise :</strong> Mc Clean</p>
+              <p><strong>Nom de l'entreprise :</strong> McClean</p>
               <p><strong>Activité :</strong> Service de lavage automobile à domicile</p>
               <p><strong>Téléphone :</strong> +972 538478659</p>
               <p><strong>Zone d'intervention :</strong> Service à domicile dans les environs de Netanya</p>
