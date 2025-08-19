@@ -19,7 +19,7 @@ const Pricing = () => {
       examples: ["Kia Picanto", "Fiat 500", "Austin Cooper", "Volkswagen Polo"],
       color: "bg-premium-green",
       image: compactCarImage,
-      link: "https://calendly.com/mickaelcarwash/30min"
+      link: "https://cal.com/mickael-s4lcqz/45min"
     },
     {
       type: t("pricing.sedan"),
@@ -30,7 +30,7 @@ const Pricing = () => {
       color: "bg-premium-gold",
       popular: true,
       image: sedanCarImage,
-      link: "https://calendly.com/mickaelcarwash/45-minute-meeting-clone"
+      link: "https://cal.com/mickael-s4lcqz/45min"
     },
     {
       type: t("pricing.large"),
@@ -40,7 +40,7 @@ const Pricing = () => {
       examples: ["Mercedes SUV", "RAM", "BMW X5", "Audi Q7", "Tesla Model 3"],
       color: "bg-premium-dark",
       image: largeCarImage,
-      link: "https://calendly.com/mickaelcarwash/60-minute-meeting-clone-clone"
+      link: "https://cal.com/mickael-s4lcqz/45min"
     }
   ];
 

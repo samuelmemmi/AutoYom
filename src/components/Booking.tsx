@@ -78,7 +78,7 @@ const Booking = () => {
             </CardHeader>
             <CardContent className="space-y-6">
               <a
-                href="https://calendly.com/mickaelcarwash/30min"
+                href="https://cal.com/mickael-s4lcqz/45min"
                 target="_blank"
                 rel="noopener noreferrer"
               >
