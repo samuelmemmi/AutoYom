@@ -28,7 +28,8 @@ const Services = () => {
         "Nettoyage des passages de porte",
         "Dépoussiérage léger des sièges",
         "Lavage extérieur à la main",
-        "Séchage manuel"
+        "Séchage manuel",
+        "Nettoyage des jantes et pneus"
       ],
       badge: t("services.simple.badge"),
       popular: false,
@@ -36,38 +37,6 @@ const Services = () => {
     },
     {
       id: 2,
-      title: t("services.deep.title"),
-      subtitle: t("services.deep.subtitle"),
-      icon: <Shield className="w-8 h-8" />,
-      description: t("services.deep.desc"),
-      features: [
-        "Tous les éléments de la formule 1",
-        "Nettoyage intérieur des portes",
-        "Nettoyage de toutes les vitres intérieures",
-        "Attention particulière aux détails",
-        "Finition soignée"
-      ],
-      badge: t("services.deep.badge"),
-      popular: true,
-      image: deepWashImage
-    },
-    {
-      id: 3,
-      title: t("services.premium.title"),
-      subtitle: t("services.premium.subtitle"),
-      icon: <Sparkles className="w-8 h-8" />,
-      description: t("services.premium.desc"),
-      features: [
-        "Nettoyage approfondi des jantes",
-        "Traitement des pneus (gel noir)",
-        "Pressing vapeur des tapis",
-        "Lavage sièges injection/extraction",
-        "Nettoyage plastiques intérieurs",
-        "Nettoyage vapeur intégral",
-        "Application de cire protectrice"
-      ],
-      badge: t("services.premium.badge"),
-      popular: false,
       image: premiumWashImage
     }
   ];

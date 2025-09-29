@@ -37,7 +37,7 @@ const Pricing = () => {
       price: "180 ₪",
       icon: <Truck className="w-8 h-8" />,
       description: t("pricing.large.desc"),
-      examples: ["Mercedes SUV", "RAM", "BMW X5", "Audi Q7", "Tesla Model 3"],
+      examples: ["Mercedes SUV", "RAM", "BMW X5", "Audi Q7", "Tesla Model 3", "Chevrolet Traverse"],
       color: "bg-premium-dark",
       image: largeCarImage,
       link: "https://cal.com/mickael-s4lcqz/45min"
