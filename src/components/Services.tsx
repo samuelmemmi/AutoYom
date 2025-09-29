@@ -19,20 +19,6 @@ const Services = () => {
   const formulas = [
     {
       id: 1,
-      title: t("services.simple.title"),
-      subtitle: t("services.simple.subtitle"),
-      icon: <Droplets className="w-8 h-8" />,
-      description: t("services.simple.desc"),
-      features: [
-        "Aspiration complète de l'habitacle",
-        "Nettoyage des passages de porte",
-        "Dépoussiérage léger des sièges",
-        "Lavage extérieur à la main",
-        "Séchage manuel",
-        "Nettoyage des jantes et pneus"
-      ],
-      badge: t("services.simple.badge"),
-      popular: false,
       image: simpleWashImage
     },
     {
@@ -77,15 +63,6 @@ const Services = () => {
   return (
     <section id="services" className="py-20 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-premium-dark mb-4">
-            {t("services.title")} <span className="text-premium-green">{t("services.highlight")}</span>
-          </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            {t("services.subtitle")}
-          </p>
-        </div>
 
         {/* Formulas */}
         <div className="grid md:grid-cols-3 gap-8 mb-20">
