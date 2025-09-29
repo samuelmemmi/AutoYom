@@ -37,38 +37,6 @@ const Services = () => {
     },
     {
       id: 2,
-      title: t("services.deep.title"),
-      subtitle: t("services.deep.subtitle"),
-      icon: <Shield className="w-8 h-8" />,
-      description: t("services.deep.desc"),
-      features: [
-        "Tous les éléments de la formule 1",
-        "Nettoyage intérieur des portes",
-        "Nettoyage de toutes les vitres intérieures",
-        "Attention particulière aux détails",
-        "Finition soignée"
-      ],
-      badge: t("services.deep.badge"),
-      popular: true,
-      image: deepWashImage
-    },
-    {
-      id: 3,
-      title: t("services.premium.title"),
-      subtitle: t("services.premium.subtitle"),
-      icon: <Sparkles className="w-8 h-8" />,
-      description: t("services.premium.desc"),
-      features: [
-        "Nettoyage approfondi des jantes",
-        "Traitement des pneus (gel noir)",
-        "Pressing vapeur des tapis",
-        "Lavage sièges injection/extraction",
-        "Nettoyage plastiques intérieurs",
-        "Nettoyage vapeur intégral",
-        "Application de cire protectrice"
-      ],
-      badge: t("services.premium.badge"),
-      popular: false,
       image: premiumWashImage
     }
   ];
@@ -122,10 +90,10 @@ const Services = () => {
         {/* Formulas */}
         <div className="grid md:grid-cols-3 gap-8 mb-20">
           {formulas.map((formula) => (
-            <Card 
-              key={formula.id} 
+            <Card
+              key={formula.id}
               className={`relative transition-all duration-300 hover:shadow-lg hover:scale-105 ${
-                formula.popular ? 'ring-2 ring-premium-gold shadow-lg' : ''
+                formula.popular ? "ring-2 ring-premium-gold shadow-lg" : ""
               }`}
             >
               {formula.popular && (
@@ -133,62 +101,74 @@ const Services = () => {
                   {t("services.popular")}
                 </Badge>
               )}
-              
+
               <CardHeader className="text-center pb-4">
                 {/* Formula Image */}
-                 <div className="mb-4 rounded-lg overflow-hidden">
-                   <img 
-                     src={formula.image} 
-                     alt={formula.title}
-                     className="w-full h-40 object-cover hover:scale-105 transition-transform duration-300"
-                   />
-                 </div>
-                
-                <div className={`mx-auto p-3 rounded-full mb-4 ${
-                  formula.popular 
-                    ? 'bg-premium-gold text-premium-dark' 
-                    : 'bg-premium-green text-premium-light'
-                }`}>
-                  {formula.icon}
-                </div>
-                
-                <Badge variant="outline" className="w-fit mx-auto mb-2">
-                  {formula.badge}
-                </Badge>
-                
-                <CardTitle className="text-2xl font-bold text-premium-dark">
-                  {formula.title}
-                </CardTitle>
-                <CardDescription className="text-lg font-medium text-premium-green">
-                  {formula.subtitle}
-                </CardDescription>
-                
-                <p className="text-sm text-muted-foreground mt-4">
-                  {formula.description}
-                </p>
-              </CardHeader>
-              
-              <CardContent>
-                <ul className="space-y-3 mb-6">
-                  {formula.features.map((feature, index) => (
-                    <li key={index} className="flex items-start gap-3">
-                      <div className="w-2 h-2 bg-premium-green rounded-full mt-2 flex-shrink-0"></div>
-                      <span className="text-sm text-foreground">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-                {/*
-                <Button 
-                  variant={formula.popular ? "gold" : "premium"} 
-                  className="w-full"
-                >
+                {formula.image && (
+                  <div className="mb-4 rounded-lg overflow-hidden">
+                    <img
+                      src={formula.image}
+                      alt={formula.title || "Service"}
+                      className="w-full h-40 object-cover hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+                )}
 
-                  {t("services.choose")}
-                </Button> */}
-              </CardContent>
+                {/* Icône seulement si définie */}
+                {formula.icon && (
+                  <div
+                    className={`mx-auto p-3 rounded-full mb-4 ${
+                      formula.popular
+                        ? "bg-premium-gold text-premium-dark"
+                        : "bg-premium-green text-premium-light"
+                    }`}
+                  >
+                    {formula.icon}
+                  </div>
+                )}
+
+                {/* Badge seulement si défini */}
+                {formula.badge && (
+                  <Badge variant="outline" className="w-fit mx-auto mb-2">
+                    {formula.badge}
+                  </Badge>
+                )}
+
+                {/* Texte */}
+                {formula.title && (
+                  <CardTitle className="text-2xl font-bold text-premium-dark">
+                    {formula.title}
+                  </CardTitle>
+                )}
+                {formula.subtitle && (
+                  <CardDescription className="text-lg font-medium text-premium-green">
+                    {formula.subtitle}
+                  </CardDescription>
+                )}
+                {formula.description && (
+                  <p className="text-sm text-muted-foreground mt-4">
+                    {formula.description}
+                  </p>
+                )}
+              </CardHeader>
+
+              {/* Features list */}
+              {formula.features && (
+                <CardContent>
+                  <ul className="space-y-3 mb-6">
+                    {formula.features.map((feature, index) => (
+                      <li key={index} className="flex items-start gap-3">
+                        <div className="w-2 h-2 bg-premium-green rounded-full mt-2 flex-shrink-0"></div>
+                        <span className="text-sm text-foreground">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </CardContent>
+              )}
             </Card>
           ))}
         </div>
+
 
         {/* Additional Services */}
         <div className="bg-premium-dark rounded-2xl p-8 md:p-12">
