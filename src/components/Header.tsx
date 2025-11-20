@@ -22,7 +22,7 @@ const Header = () => {
           {/* Logo */}
           <div className="flex-shrink-0">
             <h1 className="text-xl md:text-2xl font-bold text-premium-dark">
-              McClean <span className="text-premium-gold">Washing</span>
+              Auto <span className="text-premium-gold">Yom</span>
             </h1>
           </div>
 

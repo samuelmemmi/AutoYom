@@ -24,7 +24,7 @@ const PrivacyPolicy = () => {
           <section>
             <h2 className="text-xl font-semibold text-premium-dark mb-4">1. Collecte des données</h2>
             <p className="text-gray-700 leading-relaxed">
-              McClean collecte uniquement les données nécessaires à la fourniture de nos services : nom, prénom, numéro de téléphone, adresse d'intervention et informations sur le véhicule.
+            AutoYom collecte uniquement les données nécessaires à la fourniture de nos services : nom, prénom, numéro de téléphone, adresse d'intervention et informations sur le véhicule.
             </p>
           </section>
 
@@ -51,7 +51,7 @@ const PrivacyPolicy = () => {
           <section>
             <h2 className="text-xl font-semibold text-premium-dark mb-4">4. Partage des données</h2>
             <p className="text-gray-700 leading-relaxed">
-              McClean ne vend, ne loue, ni ne partage vos données personnelles avec des tiers, sauf obligation légale ou pour la fourniture du service demandé.
+            AutoYom ne vend, ne loue, ni ne partage vos données personnelles avec des tiers, sauf obligation légale ou pour la fourniture du service demandé.
             </p>
           </section>
 

@@ -31,7 +31,7 @@ const TermsOfService = () => {
           <section>
             <h2 className="text-xl font-semibold text-premium-dark mb-4">2. Services proposés</h2>
             <p className="text-gray-700 leading-relaxed">
-              McClean propose des services de nettoyage automobile à domicile comprenant :
+              AutoYom propose des services de nettoyage automobile à domicile comprenant :
             </p>
             <ul className="list-disc list-inside text-gray-700 mt-2 space-y-1">
               <li>Lavage extérieur complet</li>
@@ -52,7 +52,7 @@ const TermsOfService = () => {
           <section>
             <h2 className="text-xl font-semibold text-premium-dark mb-4">4. Responsabilité</h2>
             <p className="text-gray-700 leading-relaxed">
-              McClean s'engage à fournir un service de qualité avec des produits professionnels. En cas de dommage lié à notre intervention, notre responsabilité est limitée au montant de la prestation.
+            AutoYom s'engage à fournir un service de qualité avec des produits professionnels. En cas de dommage lié à notre intervention, notre responsabilité est limitée au montant de la prestation.
             </p>
           </section>
 
