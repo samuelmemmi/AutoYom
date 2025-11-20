@@ -64,23 +64,7 @@ const Hero = () => {
                 {t("hero.cta")}
               </Button>
             </a>
-            <a href="#pricing">
-              <Button 
-                variant="outline" 
-                size="lg" 
-                className="text-lg px-8 py-6 border-premium-light text-black hover:bg-premium-light hover:text-premium-dark"
-              >
-                {t("hero.pricing")}
-              </Button>
-            </a>
           </div>
-        </div>
-      </div>
-
-      {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <div className="w-6 h-10 border-2 border-premium-gold rounded-full flex justify-center">
-          <div className="w-1 h-3 bg-premium-gold rounded-full mt-2 animate-pulse"></div>
         </div>
       </div>
     </section>
