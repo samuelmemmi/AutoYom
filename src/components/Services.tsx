@@ -145,41 +145,6 @@ const Services = () => {
             </Card>
           ))}
         </div>
-
-
-        {/* Additional Services */}
-        <div className="bg-premium-dark rounded-2xl p-8 md:p-12">
-          <h3 className="text-3xl font-bold text-premium-light text-center mb-8">
-            {t("services.additional.title")} <span className="text-premium-gold">{t("services.additional.highlight")}</span>
-          </h3>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {additionalServices.map((service, index) => (
-              <div 
-                key={index}
-                className="bg-premium-light/10 rounded-lg p-6 text-center hover:bg-premium-light/20 transition-colors duration-300"
-              >
-                <div className="bg-premium-gold rounded-full p-3 w-fit mx-auto mb-4">
-                  {service.icon}
-                </div>
-                <h4 className="font-semibold text-premium-light mb-2">
-                  {service.title}
-                </h4>
-                <p className="text-sm text-premium-light/80">
-                  {service.description}
-                </p>
-              </div>
-            ))}
-          </div>
-          
-          <div className="text-center mt-8">
-            <a href="#contact">
-              <Button variant="gold" size="lg">
-                {t("services.quote")}
-              </Button>
-            </a>
-          </div>
-        </div>
       </div>
     </section>
   );
