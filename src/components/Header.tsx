@@ -21,8 +21,8 @@ const Header = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <h1 className="text-xl md:text-2xl font-bold text-premium-white">
-              Auto <span className="text-premium-white">Yom</span>
+            <h1 className="text-xl md:text-2xl font-bold text-premium-dark">
+              Auto <span className="text-premium-gold">Yom</span>
             </h1>
           </div>
 
@@ -32,7 +32,7 @@ const Header = () => {
               <a
                 key={item.label}
                 href={item.href}
-                className="text-premium-white hover:text-premium-white transition-colors duration-200 font-medium"
+                className="text-premium-dark hover:text-premium-green transition-colors duration-200 font-medium"
               >
                 {item.label}
               </a>
