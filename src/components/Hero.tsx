@@ -43,15 +43,15 @@ const Hero = () => {
           {/* Features */}
           <div className="flex flex-wrap gap-6 mb-8 justify-center">
             <div className="flex items-center gap-2 text-premium-light">
-              <MapPin className="w-5 h-5 text-premium-gold-new" />
+              <MapPin className="w-5 h-5 text-brand-blue" />
               <span>{t("hero.featureHome")}</span>
             </div>
             <div className="flex items-center gap-2 text-premium-light">
-              <Star className="w-5 h-5 text-premium-gold-new" />
+              <Star className="w-5 h-5 text-brand-blue" />
               <span>{t("hero.featureProducts")}</span>
             </div>
             <div className="flex items-center gap-2 text-premium-light">
-              <Phone className="w-5 h-5 text-premium-gold-new" />
+              <Phone className="w-5 h-5 text-brand-blue" />
               <span>{t("hero.featureAutonomous")}</span>
             </div>
           </div>
@@ -61,7 +61,7 @@ const Hero = () => {
             <a href="#booking">
               <Button 
                 size="lg" 
-                className="text-lg px-8 py-6 font-semibold text-premium-light"
+                className="text-lg px-8 py-6 font-semibold text-brand-blue"
               >
                 {t("hero.cta")}
               </Button>

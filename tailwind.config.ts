@@ -52,6 +52,8 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				'brand-blue': 'hsl(var(--brand-blue))',
+				'brand-blue-foreground': 'hsl(var(--brand-blue-foreground))',
 				premium: {
 					gold: 'hsl(var(--premium-gold))',
 					dark: 'hsl(var(--premium-dark))',
