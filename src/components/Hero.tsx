@@ -60,7 +60,7 @@ const Hero = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="#booking">
               <Button 
-                variant="gold" 
+                variant="premium-dark-new" 
                 size="lg" 
                 className="text-lg px-8 py-6 font-semibold"
               >
