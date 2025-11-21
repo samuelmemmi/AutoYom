@@ -1,17 +1,20 @@
 import { Button } from "@/components/ui/button";
 import { Phone, MapPin, Star } from "lucide-react";
-import heroImage from "@/assets/luxe-hero.jpg";
+import heroVideo from "@/assets/hero-video.mp4";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const Hero = () => {
   const { t } = useLanguage();
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image */}
+      {/* Background Video */}
       <div className="absolute inset-0 z-0">
-        <img 
-          src={heroImage} 
-          alt={t("hero.imageAlt")}
+        <video
+          src={heroVideo}
+          type="video/mp4"
+          autoPlay
+          loop
+          muted
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-premium-dark/80 via-premium-dark/60 to-transparent"></div>
