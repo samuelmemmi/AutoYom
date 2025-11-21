@@ -19,6 +19,12 @@ export default {
 		},
 		extend: {
 			colors: {
+				'premium-green': '#4A9B8E',  // Teal
+				'premium-lime' : '#7FC241',  // Lime Green
+				'premium-gold' : '#F5B840',  // Jaune
+				// Si le projet utilise d'autres variantes (dark/light), mappez-les aussi
+				'premium-dark' : '#4A9B8E',
+				'premium-light': '#7FC241',
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',

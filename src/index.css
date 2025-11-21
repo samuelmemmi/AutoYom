@@ -36,11 +36,13 @@ All colors MUST be HSL.
     --input: 0 0% 90%;
     --ring: 150 60% 15%;
 
-    /* Premium design tokens */
-    --premium-gold: 45 85% 55%;
-    --premium-dark: 0 0% 8%;
-    --premium-green: 150 60% 15%;
-    --premium-light: 0 0% 98%;
+    --premium-green: #4A9B8E;  /* Teal */
+    --premium-lime:  #7FC241;  /* Lime Green */
+    --premium-gold:  #F5B840;  /* Jaune */
+
+    /* Mappages supplémentaires si utilisés */
+    --premium-dark:  #4A9B8E;
+    --premium-light: #7FC241;
 
     /* Gradients */
     --gradient-premium: linear-gradient(135deg, hsl(var(--premium-green)), hsl(var(--premium-dark)));
