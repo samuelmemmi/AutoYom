@@ -21,10 +21,9 @@ const Header = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <h1 className="text-xl md:text-2xl font-bold text-premium-dark">
-              Auto <span className="text-premium-gold">Yom</span>
-            </h1>
+            <img src="src/assets/Capture d’écran 2025-11-21 à 14.08.22.png" alt="Logo" className="h-auto w-auto" />
           </div>
+
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-8">
