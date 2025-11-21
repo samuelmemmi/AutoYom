@@ -43,15 +43,15 @@ const Hero = () => {
           {/* Features */}
           <div className="flex flex-wrap gap-6 mb-8 justify-center">
             <div className="flex items-center gap-2 text-premium-light">
-              <MapPin className="w-5 h-5 text-premium-gold" />
+              <MapPin className="w-5 h-5 text-premium-lime" />
               <span>{t("hero.featureHome")}</span>
             </div>
             <div className="flex items-center gap-2 text-premium-light">
-              <Star className="w-5 h-5 text-premium-gold" />
+              <Star className="w-5 h-5 text-premium-lime" />
               <span>{t("hero.featureProducts")}</span>
             </div>
             <div className="flex items-center gap-2 text-premium-light">
-              <Phone className="w-5 h-5 text-premium-gold" />
+              <Phone className="w-5 h-5 text-premium-lime" />
               <span>{t("hero.featureAutonomous")}</span>
             </div>
           </div>
