@@ -40,6 +40,7 @@ All colors MUST be HSL.
     --premium-lime: 91 52% 51%;     /* #7FC241 */
     --premium-gold: 40 90% 61%;     /* #F5B840 */
     --premium-black: 0 0% 10%;      /* #1A1A1A */
+    --premium-white: 0 0% 98%;     /* #FAFAFA */
 
     /* mappings supplémentaires */
     --premium-dark: 170 35% 45%;

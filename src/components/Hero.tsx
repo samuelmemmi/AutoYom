@@ -24,17 +24,17 @@ const Hero = () => {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-4xl">
           {/* Logo/Brand */}
-          <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-premium-black mb-4">
+          <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-premium-white mb-4">
             {t("hero.titlee")}
           </h1>
           
           {/* Slogan */}
-          <p className="text-xl md:text-2xl lg:text-3xl font-medium mb-6 italic text-premium-black">
+          <p className="text-xl md:text-2xl lg:text-3xl font-medium mb-6 italic text-premium-white">
             {t("hero.slogan")}
           </p>
           
           {/* Description */}
-          <p className="text-lg md:text-xl text-premium-black/90 mb-8 leading-relaxed">
+          <p className="text-lg md:text-xl text-premium-white/90 mb-8 leading-relaxed">
             {t("hero.description")}
             <br className="hidden md:block" />
             {t("hero.description2")}
@@ -42,15 +42,15 @@ const Hero = () => {
 
           {/* Features */}
           <div className="flex flex-wrap gap-6 mb-8 justify-center">
-            <div className="flex items-center gap-2 text-premium-black">
+            <div className="flex items-center gap-2 text-premium-white">
               <MapPin className="w-5 h-5 text-premium-light" />
               <span>{t("hero.featureHome")}</span>
             </div>
-            <div className="flex items-center gap-2 text-premium-black">
+            <div className="flex items-center gap-2 text-premium-white">
               <Star className="w-5 h-5 text-premium-light" />
               <span>{t("hero.featureProducts")}</span>
             </div>
-            <div className="flex items-center gap-2 text-premium-black">
+            <div className="flex items-center gap-2 text-premium-white">
               <Phone className="w-5 h-5 text-premium-light" />
               <span>{t("hero.featureAutonomous")}</span>
             </div>
@@ -60,7 +60,7 @@ const Hero = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="#booking">
               <Button 
-                variant="light" 
+                variant="premium-dark" 
                 size="lg" 
                 className="text-lg px-8 py-6 font-semibold"
               >
