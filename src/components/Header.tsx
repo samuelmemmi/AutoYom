@@ -3,6 +3,7 @@ import { Menu, Phone, MessageSquare } from "lucide-react";
 import { useState } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import LanguageSelector from "@/components/LanguageSelector";
+import logo from "@/assets/Capture d’écran 2025-11-21 à 14.08.22.png";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -21,7 +22,7 @@ const Header = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <img src="src/assets/Capture d’écran 2025-11-21 à 14.08.22.png" alt="Logo" className="h-auto w-auto" />
+            <img src={logo} alt="Logo" className="h-auto w-auto" />
           </div>
 
 
