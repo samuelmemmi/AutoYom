@@ -61,7 +61,7 @@ const Hero = () => {
             <a href="#booking">
               <Button 
                 size="lg" 
-                className="text-lg px-8 py-6 font-semibold text-brand-blue"
+                className="text-lg px-8 py-6 font-semibold bg-brand-blue text-white hover:brightness-95"
               >
                 {t("hero.cta")}
               </Button>
