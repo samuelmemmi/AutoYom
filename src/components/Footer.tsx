@@ -16,25 +16,12 @@ const Footer = () => {
               Auto <span className="text-premium-green">Yom</span>
             </h3>
             <p className="text-premium-dark/80 mb-4 italic">
-              "Votre voiture, notre fierté."
+              "Ta voiture lavée, où tu veux quand tu veux"
             </p>
             <p className="text-sm text-premium-dark/60">
               Service de lavage automobile haut de gamme à domicile. 
               100% mobile, manuel et respectueux de votre véhicule.
             </p>
-          </div>
-
-          {/* Services */}
-          <div>
-            <h4 className="font-semibold text-premium-green mb-4">Nos Services</h4>
-            <ul className="space-y-2 text-sm text-premium-dark/80">
-              <li>Lavage Simple</li>
-              <li>Lavage Approfondi</li>
-              <li>Lavage Premium</li>
-              <li>Polissage carrosserie</li>
-              <li>Nettoyage moteur</li>
-              <li>Traitement vapeur</li>
-            </ul>
           </div>
 
           {/* Contact */}
@@ -63,9 +50,6 @@ const Footer = () => {
                   </a>
                   <a href="#" target="_blank" rel="noopener noreferrer" className="text-premium-dark/70 hover:text-premium-green transition-colors">
                     <Instagram className="w-5 h-5" />
-                  </a>
-                  <a href="#" target="_blank" rel="noopener noreferrer" className="text-premium-dark/70 hover:text-premium-green transition-colors">
-                    <FaTiktok className="w-6 h-6" />
                   </a>
                 </div>
               </div>
