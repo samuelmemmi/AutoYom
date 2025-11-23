@@ -21,7 +21,7 @@ const translations = {
     'header.whatsapp': 'WhatsApp',
     
     // Hero
-    'hero.slogan': '"Un lavage d\'exception, sans bouger de chez vous."',
+    'hero.slogan': '"Ta voiture lavée, où tu veux quand tu veux"',
     'hero.title': 'Service de lavage automobile',
     'hero.subtitle': 'premium à domicile',
     //'hero.description': 'Service mobile haut de gamme, entièrement manuel avec le souci du détail à chaque étape. Nous venons chez vous avec tout notre équipement professionnel.',
@@ -82,7 +82,7 @@ const translations = {
     'pricing.large.desc': '90 minutes • Monospace et grands SUV',
     'pricing.popular': 'Le plus demandé',
     'pricing.reserve': 'Réserver ce tarif',
-    'pricing.steps': 'Détails de la prestation - 250sh pour 1h30',
+    'pricing.steps': 'Détails de la prestation - A partir de 200₪ pour 1h30',
     'pricing.step1': 'Rincage',
     'pricing.step2': 'Shampooing',
     'pricing.step3': 'Lavage a la main',

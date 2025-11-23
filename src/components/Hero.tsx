@@ -46,15 +46,15 @@ const Hero = () => {
           {/* Features */}
           <div className="flex flex-wrap gap-6 mb-8 justify-center">
             <div className="flex items-center gap-2 text-premium-light">
-              <MapPin className="w-5 h-5 text-brand-blue" />
+              <MapPin className="w-5 h-5 text-premium-green" />
               <span>{t("hero.featureHome")}</span>
             </div>
             <div className="flex items-center gap-2 text-premium-light">
-              <Star className="w-5 h-5 text-brand-blue" />
+              <Star className="w-5 h-5 text-premium-green" />
               <span>{t("hero.featureProducts")}</span>
             </div>
             <div className="flex items-center gap-2 text-premium-light">
-              <Phone className="w-5 h-5 text-brand-blue" />
+              <Phone className="w-5 h-5 text-premium-green" />
               <span>{t("hero.featureAutonomous")}</span>
             </div>
           </div>
@@ -64,7 +64,7 @@ const Hero = () => {
             <ReservationPopup>
               <Button 
                 size="lg" 
-                className="text-lg px-8 py-6 font-semibold bg-brand-blue text-white hover:brightness-95"
+                className="text-lg px-8 py-6 font-semibold bg-premium-green text-white hover:brightness-95"
               >
                 {t("hero.cta")}
               </Button>
