@@ -8,45 +8,11 @@ import sedanCarImage from "@/assets/lavage-auto-866x505.jpg";
 import largeCarImage from "@/assets/steam-cleaning.jpg";
 import { useState } from "react";
 import video1 from "@/assets/video1.mp4";
-import video2 from "@/assets/video3.mp4";
+import video2 from "@/assets/video2.mp4";
 import video3 from "@/assets/video3.mp4";
 
 const Pricing = () => {
   const { t } = useLanguage();
-
-  const pricingTiers = [
-    {
-      type: t("pricing.compact"),
-      price: "130 ₪",
-      icon: <Car className="w-8 h-8" />,
-      description: t("pricing.compact.desc"),
-      examples: ["Kia Picanto", "Fiat 500", "Austin Cooper", "Volkswagen Polo"],
-      color: "bg-premium-green",
-      image: compactCarImage,
-      link: "https://cal.com/mickael-s4lcqz/45min"
-    },
-    {
-      type: t("pricing.sedan"),
-      price: "150 ₪",
-      icon: <CarFront className="w-8 h-8" />,
-      description: t("pricing.sedan.desc"),
-      examples: ["Kia Sportage", "Nissan Juke", "Range Rover", "Cherry Tiggo", "Kia Sorento", "Tesla Model 1 & 2"],
-      color: "bg-premium-gold",
-      popular: true,
-      image: sedanCarImage,
-      link: "https://cal.com/mickael-s4lcqz/45min"
-    },
-    {
-      type: t("pricing.large"),
-      price: "180 ₪",
-      icon: <Truck className="w-8 h-8" />,
-      description: t("pricing.large.desc"),
-      examples: ["Mercedes SUV", "RAM", "BMW X5", "Audi Q7", "Tesla Model 3", "Chevrolet Traverse"],
-      color: "bg-premium-dark",
-      image: largeCarImage,
-      link: "https://cal.com/mickael-s4lcqz/45min"
-    }
-  ];
 
   return (
     <section id="pricing" className="py-12 bg-background">
@@ -66,7 +32,7 @@ const Pricing = () => {
 
         {/* Carousel de vidéos */}
         {/* 🔥 VIDEOS COTE À COTE */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
           <video
             src={video1}
             autoPlay

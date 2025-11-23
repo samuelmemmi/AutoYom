@@ -70,9 +70,9 @@ const translations = {
     'guarantees.brand3': "Alchimy7",
     'guarantees.brand4': "Addict Auto",
     // Pricing
-    'pricing.title': 'Nos',
-    'pricing.highlight': 'Tarifs',
-    'pricing.subtitle': 'Tarification transparente selon le type de véhicule',
+    'pricing.title': 'Notre',
+    'pricing.highlight': 'Travail',
+    'pricing.subtitle': 'Découvrez en images l’expérience qui transforme votre quotidien.',
     'pricing.badge': 'Prix pour toutes nos formules selon le véhicule',
     'pricing.compact': 'Citadine / Compacte',
     'pricing.compact.desc': '45 minutes • Véhicules jusqu\'à 4,2m',
