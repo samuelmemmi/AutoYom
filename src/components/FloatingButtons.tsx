@@ -11,7 +11,7 @@ const FloatingButtons = () => {
     <div className="fixed right-4 bottom-4 z-50 flex flex-col gap-3">
       {/* WhatsApp Button */}
       <a 
-        href="https://wa.me/972538478659" 
+        href="https://wa.me/972547256057" 
         target="_blank" 
         rel="noopener noreferrer"
         className="group"
