@@ -10,6 +10,7 @@ import { useState } from "react";
 import video1 from "@/assets/video1.mp4";
 import video2 from "@/assets/video2.mp4";
 import video3 from "@/assets/video3.mp4";
+import video4 from "@/assets/video4.mp4";
 
 const Pricing = () => {
   const { t } = useLanguage();
@@ -34,7 +35,7 @@ const Pricing = () => {
         {/* 🔥 VIDEOS COTE À COTE */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
           <video
-            src={video1}
+            src={video4}
             autoPlay
             muted
             loop
