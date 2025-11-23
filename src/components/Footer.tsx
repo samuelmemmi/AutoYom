@@ -7,18 +7,18 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   const { t } = useLanguage();
   return (
-    <footer className="bg-premium-dark text-premium-light">
+    <footer className="bg-premium-light text-premium-dark">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid md:grid-cols-4 gap-8">
           {/* Brand */}
           <div className="col-span-2 md:col-span-1">
             <h3 className="text-2xl font-bold mb-4">
-              Lavage Pro <span className="text-premium-gold">Premium</span>
+              Auto <span className="text-premium-green">Yom</span>
             </h3>
-            <p className="text-premium-light/80 mb-4 italic">
+            <p className="text-premium-dark/80 mb-4 italic">
               "Votre voiture, notre fierté."
             </p>
-            <p className="text-sm text-premium-light/60">
+            <p className="text-sm text-premium-dark/60">
               Service de lavage automobile haut de gamme à domicile. 
               100% mobile, manuel et respectueux de votre véhicule.
             </p>
@@ -26,8 +26,8 @@ const Footer = () => {
 
           {/* Services */}
           <div>
-            <h4 className="font-semibold text-premium-gold mb-4">Nos Services</h4>
-            <ul className="space-y-2 text-sm text-premium-light/80">
+            <h4 className="font-semibold text-premium-green mb-4">Nos Services</h4>
+            <ul className="space-y-2 text-sm text-premium-dark/80">
               <li>Lavage Simple</li>
               <li>Lavage Approfondi</li>
               <li>Lavage Premium</li>
@@ -39,38 +39,38 @@ const Footer = () => {
 
           {/* Contact */}
           <div>
-            <h4 className="font-semibold text-premium-gold mb-4">Contact</h4>
+            <h4 className="font-semibold text-premium-green mb-4">Contact</h4>
             <div className="space-y-3 text-sm">
               <div className="flex items-center gap-2">
-                <Phone className="w-4 h-4 text-premium-gold" />
+                <Phone className="w-4 h-4 text-premium-green" />
                 <span>+972 547256057</span>
               </div>
               <a href="https://wa.me/972547256057" target="_blank" rel="noopener noreferrer">
                 <div className="flex items-center gap-2">
-                  <MessageSquare className="w-4 h-4 text-premium-gold" />
+                  <MessageSquare className="w-4 h-4 text-premium-green" />
                   <span>WhatsApp</span>
                 </div>
               </a>
               <div className="flex items-center gap-2">
-                <MapPin className="w-4 h-4 text-premium-gold" />
+                <MapPin className="w-4 h-4 text-premium-green" />
                 <span>Service à domicile</span>
               </div>
               <div className="flex items-center gap-2">
-                <Clock className="w-4 h-4 text-premium-gold" />
+                <Clock className="w-4 h-4 text-premium-green" />
                 <span>Dim-Ven, horaires flexibles</span>
               </div>
               
               {/* Social Media Links */}
               <div className="mt-4">
-                <h5 className="font-semibold text-premium-gold mb-2">Suivez-nous</h5>
+                <h5 className="font-semibold text-premium-green mb-2">Suivez-nous</h5>
                 <div className="flex gap-3">
-                  <a href="#" target="_blank" rel="noopener noreferrer" className="text-premium-light/70 hover:text-premium-gold transition-colors">
+                  <a href="#" target="_blank" rel="noopener noreferrer" className="text-premium-dark/70 hover:text-premium-green transition-colors">
                     <Facebook className="w-5 h-5" />
                   </a>
-                  <a href="#" target="_blank" rel="noopener noreferrer" className="text-premium-light/70 hover:text-premium-gold transition-colors">
+                  <a href="#" target="_blank" rel="noopener noreferrer" className="text-premium-dark/70 hover:text-premium-green transition-colors">
                     <Instagram className="w-5 h-5" />
                   </a>
-                  <a href="#" target="_blank" rel="noopener noreferrer" className="text-premium-light/70 hover:text-premium-gold transition-colors">
+                  <a href="#" target="_blank" rel="noopener noreferrer" className="text-premium-dark/70 hover:text-premium-green transition-colors">
                     <FaTiktok className="w-6 h-6" />
                   </a>
                 </div>
@@ -80,10 +80,10 @@ const Footer = () => {
 
           {/* CTA */}
           <div>
-            <h4 className="font-semibold text-premium-gold mb-4">Réservation</h4>
+            <h4 className="font-semibold text-premium-green mb-4">Réservation</h4>
             <div className="space-y-3">
               <a href="https://wa.me/972538478659" target="_blank" rel="noopener noreferrer">
-                <Button variant="gold" className="w-full" size="sm">
+                <Button variant="green" className="w-full" size="sm">
                   <MessageSquare className="w-4 h-4 mr-2" />
                   WhatsApp
                 </Button>
@@ -91,7 +91,7 @@ const Footer = () => {
               <a href="tel:+972547256057">
                 <Button
                   variant="outline"
-                  className="w-full border-premium-light text-black hover:bg-premium-light"
+                  className="w-full border-premium-dark text-black hover:bg-premium-light"
                   size="sm"
                 >
                   <Phone className="w-4 h-4 mr-2" />
@@ -102,10 +102,10 @@ const Footer = () => {
             
             <div className="mt-4 p-3 bg-premium-light/10 rounded-lg">
               <div className="flex items-center gap-2 mb-2">
-                <Star className="w-4 h-4 text-premium-gold" />
+                <Star className="w-4 h-4 text-premium-green" />
                 <span className="text-sm font-medium">Service Premium</span>
               </div>
-              <p className="text-xs text-premium-light/60">
+              <p className="text-xs text-premium-dark/60">
                 Intervention dans toute la région avec matériel professionnel
               </p>
             </div>
@@ -115,33 +115,16 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-premium-light/20 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <div className="text-sm text-premium-light/60">
-              © 2024 Lavage Pro Premium. Tous droits réservés.
+            <div className="text-sm text-premium-dark/60">
+              © 2025 AutoYom. Tous droits réservés.
             </div>
             
-            <div className="flex items-center gap-6 text-sm text-premium-light/60">
+            <div className="flex items-center gap-6 text-sm text-premium-dark/60">
               <span>Service professionnel</span>
               <span>•</span>
               <span>Produits écologiques</span>
               <span>•</span>
               <span>Satisfaction garantie</span>
-            </div>
-          </div>
-          
-          {/* Legal Links */}
-          <div className="flex flex-col md:flex-row justify-center items-center gap-4 mt-4 pt-4 border-t border-premium-light/10">
-            <div className="flex items-center gap-4 text-xs text-premium-light/50">
-              <Link to="/mentions-legales" className="hover:text-premium-gold transition-colors">
-                Mentions légales
-              </Link>
-              <span>•</span>
-              <Link to="/politique-confidentialite" className="hover:text-premium-gold transition-colors">
-                Politique de confidentialité
-              </Link>
-              <span>•</span>
-              <Link to="/conditions-utilisation" className="hover:text-premium-gold transition-colors">
-                Conditions d'utilisation
-              </Link>
             </div>
           </div>
         </div>
