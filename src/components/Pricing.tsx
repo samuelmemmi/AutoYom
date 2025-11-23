@@ -154,7 +154,7 @@ const Pricing = () => {
         <VideoCarousel />
         
         {/* Étapes communes */}
-        <div className="bg-brand-blue rounded-2xl p-8 mb-12 border border-premium-green/10">
+        <div className="bg-gradient-to-br from-premium-dark/5 to-premium-green/5 rounded-2xl p-8 mb-12 border border-premium-green/10">
           <div className="text-center mb-8">
             <h3 className="text-2xl md:text-3xl font-bold text-premium-dark mb-3">
               {t("pricing.steps")}
