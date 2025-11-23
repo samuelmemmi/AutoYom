@@ -24,7 +24,6 @@ const Header = () => {
             <img src={logo} alt="Logo" className="max-h-16" />
           </div>
 
-
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-8">
             {menuItems.map((item) => (
@@ -38,30 +37,45 @@ const Header = () => {
             ))}
           </nav>
 
-          {/* Language Selector & CTA Buttons - Desktop */}
-          <div className="hidden md:flex items-center space-x-4">
-            <LanguageSelector />
-            <a href="tel:+972547256057">
-              <Button variant="outline" size="sm">
-                <Phone className="w-4 h-4 mr-2" />
-                {t("header.call")}
-              </Button>
-            </a>
-            <a href="https://wa.me/972547256057" target="_blank" rel="noopener noreferrer">
-              <Button size="sm" className="bg-premium-green text-white hover:bg-premium-green hover:text-premium-dark border-0">
-                <MessageSquare className="w-4 h-4 mr-2" />
-                {t("header.whatsapp")}
-              </Button>
-            </a>
-          </div>
+          {/* Côté droit du header */}
+          <div className="flex items-center space-x-2">
+            {/* Language selector visible en mobile (< md) dans le header */}
+            <div className="md:hidden">
+              <LanguageSelector />
+            </div>
 
-          {/* Mobile Menu Button */}
-          <button
-            className="lg:hidden p-2 rounded-md text-premium-dark hover:text-premium-green"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-          >
-            <Menu className="w-6 h-6" />
-          </button>
+            {/* Language selector + CTA visibles à partir de md */}
+            <div className="hidden md:flex items-center space-x-4">
+              <LanguageSelector />
+              <a href="tel:+972547256057">
+                <Button variant="outline" size="sm">
+                  <Phone className="w-4 h-4 mr-2" />
+                  {t("header.call")}
+                </Button>
+              </a>
+              <a
+                href="https://wa.me/972547256057"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button
+                  size="sm"
+                  className="bg-premium-green text-white hover:bg-premium-green hover:text-premium-dark border-0"
+                >
+                  <MessageSquare className="w-4 h-4 mr-2" />
+                  {t("header.whatsapp")}
+                </Button>
+              </a>
+            </div>
+
+            {/* Mobile Menu Button (visible < lg comme avant) */}
+            <button
+              className="lg:hidden p-2 rounded-md text-premium-dark hover:text-premium-green"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+            >
+              <Menu className="w-6 h-6" />
+            </button>
+          </div>
         </div>
 
         {/* Mobile Navigation */}
@@ -78,21 +92,23 @@ const Header = () => {
                   {item.label}
                 </a>
               ))}
-              
+
+              {/* Plus de LanguageSelector ici, il est dans le header maintenant */}
               <div className="flex flex-col space-y-2 pt-4">
-                <div className="mb-2">
-                  <LanguageSelector />
-                </div>
                 <a href="tel:+972538478659">
                   <Button variant="outline" size="sm" className="w-full">
                     <Phone className="w-4 h-4 mr-2" />
                     {t("header.call")}
                   </Button>
                 </a>
-                <a href="https://wa.me/972547256057" target="_blank" rel="noopener noreferrer">
+                <a
+                  href="https://wa.me/972547256057"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <Button variant="green" size="sm" className="w-full">
                     <MessageSquare className="w-4 h-4 mr-2" />
-                      {t("header.whatsapp")}
+                    {t("header.whatsapp")}
                   </Button>
                 </a>
               </div>

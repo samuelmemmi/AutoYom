@@ -121,7 +121,7 @@ const Pricing = () => {
 
         {/* Additional Info */}
         <div className="grid md:grid-cols-2 gap-8 mt-12">
-          <div className="bg-premium-green rounded-xl p-6 text-center">
+          <div className="bg-brand-blue rounded-xl p-6 text-center">
             <Truck className="w-12 h-12 text-premium-light mx-auto mb-4" />
             <h3 className="text-xl font-bold text-premium-light mb-2">
               {t("pricing.mobile.title")}
