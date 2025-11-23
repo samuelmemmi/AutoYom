@@ -100,6 +100,12 @@ const translations = {
     'pricing.mobile.desc': 'Pas de frais de déplacement dans notre zone d\'intervention',
     'pricing.custom.title': 'Devis personnalisé',
     'pricing.custom.desc': 'Pour les prestations spéciales ou véhicules particuliers',
+    'pricing.table.vehicleType': 'Type de véhicule',
+    'pricing.table.price': 'Prix (₪)',  
+    'pricing.table.vehicle.standardDirty': 'Voiture standard sale',
+    'pricing.table.vehicle.standardVeryDirty': 'Voiture standard très sale',
+    'pricing.table.vehicle.jeepDirty': 'Voiture Jeep sale',
+    'pricing.table.vehicle.jeepVeryDirty': 'Voiture Jeep très sale',
     
     // Testimonials
     'testimonials.title': 'Quelques avis de nos',
@@ -284,6 +290,12 @@ const translations = {
     'pricing.mobile.desc': 'ללא עלות נסיעה באזור השירות שלנו',
     'pricing.custom.title': 'הצעת מחיר מותאמת',
     'pricing.custom.desc': 'לשירותים מיוחדים או רכבים מיוחדים',
+    'pricing.table.vehicleType': 'סוג הרכב',
+    'pricing.table.price': 'מחיר (₪)',  
+    'pricing.table.vehicle.standardDirty': 'רכב סטנדרטי מלוכלך',
+    'pricing.table.vehicle.standardVeryDirty': 'רכב סטנדרטי מלוכלך מאוד',
+    'pricing.table.vehicle.jeepDirty': 'רכב ג\'יפ מלוכלך',
+    'pricing.table.vehicle.jeepVeryDirty': 'רכב ג\'יפ מלוכלך מאוד',
     
     // Services
     'services.title': 'נוסחאות',

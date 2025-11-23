@@ -110,36 +110,36 @@ const Pricing = () => {
         {/* Tableau de tarifs */}
         <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 border border-premium-green/10 mb-12 shadow-sm">
           <h3 className="text-2xl font-bold text-premium-dark text-center mb-6">
-            Tarifs détaillés
+            {t("pricing.title.details")} 
           </h3>
 
           <div className="w-full overflow-x-auto">
             <table className="w-full text-left border-collapse rounded-xl overflow-hidden">
               <thead>
                 <tr className="bg-premium-green/10">
-                  <th className="p-4 font-semibold text-premium-dark">Type de véhicule</th>
-                  <th className="p-4 font-semibold text-premium-dark text-right">Prix (€)</th>
+                  <th className="p-4 font-semibold text-premium-dark">{t("pricing.table.vehicleType")}</th>
+                  <th className="p-4 font-semibold text-premium-dark text-right">{t("pricing.table.price")}</th>
                 </tr>
               </thead>
               <tbody className="bg-white">
                 <tr className="border-t border-premium-green/10">
-                  <td className="p-4">Voiture standard sale</td>
-                  <td className="p-4 text-right font-bold text-premium-green">200 €</td>
+                  <td className="p-4">{t("pricing.table.vehicle.standardDirty")}</td>
+                  <td className="p-4 text-right font-bold text-premium-green">200 ₪</td>
                 </tr>
 
                 <tr className="border-t border-premium-green/10 bg-premium-green/5">
-                  <td className="p-4">Voiture standard très sale</td>
-                  <td className="p-4 text-right font-bold text-premium-green">250 €</td>
+                  <td className="p-4">{t("pricing.table.vehicle.standardVeryDirty")}</td>
+                  <td className="p-4 text-right font-bold text-premium-green">250 ₪</td>
                 </tr>
 
                 <tr className="border-t border-premium-green/10">
-                  <td className="p-4">Voiture Jeep sale</td>
-                  <td className="p-4 text-right font-bold text-premium-green">250 €</td>
+                  <td className="p-4">{t("pricing.table.vehicle.jeepDirty")}</td>
+                  <td className="p-4 text-right font-bold text-premium-green">250 ₪</td>
                 </tr>
 
                 <tr className="border-t border-premium-green/10 bg-premium-green/5">
-                  <td className="p-4">Voiture Jeep très sale</td>
-                  <td className="p-4 text-right font-bold text-premium-green">300 €</td>
+                  <td className="p-4">{t("pricing.table.vehicle.jeepVeryDirty")}</td>
+                  <td className="p-4 text-right font-bold text-premium-green">300 ₪</td>
                 </tr>
               </tbody>
             </table>
