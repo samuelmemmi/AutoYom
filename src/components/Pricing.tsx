@@ -154,12 +154,12 @@ const Pricing = () => {
         <VideoCarousel />
         
         {/* Étapes communes */}
-        <div className="bg-gradient-to-br from-premium-dark/5 to-premium-green/5 rounded-2xl p-8 mb-12 border border-premium-green/10">
+        <div className="bg-brand-blue rounded-2xl p-8 mb-12 border border-premium-green/10">
           <div className="text-center mb-8">
             <h3 className="text-2xl md:text-3xl font-bold text-premium-dark mb-3">
               {t("pricing.steps")}
             </h3>
-            <div className="w-20 h-1 bg-gradient-to-r from-premium-green to-premium-gold mx-auto rounded-full"></div>
+            <div className="w-20 h-1 bg-brand-blue mx-auto rounded-full"></div>
           </div>
           
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 max-w-6xl mx-auto">
@@ -178,7 +178,7 @@ const Pricing = () => {
                 <div className="bg-white/80 backdrop-blur-sm rounded-xl p-4 shadow-sm border border-premium-green/10 hover:shadow-md hover:border-premium-green/20 transition-all duration-300 hover:scale-105">
                   <div className="flex items-start gap-3">
                     <div className="flex-shrink-0">
-                      <div className="w-8 h-8 bg-gradient-to-br from-premium-green to-premium-gold rounded-full flex items-center justify-center shadow-sm">
+                      <div className="w-8 h-8 bg-brand-blue rounded-full flex items-center justify-center shadow-sm">
                         <span className="text-xs font-bold text-white">{step.number}</span>
                       </div>
                     </div>
