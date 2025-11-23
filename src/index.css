@@ -47,7 +47,7 @@ All colors MUST be HSL.
     --premium-gold-new: 40 90% 61%;     /* #F5B840 */
     /* Bleu "joli" utilisé pour les pins / bouton / box */
     /* #2D8CF0 ≈ hsl(210 90% 56%) */
-    --brand-blue: 210 90% 56%;
+    --brand-blue: 210 72% 43%;
     --brand-blue-foreground: 0 0% 100%;
 
     /* mappings supplémentaires */

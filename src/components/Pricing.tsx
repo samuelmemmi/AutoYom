@@ -14,24 +14,6 @@ import video3 from "@/assets/video3.mp4";
 const Pricing = () => {
   const { t } = useLanguage();
 
-  const videoSlides = [
-    {
-      title: "Vidéo 1 – Présentation",
-      description: "Présentation rapide de ton service.",
-      src: video1, 
-    },
-    {
-      title: "Vidéo 2 – Démo",
-      description: "Démonstration du fonctionnement.",
-      src: video2,
-    },
-    {
-      title: "Vidéo 3 – Témoignage client",
-      description: "Retour d’un client satisfait.",
-      src: video3,
-    },
-  ];
-
   const pricingTiers = [
     {
       type: t("pricing.compact"),
@@ -66,74 +48,6 @@ const Pricing = () => {
     }
   ];
 
-  const VideoCarousel = () => {
-    const [currentIndex, setCurrentIndex] = useState(0);
-
-    const next = () => {
-      setCurrentIndex((prev) => (prev + 1) % videoSlides.length);
-    };
-
-    const prev = () => {
-      setCurrentIndex((prev) =>
-        prev === 0 ? videoSlides.length - 1 : prev - 1
-      );
-    };
-
-    const currentVideo = videoSlides[currentIndex];
-
-    return (
-      <div className="max-w-3xl mx-auto">
-        {/* Vidéo */}
-        <div className="relative rounded-2xl overflow-hidden shadow-lg">
-          <video
-            key={currentVideo.src}
-            src={currentVideo.src}
-            controls
-            className="w-full h-auto"
-          />
-        </div>
-
-        {/* Titre + description */}
-        <div className="text-center mt-4">
-          <h3 className="text-2xl font-bold text-premium-dark">
-            {currentVideo.title}
-          </h3>
-          <p className="text-muted-foreground mt-2">
-            {currentVideo.description}
-          </p>
-        </div>
-
-        {/* Boutons + petits dots */}
-        <div className="flex items-center justify-between mt-6">
-          <button
-            onClick={prev}
-            className="px-4 py-2 rounded-full border border-border text-sm"
-          >
-            ← Précédent
-          </button>
-
-          <div className="flex gap-2">
-            {videoSlides.map((_, index) => (
-              <span
-                key={index}
-                className={`w-2 h-2 rounded-full ${
-                  index === currentIndex ? "bg-premium-gold" : "bg-border"
-                }`}
-              />
-            ))}
-          </div>
-
-          <button
-            onClick={next}
-            className="px-4 py-2 rounded-full border border-border text-sm"
-          >
-            Suivant →
-          </button>
-        </div>
-      </div>
-    );
-  };
-
   return (
     <section id="pricing" className="py-12 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -151,7 +65,39 @@ const Pricing = () => {
         </div>
 
         {/* Carousel de vidéos */}
-        <VideoCarousel />
+        {/* 🔥 VIDEOS COTE À COTE */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <video
+            src={video1}
+            autoPlay
+            muted
+            loop
+            playsInline
+            controls={false}
+            className="w-full rounded-xl"
+          />
+
+          <video
+            src={video2}
+            autoPlay
+            muted
+            loop
+            playsInline
+            controls={false}
+            className="w-full rounded-xl"
+          />
+
+          <video
+            src={video3}
+            autoPlay
+            muted
+            loop
+            playsInline
+            controls={false}
+            className="w-full rounded-xl"
+          />
+        </div>
+
         
         {/* Étapes communes */}
         <div className="bg-gradient-to-br from-premium-dark/5 to-premium-green/5 rounded-2xl p-8 mb-12 border border-premium-green/10">
