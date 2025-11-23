@@ -13,7 +13,7 @@ const Testimonials = () => {
     name: "Carole Manaud",
     date: "2025-10-06",
     rating: 5,
-    text: "Ma voiture est propre, comme au premier jour, je suis ravie. Un service impeccable. Gentil à l’écoute extrêmement professionnel. Je recommande à 100 %",
+    text: "Ma voiture est propre, comme au premier jour, je suis ravie. Un service impeccable. Je recommande à 100 %",
     platform: "Facebook",
     verified: true,
     link : "https://www.facebook.com/story.php?story_fbid=10238605559778561&id=1259046096&rdid=j14nHT7VrxjcUet1#",
