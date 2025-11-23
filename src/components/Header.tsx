@@ -12,7 +12,7 @@ const Header = () => {
   const menuItems = [
     { label: t("header.home"), href: "#hero" },
     { label: t("header.guarantees"), href: "#pricing" },
-    { label: t("header.pricing"), href: "#pricing" }
+    { label: t("header.pricing"), href: "#pricing-table" }
   ];
 
   return (

@@ -108,7 +108,7 @@ const Pricing = () => {
         </div>
 
         {/* Tableau de tarifs */}
-        <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 border border-premium-green/10 mb-12 shadow-sm">
+        <div id="pricing-table" className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 border border-premium-green/10 mb-12 shadow-sm">
           <h3 className="text-2xl font-bold text-premium-dark text-center mb-6">
             {t("pricing.title.details")} 
           </h3>
