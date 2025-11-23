@@ -11,9 +11,8 @@ const Header = () => {
 
   const menuItems = [
     { label: t("header.home"), href: "#hero" },
-    { label: t("header.guarantees"), href: "#guarantees" },
-    { label: t("header.pricing"), href: "#pricing" },
-    { label: t("header.services"), href: "#services" }
+    { label: t("header.guarantees"), href: "#pricing" },
+    { label: t("header.pricing"), href: "#pricing" }
   ];
 
   return (

@@ -14,8 +14,8 @@ const translations = {
   fr: {
     // Header
     'header.home': 'Accueil',
-    'header.guarantees': 'Nos garanties',
-    'header.pricing': 'Tarifs',
+    'header.guarantees': 'Notre travail',
+    'header.pricing': 'Tarif',
     'header.services': 'Formules',
     'header.call': 'Appeler',
     'header.whatsapp': 'WhatsApp',
