@@ -48,7 +48,7 @@ const Header = () => {
               </Button>
             </a>
             <a href="https://wa.me/972547256057" target="_blank" rel="noopener noreferrer">
-              <Button size="sm" className="bg-premium-green text-white hover:bg-premium-gold hover:text-premium-dark border-0">
+              <Button size="sm" className="bg-premium-green text-white hover:bg-premium-green hover:text-premium-dark border-0">
                 <MessageSquare className="w-4 h-4 mr-2" />
                 {t("header.whatsapp")}
               </Button>
@@ -90,7 +90,7 @@ const Header = () => {
                   </Button>
                 </a>
                 <a href="https://wa.me/972538478659" target="_blank" rel="noopener noreferrer">
-                  <Button variant="gold" size="sm" className="w-full">
+                  <Button variant="green" size="sm" className="w-full">
                     <MessageSquare className="w-4 h-4 mr-2" />
                       {t("header.whatsapp")}
                   </Button>
