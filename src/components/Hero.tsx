@@ -16,10 +16,12 @@ const Hero = () => {
           autoPlay
           loop
           muted
+          playsInline
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-premium-dark/80 via-premium-dark/60 to-transparent"></div>
       </div>
+
 
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
