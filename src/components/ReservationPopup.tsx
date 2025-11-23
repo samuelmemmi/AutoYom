@@ -12,12 +12,12 @@ type ReservationPopupProps = {
 };
 
 const CAL_URLS: Record<number, string> = {
-  1: "https://cal.com/ton-lien-1-voiture",
-  2: "https://cal.com/ton-lien-2-voitures",
-  3: "https://cal.com/ton-lien-3-voitures",
-  4: "https://cal.com/ton-lien-4-voitures",
-  5: "https://cal.com/ton-lien-5-voitures",
-  6: "https://cal.com/ton-lien-6-voitures",
+  1: "https://cal.com/autoyom-875ioj/1-car",
+  2: "https://cal.com/autoyom-875ioj/2-cars",
+  3: "https://cal.com/autoyom-875ioj/3-cars",
+  4: "https://cal.com/autoyom-875ioj/4-cars",
+  5: "https://cal.com/autoyom-875ioj/5-cars",
+  6: "https://cal.com/autoyom-875ioj/6-cars",
 };
 
 export const ReservationPopup = ({ children }: ReservationPopupProps) => {
