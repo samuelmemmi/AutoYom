@@ -45,12 +45,6 @@ const Footer = () => {
                 <Phone className="w-4 h-4 text-premium-green" />
                 <span>+972 547256057</span>
               </div>
-              <a href="https://wa.me/972547256057" target="_blank" rel="noopener noreferrer">
-                <div className="flex items-center gap-2">
-                  <MessageSquare className="w-4 h-4 text-premium-green" />
-                  <span>WhatsApp</span>
-                </div>
-              </a>
               <div className="flex items-center gap-2">
                 <MapPin className="w-4 h-4 text-premium-green" />
                 <span>Service à domicile</span>
