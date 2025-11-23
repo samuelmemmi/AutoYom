@@ -58,7 +58,7 @@ const PrivacyPolicy = () => {
           <section>
             <h2 className="text-xl font-semibold text-premium-dark mb-4">5. Vos droits</h2>
             <p className="text-gray-700 leading-relaxed">
-              Vous disposez d'un droit d'accès, de rectification, d'effacement et de portabilité de vos données. Pour exercer ces droits, contactez-nous au +972 538478659.
+              Vous disposez d'un droit d'accès, de rectification, d'effacement et de portabilité de vos données. Pour exercer ces droits, contactez-nous au +972 547256057.
             </p>
           </section>
 
@@ -72,7 +72,7 @@ const PrivacyPolicy = () => {
           <section>
             <h2 className="text-xl font-semibold text-premium-dark mb-4">7. Contact</h2>
             <p className="text-gray-700 leading-relaxed">
-              Pour toute question relative à cette politique de confidentialité, vous pouvez nous contacter au +972 538478659 ou via WhatsApp.
+              Pour toute question relative à cette politique de confidentialité, vous pouvez nous contacter au +972 547256057 ou via WhatsApp.
             </p>
           </section>
         </div>

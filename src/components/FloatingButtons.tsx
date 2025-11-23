@@ -25,7 +25,7 @@ const FloatingButtons = () => {
 
 
       {/* Phone Button */}
-      <a href="tel:+972538478659" className="group">
+      <a href="tel:+972547256057" className="group">
         <Button
           size="lg"
           className="bg-blue-500 hover:bg-blue-600 text-white rounded-full w-12 h-12 shadow-lg hover:shadow-xl transition-all duration-300 group-hover:scale-110"

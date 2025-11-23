@@ -41,13 +41,13 @@ const Header = () => {
           {/* Language Selector & CTA Buttons - Desktop */}
           <div className="hidden md:flex items-center space-x-4">
             <LanguageSelector />
-            <a href="tel:+972538478659">
+            <a href="tel:+972547256057">
               <Button variant="outline" size="sm">
                 <Phone className="w-4 h-4 mr-2" />
                 {t("header.call")}
               </Button>
             </a>
-            <a href="https://wa.me/972538478659" target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/972547256057" target="_blank" rel="noopener noreferrer">
               <Button size="sm" className="bg-premium-green text-white hover:bg-premium-gold hover:text-premium-dark border-0">
                 <MessageSquare className="w-4 h-4 mr-2" />
                 {t("header.whatsapp")}

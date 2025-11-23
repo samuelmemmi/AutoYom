@@ -45,7 +45,7 @@ const TermsOfService = () => {
           <section>
             <h2 className="text-xl font-semibold text-premium-dark mb-4">3. Réservation et prix</h2>
             <p className="text-gray-700 leading-relaxed">
-              Les réservations peuvent être effectuées par téléphone au +972 538478659 ou via WhatsApp. Les tarifs sont indiqués sur notre site web et peuvent être modifiés sans préavis. Le paiement s'effectue à la prestation.
+              Les réservations peuvent être effectuées par téléphone au +972 547256057 ou via WhatsApp. Les tarifs sont indiqués sur notre site web et peuvent être modifiés sans préavis. Le paiement s'effectue à la prestation.
             </p>
           </section>
 

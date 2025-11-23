@@ -26,7 +26,7 @@ const LegalNotice = () => {
             <div className="text-gray-700 leading-relaxed space-y-2">
               <p><strong>Nom de l'entreprise :</strong> McClean</p>
               <p><strong>Activité :</strong> Service de lavage automobile à domicile</p>
-              <p><strong>Téléphone :</strong> +972 538478659</p>
+              <p><strong>Téléphone :</strong> +972 547256057</p>
               <p><strong>Zone d'intervention :</strong> Service à domicile dans les environs de Netanya</p>
             </div>
           </section>
@@ -65,8 +65,8 @@ const LegalNotice = () => {
               Pour toute question ou réclamation, vous pouvez nous contacter :
             </p>
             <ul className="list-disc list-inside text-gray-700 mt-2 space-y-1">
-              <li>Par téléphone : +972 538478659</li>
-              <li>Via WhatsApp : +972 538478659</li>
+              <li>Par téléphone : +972 547256057</li>
+              <li>Via WhatsApp : +972 547256057</li>
             </ul>
           </section>
         </div>

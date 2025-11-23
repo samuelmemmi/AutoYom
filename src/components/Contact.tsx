@@ -113,10 +113,10 @@ const Contact = () => {
                   <Phone className="w-6 h-6 text-premium-gold flex-shrink-0" />
                   <div>
                     <p className="font-semibold">Téléphone</p>
-                    <p className="text-premium-light/80">+972 538478659</p>
+                    <p className="text-premium-light/80">+972 547256057</p>
                   </div>
                 </div>
-                <a href="https://wa.me/972538478659" target="_blank" rel="noopener noreferrer">
+                <a href="https://wa.me/972547256057" target="_blank" rel="noopener noreferrer">
                   <Button 
                     variant="gold" 
                     className="w-full" 

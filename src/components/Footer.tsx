@@ -43,9 +43,9 @@ const Footer = () => {
             <div className="space-y-3 text-sm">
               <div className="flex items-center gap-2">
                 <Phone className="w-4 h-4 text-premium-gold" />
-                <span>+972 538478659</span>
+                <span>+972 547256057</span>
               </div>
-              <a href="https://wa.me/972538478659" target="_blank" rel="noopener noreferrer">
+              <a href="https://wa.me/972547256057" target="_blank" rel="noopener noreferrer">
                 <div className="flex items-center gap-2">
                   <MessageSquare className="w-4 h-4 text-premium-gold" />
                   <span>WhatsApp</span>
@@ -57,7 +57,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center gap-2">
                 <Clock className="w-4 h-4 text-premium-gold" />
-                <span>Lun-Ven, horaires flexibles</span>
+                <span>Dim-Ven, horaires flexibles</span>
               </div>
               
               {/* Social Media Links */}
@@ -88,7 +88,7 @@ const Footer = () => {
                   WhatsApp
                 </Button>
               </a>
-              <a href="tel:+972538478659">
+              <a href="tel:+972547256057">
                 <Button
                   variant="outline"
                   className="w-full border-premium-light text-black hover:bg-premium-light"
