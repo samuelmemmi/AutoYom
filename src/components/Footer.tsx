@@ -76,7 +76,7 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold text-premium-green mb-4">Réservation</h4>
             <div className="space-y-3">
-              <a href="https://wa.me/972538478659" target="_blank" rel="noopener noreferrer">
+              <a href="https://wa.me/972547256057" target="_blank" rel="noopener noreferrer">
                 <Button variant="green" className="w-full" size="sm">
                   <MessageSquare className="w-4 h-4 mr-2" />
                   WhatsApp

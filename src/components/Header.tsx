@@ -89,7 +89,7 @@ const Header = () => {
                     {t("header.call")}
                   </Button>
                 </a>
-                <a href="https://wa.me/972538478659" target="_blank" rel="noopener noreferrer">
+                <a href="https://wa.me/972547256057" target="_blank" rel="noopener noreferrer">
                   <Button variant="green" size="sm" className="w-full">
                     <MessageSquare className="w-4 h-4 mr-2" />
                       {t("header.whatsapp")}
