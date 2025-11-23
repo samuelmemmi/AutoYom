@@ -3,42 +3,47 @@ import { Star, CheckCircle } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useState } from "react";
 import { FcGoogle } from "react-icons/fc";
+import { FaFacebook } from "react-icons/fa";
 
 const Testimonials = () => {
   const { t } = useLanguage();
 
   const testimonials = [
   {
-    name: "David Benhamou",
-    date: "2025-04-09",
+    name: "Carole Manaud",
+    date: "2025-10-06",
     rating: 5,
-    text: "Service impeccable ! Ma voiture n’a jamais été aussi propre. Le technicien est venu à l’heure, super équipé, et très professionnel. Je recommande à 100%.",
-    platform: "Google",
+    text: "Ma voiture est propre, comme au premier jour, je suis ravie. Un service impeccable. Gentil à l’écoute extrêmement professionnel. Je recommande à 100 %",
+    platform: "Facebook",
     verified: true,
+    link : "https://www.facebook.com/story.php?story_fbid=10238605559778561&id=1259046096&rdid=j14nHT7VrxjcUet1#",
   },
   {
-    name: "Sarah Cohen",
-    date: "2025-05-15",
+    name: "Aaron Hamon",
+    date: "2025-09-28",
     rating: 5,
-    text: "Un nettoyage intérieur/extérieur au top, directement devant chez moi. L’équipe est ponctuelle, efficace, et le résultat est impressionnant.",
-    platform: "Google",
+    text: "Bravo. Lavage impeccable je recommande",
+    platform: "Facebook",
     verified: true,
+    link : "https://www.facebook.com/story.php?story_fbid=10162590289428171&id=694913170&rdid=NtdG6cQwnIcFz198#",
   },
   {
-    name: "Jonathan Abitbol",
-    date: "2024-11-26",
+    name: "Ornella Krief",
+    date: "2025-08-31",
     rating: 5,
-    text: "Très satisfait de leur service à domicile. Plus besoin de me déplacer pour avoir une voiture nickel, même les jantes brillent comme neuves !",
-    platform: "Google",
+    text: "Travail Pro et efficace ! merci",
+    platform: "Facebook",
     verified: true,
+    link : "https://www.facebook.com/story.php?story_fbid=1323341395876808&id=100046028802086&rdid=o6jp92e6kLlG5TS6#",
   },
   {
-    name: "Rachel Attal",
-    date: "2024-10-06",
+    name: "Raphael Cohen",
+    date: "2025-08-31",
     rating: 5,
-    text: "Ponctuels, souriants et méticuleux. Ils ont réussi à enlever des taches que je pensais impossibles. Je referai appel à eux sans hésiter.",
-    platform: "Google",
+    text: "Rapide efficace et pas cher",
+    platform: "Facebook",
     verified: true,
+    link : "https://www.facebook.com/story.php?story_fbid=25116588914609995&id=100000566986323&rdid=JPo9TX1b0XlSM2Lx#",
   }
 ];
 
@@ -74,56 +79,72 @@ const Testimonials = () => {
               : testimonial.text.slice(0, 100) + "…";
 
             return (
-              <Card key={index} className="border-0 shadow-lg hover:shadow-xl transition-shadow duration-300 bg-white">
-                <CardContent className="p-6">
-                  {/* Header with platform and verified badge */}
-                  <div className="flex items-center justify-between mb-4">
-                    <div className="flex items-center gap-2">
-                      <FcGoogle className="w-5 h-5" />
-                      <span className="text-sm font-medium text-muted-foreground">
-                        {testimonial.platform}
-                      </span>
-                    </div>
-                    {testimonial.verified && (
-                      <CheckCircle className="w-4 h-4 text-green-500" aria-label="Avis vérifié" role="img" />
-                    )}
+            <Card key={index} className="border-0 shadow-lg hover:shadow-xl transition-shadow duration-300 bg-white">
+              <CardContent className="p-6">
+                
+                {/* Header plateforme + badge vérifié */}
+                <div className="flex items-center justify-between mb-4">
+                  <div className="flex items-center gap-2">
+                    <FaFacebook className="w-5 h-5 text-blue-600" />
+                    <span className="text-sm font-medium text-muted-foreground">
+                      {testimonial.platform}
+                    </span>
                   </div>
-
-                  {/* User Info */}
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="w-10 h-10 bg-premium-green rounded-full flex items-center justify-center">
-                      <span className="text-white font-semibold text-lg">
-                        {testimonial.name.charAt(0)}
-                      </span>
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-premium-dark">{testimonial.name}</h4>
-                      <p className="text-sm text-muted-foreground">{testimonial.date}</p>
-                    </div>
-                  </div>
-
-                  {/* Rating */}
-                  <div className="flex items-center gap-1 mb-4">
-                    {[...Array(testimonial.rating)].map((_, starIndex) => (
-                      <Star key={starIndex} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-                    ))}
-                  </div>
-
-                  {/* Review Text */}
-                  <p className="text-sm text-muted-foreground leading-relaxed">
-                    {displayText}
-                  </p>
-
-                  {isLong && (
-                    <button
-                      onClick={() => toggleExpand(index)}
-                      className="text-xs text-premium-green hover:text-premium-gold mt-2 font-medium"
-                    >
-                      {isExpanded ? "Voir moins" : "Lire la suite"}
-                    </button>
+                  {testimonial.verified && (
+                    <CheckCircle className="w-4 h-4 text-green-500" />
                   )}
-                </CardContent>
-              </Card>
+                </div>
+
+                {/* User Info */}
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-10 h-10 bg-premium-green rounded-full flex items-center justify-center">
+                    <span className="text-white font-semibold text-lg">
+                      {testimonial.name.charAt(0)}
+                    </span>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-premium-dark">{testimonial.name}</h4>
+                    <p className="text-sm text-muted-foreground">{testimonial.date}</p>
+                  </div>
+                </div>
+
+                {/* Rating */}
+                <div className="flex items-center gap-1 mb-4">
+                  {[...Array(testimonial.rating)].map((_, starIndex) => (
+                    <Star key={starIndex} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                  ))}
+                </div>
+
+                {/* Review Text */}
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  {displayText}
+                </p>
+
+                {isLong && (
+                  <button
+                    onClick={() => toggleExpand(index)}
+                    className="text-xs text-premium-green hover:text-premium-gold mt-2 font-medium"
+                  >
+                    {isExpanded ? "Voir moins" : "Lire la suite"}
+                  </button>
+                )}
+
+                {/* 🔗 Lien Facebook */}
+                {testimonial.link && (
+                  <a
+                    href={testimonial.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-xs text-blue-600 hover:underline mt-4"
+                  >
+                    <FaFacebook className="w-4 h-4" />
+                    <span>Voir l’avis sur Facebook</span>
+                  </a>
+                )}
+
+              </CardContent>
+            </Card>
+
             );
           })}
         </div>

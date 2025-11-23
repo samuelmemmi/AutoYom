@@ -35,11 +35,11 @@ const Hero = () => {
           </p>
           
           {/* Description */}
-          <p className="text-lg md:text-xl text-premium-light/90 mb-8 leading-relaxed">
+          {/* <p className="text-lg md:text-xl text-premium-light/90 mb-8 leading-relaxed">
             {t("hero.description")}
             <br className="hidden md:block" />
             {t("hero.description2")}
-          </p>
+          </p> */}
 
           {/* Features */}
           <div className="flex flex-wrap gap-6 mb-8 justify-center">
