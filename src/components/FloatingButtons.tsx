@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Phone, MessageSquare, Calendar } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { FaWhatsapp } from "react-icons/fa";
+import { ReservationPopup } from "@/components/ReservationPopup";
 
 const FloatingButtons = () => {
   const { t } = useLanguage();
@@ -35,19 +36,15 @@ const FloatingButtons = () => {
       </a>
 
       {/* Reservation Button */}
-      <a 
-        href="https://cal.com/mickael-s4lcqz/45min" 
-        target="_blank" 
-        rel="noopener noreferrer"
-        className="group"
-      >
+      <ReservationPopup>
         <Button
           size="lg"
           className="bg-premium-gold hover:bg-premium-gold/90 text-premium-dark rounded-full w-12 h-12 shadow-lg hover:shadow-xl transition-all duration-300 group-hover:scale-110"
         >
           <Calendar style={{ width: '28px', height: '28px' }} className="text-white" />
         </Button>
-      </a>
+      </ReservationPopup>
+
 
     </div>
   );

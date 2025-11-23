@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Phone, MapPin, Star } from "lucide-react";
 import heroVideo from "@/assets/hero-video.mp4";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { ReservationPopup } from "@/components/ReservationPopup";
 
 const Hero = () => {
   const { t } = useLanguage();
@@ -58,14 +59,14 @@ const Hero = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="#booking">
+            <ReservationPopup>
               <Button 
                 size="lg" 
                 className="text-lg px-8 py-6 font-semibold bg-brand-blue text-white hover:brightness-95"
               >
                 {t("hero.cta")}
               </Button>
-            </a>
+            </ReservationPopup>
           </div>
         </div>
       </div>
