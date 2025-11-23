@@ -3,7 +3,7 @@ import { Menu, Phone, MessageSquare } from "lucide-react";
 import { useState } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import LanguageSelector from "@/components/LanguageSelector";
-import logo from "@/assets/Capture d’écran 2025-11-21 à 14.08.22.png";
+import logo from "@/assets/logoremove.png";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
