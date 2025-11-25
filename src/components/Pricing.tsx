@@ -1,7 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Car, Truck, Users, CarFront } from "lucide-react";
+import { Car, Truck, Users, CarFront, BadgeAlert, Splotch } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import compactCarImage from "@/assets/lavage-auto.jpg";
 import sedanCarImage from "@/assets/lavage-auto-866x505.jpg";
@@ -11,8 +11,6 @@ import video1 from "@/assets/video1.mp4";
 import video2 from "@/assets/video2.mp4";
 import video3 from "@/assets/video3.mp4";
 import video4 from "@/assets/video4.mp4";
-import { Splotch } from "lucide-react";
-import { BadgeAlert } from "lucide-react";
 
 
 const Pricing = () => {
