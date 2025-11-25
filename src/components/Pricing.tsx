@@ -133,40 +133,70 @@ const Pricing = () => {
 
                 {/* Petite voiture - Sale */}
                 <tr className="border-t border-premium-green/10">
-                  <td className="p-4 flex items-center gap-3">
-                    <CarFront className="w-6 h-6 text-premium-green" />
-                    <Splotch className="w-5 h-5 text-yellow-600" />
-                    {t("pricing.table.vehicle.standardDirty")}
+                  <td className="p-4 flex items-center gap-4">
+                    {/* Icône voiture dans un rond */}
+                    <div className="w-9 h-9 rounded-full bg-premium-green/10 flex items-center justify-center">
+                      <CarFront className="w-5 h-5 text-premium-green" />
+                    </div>
+
+                    {/* Badge "sale" */}
+                    <div className="flex items-center gap-1 px-2 py-1 rounded-full bg-yellow-100 text-xs font-medium text-yellow-700">
+                      <Splotch className="w-3 h-3" />
+                      <span>{t("pricing.table.dirtyLevel.dirty")}</span>
+                    </div>
+
+                    <span>{t("pricing.table.vehicle.standardDirty")}</span>
                   </td>
                   <td className="p-4 text-right font-bold text-premium-green">200 ₪</td>
                 </tr>
 
                 {/* Petite voiture - Très sale */}
                 <tr className="border-t border-premium-green/10 bg-premium-green/5">
-                  <td className="p-4 flex items-center gap-3">
-                    <CarFront className="w-6 h-6 text-premium-green" />
-                    <BadgeAlert className="w-5 h-5 text-red-500" />
-                    {t("pricing.table.vehicle.standardVeryDirty")}
+                  <td className="p-4 flex items-center gap-4">
+                    <div className="w-9 h-9 rounded-full bg-premium-green/10 flex items-center justify-center">
+                      <CarFront className="w-5 h-5 text-premium-green" />
+                    </div>
+
+                    <div className="flex items-center gap-1 px-2 py-1 rounded-full bg-red-100 text-xs font-medium text-red-700">
+                      <BadgeAlert className="w-3 h-3" />
+                      <span>{t("pricing.table.dirtyLevel.veryDirty")}</span>
+                    </div>
+
+                    <span>{t("pricing.table.vehicle.standardVeryDirty")}</span>
                   </td>
                   <td className="p-4 text-right font-bold text-premium-green">250 ₪</td>
                 </tr>
 
                 {/* Grosse voiture - Sale */}
                 <tr className="border-t border-premium-green/10">
-                  <td className="p-4 flex items-center gap-3">
-                    <Truck className="w-6 h-6 text-premium-green" />
-                    <Splotch className="w-5 h-5 text-yellow-600" />
-                    {t("pricing.table.vehicle.jeepDirty")}
+                  <td className="p-4 flex items-center gap-4">
+                    <div className="w-9 h-9 rounded-full bg-premium-green/10 flex items-center justify-center">
+                      <Truck className="w-5 h-5 text-premium-green" />
+                    </div>
+
+                    <div className="flex items-center gap-1 px-2 py-1 rounded-full bg-yellow-100 text-xs font-medium text-yellow-700">
+                      <Splotch className="w-3 h-3" />
+                      <span>{t("pricing.table.dirtyLevel.dirty")}</span>
+                    </div>
+
+                    <span>{t("pricing.table.vehicle.jeepDirty")}</span>
                   </td>
                   <td className="p-4 text-right font-bold text-premium-green">250 ₪</td>
                 </tr>
 
                 {/* Grosse voiture - Très sale */}
                 <tr className="border-t border-premium-green/10 bg-premium-green/5">
-                  <td className="p-4 flex items-center gap-3">
-                    <Truck className="w-6 h-6 text-premium-green" />
-                    <BadgeAlert className="w-5 h-5 text-red-500" />
-                    {t("pricing.table.vehicle.jeepVeryDirty")}
+                  <td className="p-4 flex items-center gap-4">
+                    <div className="w-9 h-9 rounded-full bg-premium-green/10 flex items-center justify-center">
+                      <Truck className="w-5 h-5 text-premium-green" />
+                    </div>
+
+                    <div className="flex items-center gap-1 px-2 py-1 rounded-full bg-red-100 text-xs font-medium text-red-700">
+                      <BadgeAlert className="w-3 h-3" />
+                      <span>{t("pricing.table.dirtyLevel.veryDirty")}</span>
+                    </div>
+
+                    <span>{t("pricing.table.vehicle.jeepVeryDirty")}</span>
                   </td>
                   <td className="p-4 text-right font-bold text-premium-green">300 ₪</td>
                 </tr>
