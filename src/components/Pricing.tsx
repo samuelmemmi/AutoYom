@@ -1,7 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Car, Truck, Users, CarFront, BadgeAlert, Splotch } from "lucide-react";
+import { Car, Truck, Users, CarFront, BadgeAlert, Skull } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import compactCarImage from "@/assets/lavage-auto.jpg";
 import sedanCarImage from "@/assets/lavage-auto-866x505.jpg";
@@ -139,7 +139,7 @@ const Pricing = () => {
 
                     {/* Badge "sale" */}
                     <div className="flex items-center gap-1 px-2 py-1 rounded-full bg-yellow-100 text-xs font-medium text-yellow-700">
-                      <Splotch className="w-3 h-3" />
+                      <Skull className="w-3 h-3" />
                       <span>{t("pricing.table.dirtyLevel.dirty")}</span>
                     </div>
 
@@ -173,7 +173,7 @@ const Pricing = () => {
                     </div>
 
                     <div className="flex items-center gap-1 px-2 py-1 rounded-full bg-yellow-100 text-xs font-medium text-yellow-700">
-                      <Splotch className="w-3 h-3" />
+                      <Skull className="w-3 h-3" />
                       <span>{t("pricing.table.dirtyLevel.dirty")}</span>
                     </div>
 
