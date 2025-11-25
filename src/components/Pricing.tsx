@@ -1,7 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { CarFront, Truck, Droplets, AlertCircle } from "lucide-react";
+import { CarFront, Truck, Droplets, AlertCircle, Users } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import compactCarImage from "@/assets/lavage-auto.jpg";
 import sedanCarImage from "@/assets/lavage-auto-866x505.jpg";
@@ -129,47 +129,48 @@ const Pricing = () => {
 
               <tbody className="bg-white">
 
-              {/* Petite voiture - Sale */}
-              <tr className="border-t border-premium-green/10">
-                <td className="p-4 flex items-center gap-3">
-                  <CarFront className="w-6 h-6 text-premium-green" />
-                  <Droplets className="w-5 h-5 text-yellow-600" />
-                  {t("pricing.table.vehicle.standardDirty")}
-                </td>
-                <td className="p-4 text-right font-bold text-premium-green">200 ₪</td>
-              </tr>
+                {/* Petite voiture - Sale */}
+                <tr className="border-t border-premium-green/10">
+                  <td className="p-4 flex items-center gap-3">
+                    <CarFront className="w-6 h-6 text-premium-green" />
+                    <Droplets className="w-5 h-5 text-yellow-600" />
+                    {t("pricing.table.vehicle.standardDirty")}
+                  </td>
+                  <td className="p-4 text-right font-bold text-premium-green">200 ₪</td>
+                </tr>
 
-              {/* Petite voiture - Très sale */}
-              <tr className="border-t border-premium-green/10 bg-premium-green/5">
-                <td className="p-4 flex items-center gap-3">
-                  <CarFront className="w-6 h-6 text-premium-green" />
-                  <AlertCircle className="w-5 h-5 text-red-500" />
-                  {t("pricing.table.vehicle.standardVeryDirty")}
-                </td>
-                <td className="p-4 text-right font-bold text-premium-green">250 ₪</td>
-              </tr>
+                {/* Petite voiture - Très sale */}
+                <tr className="border-t border-premium-green/10 bg-premium-green/5">
+                  <td className="p-4 flex items-center gap-3">
+                    <CarFront className="w-6 h-6 text-premium-green" />
+                    <AlertCircle className="w-5 h-5 text-red-500" />
+                    {t("pricing.table.vehicle.standardVeryDirty")}
+                  </td>
+                  <td className="p-4 text-right font-bold text-premium-green">250 ₪</td>
+                </tr>
 
-              {/* Grosse voiture - Sale */}
-              <tr className="border-t border-premium-green/10">
-                <td className="p-4 flex items-center gap-3">
-                  <Truck className="w-6 h-6 text-premium-green" />
-                  <Droplets className="w-5 h-5 text-yellow-600" />
-                  {t("pricing.table.vehicle.jeepDirty")}
-                </td>
-                <td className="p-4 text-right font-bold text-premium-green">250 ₪</td>
-              </tr>
+                {/* Grosse voiture - Sale */}
+                <tr className="border-t border-premium-green/10">
+                  <td className="p-4 flex items-center gap-3">
+                    <Truck className="w-6 h-6 text-premium-green" />
+                    <Droplets className="w-5 h-5 text-yellow-600" />
+                    {t("pricing.table.vehicle.jeepDirty")}
+                  </td>
+                  <td className="p-4 text-right font-bold text-premium-green">250 ₪</td>
+                </tr>
 
-              {/* Grosse voiture - Très sale */}
-              <tr className="border-t border-premium-green/10 bg-premium-green/5">
-                <td className="p-4 flex items-center gap-3">
-                  <Truck className="w-6 h-6 text-premium-green" />
-                  <AlertCircle className="w-5 h-5 text-red-500" />
-                  {t("pricing.table.vehicle.jeepVeryDirty")}
-                </td>
-                <td className="p-4 text-right font-bold text-premium-green">300 ₪</td>
-              </tr>
+                {/* Grosse voiture - Très sale */}
+                <tr className="border-t border-premium-green/10 bg-premium-green/5">
+                  <td className="p-4 flex items-center gap-3">
+                    <Truck className="w-6 h-6 text-premium-green" />
+                    <AlertCircle className="w-5 h-5 text-red-500" />
+                    {t("pricing.table.vehicle.jeepVeryDirty")}
+                  </td>
+                  <td className="p-4 text-right font-bold text-premium-green">300 ₪</td>
+                </tr>
 
-            </tbody>
+              </tbody>
+
 
 
             </table>
