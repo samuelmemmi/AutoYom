@@ -218,6 +218,7 @@ const translations = {
     'footer.satisfactionGuaranteed': 'Satisfaction garantie',
     'footer.serviceAtHome': 'Service à domicile inclus',
     'footer.slogan': 'La qualité à votre porte',
+    'footer.contact': 'Contactez-nous',
   },
   he: {
     // Header
@@ -424,6 +425,7 @@ const translations = {
     'footer.satisfactionGuaranteed': 'שביעות רצון מובטחת',
     'footer.serviceAtHome': 'שירות עד הבית כלול',
     'footer.slogan': 'האיכות עד פתח ביתך',
+    'footer.contact': 'צור קשר',
 
   },
   en: {
@@ -632,6 +634,7 @@ const translations = {
     'footer.satisfactionGuaranteed': 'Satisfaction Guaranteed',
     'footer.serviceAtHome': 'At-Home Service Included',
     'footer.slogan': 'Quality at your doorstep',
+    'footer.contact': 'Contact Us',
   }
 };
 
