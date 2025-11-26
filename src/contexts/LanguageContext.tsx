@@ -216,6 +216,8 @@ const translations = {
     'footer.professionalService': 'Service professionnel',
     'footer.ecologicalProducts': 'Produits écologiques',
     'footer.satisfactionGuaranteed': 'Satisfaction garantie',
+    'footer.serviceAtHome': 'Service à domicile inclus',
+    'footer.slogan': 'La qualité à votre porte',
   },
   he: {
     // Header
@@ -420,6 +422,8 @@ const translations = {
     'footer.professionalService': 'שירות מקצועי',
     'footer.ecologicalProducts': 'מוצרים אקולוגיים',
     'footer.satisfactionGuaranteed': 'שביעות רצון מובטחת',
+    'footer.serviceAtHome': 'שירות עד הבית כלול',
+    'footer.slogan': 'האיכות עד פתח ביתך',
 
   },
   en: {
@@ -626,6 +630,8 @@ const translations = {
     'footer.professionalService': 'Professional Service',
     'footer.ecologicalProducts': 'Ecological Products',
     'footer.satisfactionGuaranteed': 'Satisfaction Guaranteed',
+    'footer.serviceAtHome': 'At-Home Service Included',
+    'footer.slogan': 'Quality at your doorstep',
   }
 };
 
