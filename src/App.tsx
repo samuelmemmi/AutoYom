@@ -23,7 +23,7 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/fr" element={<Index />} />
             <Route path="/he" element={<Index />} />
-            <Route path="/ru" element={<Index />} />
+            <Route path="/en" element={<Index />} />
             <Route path="/mentions-legales" element={<LegalNotice />} />
             <Route path="/politique-confidentialite" element={<PrivacyPolicy />} />
             <Route path="/conditions-utilisation" element={<TermsOfService />} />

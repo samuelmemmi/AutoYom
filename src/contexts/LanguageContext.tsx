@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useState, ReactNode } from 'react';
 
-export type Language = 'fr' | 'he' | 'ru';
+export type Language = 'fr' | 'he' | 'en';
 
 interface LanguageContextType {
   language: Language;
@@ -399,7 +399,7 @@ const translations = {
     'footer.rights': 'כל הזכויות שמורות.',
 
   },
-  ru: {
+  en: {
     // Header
     'header.home': 'Home',
     'header.guarantees': 'Our Work',
