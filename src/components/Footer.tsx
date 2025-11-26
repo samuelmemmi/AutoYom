@@ -44,10 +44,10 @@ const Footer = () => {
               <div className="mt-4">
                 <h5 className="font-semibold text-premium-green mb-2">{t("footer.followUs")}</h5>
                 <div className="flex gap-3">
-                  <a href="#" target="_blank" rel="noopener noreferrer" className="text-premium-dark/70 hover:text-premium-green transition-colors">
+                  <a href="https://www.facebook.com/p/AutoYom-61577623393481/" target="_blank" rel="noopener noreferrer" className="text-premium-dark/70 hover:text-premium-green transition-colors">
                     <Facebook className="w-5 h-5" />
                   </a>
-                  <a href="#" target="_blank" rel="noopener noreferrer" className="text-premium-dark/70 hover:text-premium-green transition-colors">
+                  <a href="https://www.instagram.com/reel/DNf7vPsN2bN/?utm_source=ig_web_copy_link" target="_blank" rel="noopener noreferrer" className="text-premium-dark/70 hover:text-premium-green transition-colors">
                     <Instagram className="w-5 h-5" />
                   </a>
                 </div>
