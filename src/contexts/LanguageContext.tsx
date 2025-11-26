@@ -112,6 +112,8 @@ const translations = {
     'testimonials.title': 'Quelques avis de nos',
     'testimonials.highlight': 'clients',
     'testimonials.subtitle': 'Découvrez ce que les clients pensent de nous',
+    'testimonials.joinUs': 'Rejoignez nos clients satisfaits',
+    'testimonials.moreThan100Reviews': 'Plus de 100 avis 5 étoiles',
     
     // Services
     'services.title': 'Nos',
@@ -204,6 +206,16 @@ const translations = {
     'footer.legal.privacy': 'Politique de confidentialité',
     'footer.legal.mentions': 'Mentions légales',
     'footer.rights': 'Tous droits réservés.',
+    'footer.openingHours': 'Dim-Ven, horaires flexibles',
+    'footer.followUs': 'Suivez-nous',
+    'footer.booking': 'Réservation',
+    'footer.call': 'Appeler',
+    'footer.premiumService': 'Service Premium',
+    'footer.professionalEquipment': 'Intervention dans toute la région avec matériel professionnel',
+    'footer.reserved': 'Tous droits réservés',
+    'footer.professionalService': 'Service professionnel',
+    'footer.ecologicalProducts': 'Produits écologiques',
+    'footer.satisfactionGuaranteed': 'Satisfaction garantie',
   },
   he: {
     // Header
@@ -305,7 +317,8 @@ const translations = {
     'testimonials.title': 'כמה חוות דעת מ־',
     'testimonials.highlight': 'הלקוחות שלנו',
     'testimonials.subtitle': 'גלו מה הלקוחות חושבים עלינו',
-
+    'testimonials.joinUs': 'הצטרפו ללקוחות המרוצים שלנו',
+    'testimonials.moreThan100Reviews': 'יותר מ־100 חוות דעת 5 כוכבים',
     // Services
     'services.title': 'החבילות',
     'services.highlight': 'שלנו',
@@ -397,6 +410,16 @@ const translations = {
     'footer.legal.privacy': 'מדיניות פרטיות',
     'footer.legal.mentions': 'אזכורים משפטיים',
     'footer.rights': 'כל הזכויות שמורות.',
+    'footer.openingHours': 'א׳-ה׳, שעות גמישות',
+    'footer.followUs': 'עקבו אחרינו',
+    'footer.booking': 'הזמנה',
+    'footer.call': 'התקשר',
+    'footer.premiumService': 'שירות פרימיום',
+    'footer.professionalEquipment': 'שירות בכל האזור עם ציוד מקצועי',
+    'footer.reserved': 'כל הזכויות שמורות',
+    'footer.professionalService': 'שירות מקצועי',
+    'footer.ecologicalProducts': 'מוצרים אקולוגיים',
+    'footer.satisfactionGuaranteed': 'שביעות רצון מובטחת',
 
   },
   en: {
@@ -499,6 +522,8 @@ const translations = {
     'testimonials.title': 'Some reviews from our',
     'testimonials.highlight': 'clients',
     'testimonials.subtitle': 'See what customers say about us',
+    'testimonials.joinUs': 'Join our satisfied customers',
+    'testimonials.moreThan100Reviews': 'More than 100 five-star reviews',
 
     // Services
     'services.title': 'Our',
@@ -591,6 +616,16 @@ const translations = {
     'footer.legal.privacy': 'Privacy policy',
     'footer.legal.mentions': 'Legal notices',
     'footer.rights': 'All rights reserved.',
+    'footer.openingHours': 'Mon-Fri, flexible hours',
+    'footer.followUs': 'Follow us',
+    'footer.booking': 'Booking',
+    'footer.call': 'Call',
+    'footer.premiumService': 'Premium Service',
+    'footer.professionalEquipment': 'Service throughout the region with professional equipment',
+    'footer.reserved': 'All rights reserved',
+    'footer.professionalService': 'Professional Service',
+    'footer.ecologicalProducts': 'Ecological Products',
+    'footer.satisfactionGuaranteed': 'Satisfaction Guaranteed',
   }
 };
 

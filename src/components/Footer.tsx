@@ -16,17 +16,16 @@ const Footer = () => {
               Auto <span className="text-premium-green">Yom</span>
             </h3>
             <p className="text-premium-dark/80 mb-4 italic">
-              "Ta voiture lavée, où tu veux quand tu veux"
+              {t("footer.slogan")}
             </p>
             <p className="text-sm text-premium-dark/60">
-              Service de lavage automobile haut de gamme à domicile. 
-              100% mobile, manuel et respectueux de votre véhicule.
+              {t("footer.description")}
             </p>
           </div>
 
           {/* Contact */}
           <div>
-            <h4 className="font-semibold text-premium-green mb-4">Contact</h4>
+            <h4 className="font-semibold text-premium-green mb-4">{t("footer.contact")}</h4>
             <div className="space-y-3 text-sm">
               <div className="flex items-center gap-2">
                 <Phone className="w-4 h-4 text-premium-green" />
@@ -34,16 +33,16 @@ const Footer = () => {
               </div>
               <div className="flex items-center gap-2">
                 <MapPin className="w-4 h-4 text-premium-green" />
-                <span>Service à domicile</span>
+                <span>{t("footer.serviceAtHome")}</span>
               </div>
               <div className="flex items-center gap-2">
                 <Clock className="w-4 h-4 text-premium-green" />
-                <span>Dim-Ven, horaires flexibles</span>
+                <span>{t("footer.openingHours")}</span>
               </div>
               
               {/* Social Media Links */}
               <div className="mt-4">
-                <h5 className="font-semibold text-premium-green mb-2">Suivez-nous</h5>
+                <h5 className="font-semibold text-premium-green mb-2">{t("footer.followUs")}</h5>
                 <div className="flex gap-3">
                   <a href="#" target="_blank" rel="noopener noreferrer" className="text-premium-dark/70 hover:text-premium-green transition-colors">
                     <Facebook className="w-5 h-5" />
@@ -58,7 +57,7 @@ const Footer = () => {
 
           {/* CTA */}
           <div>
-            <h4 className="font-semibold text-premium-green mb-4">Réservation</h4>
+            <h4 className="font-semibold text-premium-green mb-4">{t("footer.booking")}</h4>
             <div className="space-y-3">
               <a href="https://wa.me/972547256057" target="_blank" rel="noopener noreferrer">
                 <Button variant="green" className="w-full" size="sm">
@@ -73,7 +72,7 @@ const Footer = () => {
                   size="sm"
                 >
                   <Phone className="w-4 h-4 mr-2" />
-                  Appeler
+                  {t("footer.call")}
                 </Button>
               </a>
             </div>
@@ -81,10 +80,10 @@ const Footer = () => {
             <div className="mt-4 p-3 bg-premium-light/10 rounded-lg">
               <div className="flex items-center gap-2 mb-2">
                 <Star className="w-4 h-4 text-premium-green" />
-                <span className="text-sm font-medium">Service Premium</span>
+                <span className="text-sm font-medium">{t("footer.premiumService")}</span>
               </div>
               <p className="text-xs text-premium-dark/60">
-                Intervention dans toute la région avec matériel professionnel
+                {t("footer.professionalEquipment")}
               </p>
             </div>
           </div>
@@ -94,15 +93,15 @@ const Footer = () => {
         <div className="border-t border-premium-light/20 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="text-sm text-premium-dark/60">
-              © 2025 AutoYom. Tous droits réservés.
+              © 2025 AutoYom. {t("footer.reserved")}.
             </div>
             
             <div className="flex items-center gap-6 text-sm text-premium-dark/60">
-              <span>Service professionnel</span>
+              <span>{t("footer.professionalService")}</span>
               <span>•</span>
-              <span>Produits écologiques</span>
+              <span>{t("footer.ecologicalProducts")}</span>
               <span>•</span>
-              <span>Satisfaction garantie</span>
+              <span>{t("footer.satisfactionGuaranteed")}</span>
             </div>
           </div>
         </div>

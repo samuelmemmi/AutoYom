@@ -152,7 +152,7 @@ const Testimonials = () => {
         {/* Bottom CTA */}
         <div className="text-center mt-12">
           <p className="text-muted-foreground mb-4">
-            Vous aussi, rejoignez nos clients satisfaits
+            {t("testimonials.joinUs")}
           </p>
           <div className="flex items-center justify-center gap-2">
             <div className="flex">
@@ -161,7 +161,7 @@ const Testimonials = () => {
               ))}
             </div>
             <span className="font-semibold text-premium-dark">5.0</span>
-            <span className="text-muted-foreground">• Plus de 100 avis clients</span>
+            <span className="text-muted-foreground">• {t("testimonials.moreThan100Reviews")}</span>
           </div>
         </div>
       </div>
