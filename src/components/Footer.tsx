@@ -16,7 +16,7 @@ const Footer = () => {
               Auto <span className="text-premium-green">Yom</span>
             </h3>
             <p className="text-premium-dark/80 mb-4 italic">
-              {t("footer.slogan")}
+              {t("hero.slogan")}
             </p>
             <p className="text-sm text-premium-dark/60">
               {t("footer.description")}
