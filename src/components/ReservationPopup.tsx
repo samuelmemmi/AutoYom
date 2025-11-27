@@ -6,6 +6,7 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 type ReservationPopupProps = {
   children: ReactNode;
@@ -26,6 +27,7 @@ export const ReservationPopup = ({ children }: ReservationPopupProps) => {
     if (!url) return;
     window.open(url, "_blank");
   };
+  const { t } = useLanguage();
 
   return (
     <Dialog>
@@ -35,7 +37,7 @@ export const ReservationPopup = ({ children }: ReservationPopupProps) => {
 
       <DialogContent className="max-w-sm">
         <DialogHeader>
-          <DialogTitle>Combien de véhicules souhaitez-vous laver ?</DialogTitle>
+          <DialogTitle> {t('reservationPopup.title')}</DialogTitle>
         </DialogHeader>
 
         <div className="grid grid-cols-3 gap-3 mt-4">

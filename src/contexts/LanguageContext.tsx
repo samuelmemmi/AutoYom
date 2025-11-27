@@ -19,6 +19,7 @@ const translations = {
     'header.services': 'Formules',
     'header.call': 'Appeler',
     'header.whatsapp': 'WhatsApp',
+    'reservationPopup.title': 'Combien de véhicules souhaitez-vous laver ?',
     
     // Hero
     'hero.slogan': '"Ta voiture lavée, où tu veux quand tu veux"',
@@ -228,6 +229,7 @@ const translations = {
     'header.services': 'חבילות',
     'header.call': 'התקשר',
     'header.whatsapp': 'וואטסאפ',
+    'reservationPopup.title': 'כמה רכבים ברצונך לשטוף?',
 
     // Hero
     'hero.slogan': '"הרכב שלך נקי, איפה ומתי שתרצה"',
@@ -451,6 +453,7 @@ const translations = {
     'hero.featureAutonomous': "100% Autonomous",
     'hero.pricing': "Our Pricing",
     'hero.imageAlt': "Professional car wash",
+    'reservationPopup.title': "How many vehicles would you like to wash?",
 
     // Guarantees (ex Why Choose Us)
     'guarantees.title': "Our Guarantees",
