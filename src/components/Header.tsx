@@ -21,7 +21,7 @@ const Header = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <img src={logo} alt="Logo" className="max-h-16" />
+            <img src={logo} alt="Logo" className="max-h-20" />
           </div>
 
           {/* Desktop Navigation */}
