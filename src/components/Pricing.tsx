@@ -7,10 +7,13 @@ import compactCarImage from "@/assets/lavage-auto.jpg";
 import sedanCarImage from "@/assets/lavage-auto-866x505.jpg";
 import largeCarImage from "@/assets/steam-cleaning.jpg";
 import { useState } from "react";
-import video1 from "@/assets/video1.mp4";
 import video2 from "@/assets/video2.mp4";
 import video3 from "@/assets/video3.mp4";
 import video4 from "@/assets/video4.mp4";
+import poster2 from "@/assets/video2-poster.jpg";
+import poster3 from "@/assets/video3-poster.jpg";
+import poster4 from "@/assets/video4-poster.jpg";
+import AutoPlayVideo from "@/components/AutoPlayVideo";
 
 
 const Pricing = () => {
@@ -35,33 +38,24 @@ const Pricing = () => {
         {/* Carousel de vidéos */}
         {/* 🔥 VIDEOS COTE À COTE */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-          <video
+          <AutoPlayVideo
             src={video4}
-            autoPlay
-            muted
-            loop
-            playsInline
-            controls={false}
+            poster={poster4}
+            lazy
             className="w-full rounded-xl"
           />
 
-          <video
+          <AutoPlayVideo
             src={video2}
-            autoPlay
-            muted
-            loop
-            playsInline
-            controls={false}
+            poster={poster2}
+            lazy
             className="w-full rounded-xl"
           />
 
-          <video
+          <AutoPlayVideo
             src={video3}
-            autoPlay
-            muted
-            loop
-            playsInline
-            controls={false}
+            poster={poster3}
+            lazy
             className="w-full rounded-xl"
           />
         </div>
