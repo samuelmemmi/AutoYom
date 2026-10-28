@@ -1,22 +1,36 @@
 import { Button } from "@/components/ui/button";
 import { Phone, MapPin, Star } from "lucide-react";
 import heroVideo from "@/assets/hero-video.mp4";
+import heroVideoPoster from "@/assets/hero-video-poster.jpg";
+import heroMobileVideo from "@/assets/hero-mobile.mp4";
+import heroMobilePoster from "@/assets/hero-mobile-poster.jpg";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { ReservationPopup } from "@/components/ReservationPopup";
+import AutoPlayVideo from "@/components/AutoPlayVideo";
+import { useState, useEffect } from "react";
+
+const MOBILE_QUERY = "(max-width: 767px)";
 
 const Hero = () => {
   const { t } = useLanguage();
+  // Valeur initiale synchrone pour ne charger que la bonne vidéo
+  const [isMobile, setIsMobile] = useState(() => window.matchMedia(MOBILE_QUERY).matches);
+
+  useEffect(() => {
+    const mql = window.matchMedia(MOBILE_QUERY);
+    const onChange = () => setIsMobile(mql.matches);
+    mql.addEventListener("change", onChange);
+    return () => mql.removeEventListener("change", onChange);
+  }, []);
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Video */}
       <div className="absolute inset-0 z-0">
-        <video
-          src={heroVideo}
-          type="video/mp4"
-          autoPlay
-          loop
-          muted
-          playsInline
+        <AutoPlayVideo
+          key={isMobile ? "mobile" : "desktop"}
+          src={isMobile ? heroMobileVideo : heroVideo}
+          poster={isMobile ? heroMobilePoster : heroVideoPoster}
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-premium-dark/80 via-premium-dark/60 to-transparent"></div>
